@@ -71,6 +71,9 @@
 		3EB939B71A69759400535310 /* meIconRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB939AD1A69759400535310 /* meIconRed@2x.png */; };
 		3EB939B81A69759400535310 /* searchIconGray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB939AE1A69759400535310 /* searchIconGray@2x.png */; };
 		3EB939B91A69759400535310 /* searchIconRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB939AF1A69759400535310 /* searchIconRed@2x.png */; };
+		3EB939C11A69833100535310 /* SizeToLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB939BC1A69833100535310 /* SizeToLabelCell.m */; };
+		3EB939C21A69833100535310 /* SizeToLeftLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB939BE1A69833100535310 /* SizeToLeftLabelCell.m */; };
+		3EB939C31A69833100535310 /* SizeToRightLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB939C01A69833100535310 /* SizeToRightLabelCell.m */; };
 		CFCDB3D51A69828E002DDD68 /* HYZTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCDB3D41A69828E002DDD68 /* HYZTextField.m */; };
 /* End PBXBuildFile section */
 
@@ -202,6 +205,12 @@
 		3EB939AD1A69759400535310 /* meIconRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "meIconRed@2x.png"; sourceTree = "<group>"; };
 		3EB939AE1A69759400535310 /* searchIconGray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchIconGray@2x.png"; sourceTree = "<group>"; };
 		3EB939AF1A69759400535310 /* searchIconRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchIconRed@2x.png"; sourceTree = "<group>"; };
+		3EB939BB1A69833100535310 /* SizeToLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SizeToLabelCell.h; sourceTree = "<group>"; };
+		3EB939BC1A69833100535310 /* SizeToLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SizeToLabelCell.m; sourceTree = "<group>"; };
+		3EB939BD1A69833100535310 /* SizeToLeftLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SizeToLeftLabelCell.h; sourceTree = "<group>"; };
+		3EB939BE1A69833100535310 /* SizeToLeftLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SizeToLeftLabelCell.m; sourceTree = "<group>"; };
+		3EB939BF1A69833100535310 /* SizeToRightLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SizeToRightLabelCell.h; sourceTree = "<group>"; };
+		3EB939C01A69833100535310 /* SizeToRightLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SizeToRightLabelCell.m; sourceTree = "<group>"; };
 		CFCDB3D31A69828E002DDD68 /* HYZTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYZTextField.h; sourceTree = "<group>"; };
 		CFCDB3D41A69828E002DDD68 /* HYZTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYZTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -261,7 +270,7 @@
 				3EB939071A695DDF00535310 /* PublicHelper */,
 				3EB9390B1A695E2100535310 /* Request */,
 				CFCDB3D11A698226002DDD68 /* Model */,
-				CFCDB3D21A69823F002DDD68 /* BaseCell */,
+				3EB939BA1A69830500535310 /* BaseCell */,
 				3EB939091A695E0100535310 /* ViewControllers */,
 				3EB9390C1A695E5D00535310 /* Libs */,
 				3EB9390A1A695E0C00535310 /* Images */,
@@ -514,6 +523,19 @@
 			name = "Me_我的";
 			sourceTree = "<group>";
 		};
+		3EB939BA1A69830500535310 /* BaseCell */ = {
+			isa = PBXGroup;
+			children = (
+				3EB939BB1A69833100535310 /* SizeToLabelCell.h */,
+				3EB939BC1A69833100535310 /* SizeToLabelCell.m */,
+				3EB939BD1A69833100535310 /* SizeToLeftLabelCell.h */,
+				3EB939BE1A69833100535310 /* SizeToLeftLabelCell.m */,
+				3EB939BF1A69833100535310 /* SizeToRightLabelCell.h */,
+				3EB939C01A69833100535310 /* SizeToRightLabelCell.m */,
+			);
+			path = BaseCell;
+			sourceTree = "<group>";
+		};
 		CFCDB3D01A6981FA002DDD68 /* Toolkit */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,13 +550,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		CFCDB3D21A69823F002DDD68 /* BaseCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BaseCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -679,15 +694,18 @@
 				3EB939631A696DCA00535310 /* AFHTTPSessionManager.m in Sources */,
 				3EB939941A69723000535310 /* HomeViewController.m in Sources */,
 				3EB9399A1A69726C00535310 /* SearchViewController.m in Sources */,
+				3EB939C31A69833100535310 /* SizeToRightLabelCell.m in Sources */,
 				3EB9398D1A696F0400535310 /* PublicConfig.m in Sources */,
 				3EB9397B1A696DCA00535310 /* SDWebImagePrefetcher.m in Sources */,
 				3EB9397F1A696DCA00535310 /* UIImage+WebP.m in Sources */,
 				3EB9397A1A696DCA00535310 /* SDWebImageManager.m in Sources */,
 				3EB939741A696DCA00535310 /* NSData+ImageContentType.m in Sources */,
 				3EB9396C1A696DCA00535310 /* UIAlertView+AFNetworking.m in Sources */,
+				3EB939C11A69833100535310 /* SizeToLabelCell.m in Sources */,
 				3EB939671A696DCA00535310 /* AFURLRequestSerialization.m in Sources */,
 				3EB9396A1A696DCA00535310 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				3EB9399D1A69728900535310 /* LazyViewController.m in Sources */,
+				3EB939C21A69833100535310 /* SizeToLeftLabelCell.m in Sources */,
 				3EB939691A696DCA00535310 /* AFURLSessionManager.m in Sources */,
 				3EB938E11A695D2800535310 /* main.m in Sources */,
 				3EB939821A696DCA00535310 /* UIView+WebCacheOperation.m in Sources */,
