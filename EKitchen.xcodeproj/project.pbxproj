@@ -71,6 +71,7 @@
 		3EB939B71A69759400535310 /* meIconRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB939AD1A69759400535310 /* meIconRed@2x.png */; };
 		3EB939B81A69759400535310 /* searchIconGray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB939AE1A69759400535310 /* searchIconGray@2x.png */; };
 		3EB939B91A69759400535310 /* searchIconRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB939AF1A69759400535310 /* searchIconRed@2x.png */; };
+		CFCDB3D51A69828E002DDD68 /* HYZTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCDB3D41A69828E002DDD68 /* HYZTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +202,8 @@
 		3EB939AD1A69759400535310 /* meIconRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "meIconRed@2x.png"; sourceTree = "<group>"; };
 		3EB939AE1A69759400535310 /* searchIconGray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchIconGray@2x.png"; sourceTree = "<group>"; };
 		3EB939AF1A69759400535310 /* searchIconRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchIconRed@2x.png"; sourceTree = "<group>"; };
+		CFCDB3D31A69828E002DDD68 /* HYZTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYZTextField.h; sourceTree = "<group>"; };
+		CFCDB3D41A69828E002DDD68 /* HYZTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYZTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,11 +257,11 @@
 				3EB938E31A695D2800535310 /* AppDelegate.m */,
 				3EB939041A695DA200535310 /* RootTabBarViewController.h */,
 				3EB939051A695DA200535310 /* RootTabBarViewController.m */,
+				CFCDB3D01A6981FA002DDD68 /* Toolkit */,
 				3EB939071A695DDF00535310 /* PublicHelper */,
-				3EB939081A695DF100535310 /* ToolKit */,
 				3EB9390B1A695E2100535310 /* Request */,
-				3EB9390E1A695EA900535310 /* Model */,
-				3EB9390D1A695E7700535310 /* BaseCell */,
+				CFCDB3D11A698226002DDD68 /* Model */,
+				CFCDB3D21A69823F002DDD68 /* BaseCell */,
 				3EB939091A695E0100535310 /* ViewControllers */,
 				3EB9390C1A695E5D00535310 /* Libs */,
 				3EB9390A1A695E0C00535310 /* Images */,
@@ -304,13 +307,6 @@
 				3EB9398C1A696F0400535310 /* PublicConfig.m */,
 			);
 			path = PublicHelper;
-			sourceTree = "<group>";
-		};
-		3EB939081A695DF100535310 /* ToolKit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ToolKit;
 			sourceTree = "<group>";
 		};
 		3EB939091A695E0100535310 /* ViewControllers */ = {
@@ -371,20 +367,6 @@
 				3EB9395D1A696DCA00535310 /* SVPHUD */,
 			);
 			path = Libs;
-			sourceTree = "<group>";
-		};
-		3EB9390D1A695E7700535310 /* BaseCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BaseCell;
-			sourceTree = "<group>";
-		};
-		3EB9390E1A695EA900535310 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		3EB939121A696DC900535310 /* AFNetWorking */ = {
@@ -530,6 +512,29 @@
 			children = (
 			);
 			name = "Me_我的";
+			sourceTree = "<group>";
+		};
+		CFCDB3D01A6981FA002DDD68 /* Toolkit */ = {
+			isa = PBXGroup;
+			children = (
+				CFCDB3D31A69828E002DDD68 /* HYZTextField.h */,
+				CFCDB3D41A69828E002DDD68 /* HYZTextField.m */,
+			);
+			path = Toolkit;
+			sourceTree = "<group>";
+		};
+		CFCDB3D11A698226002DDD68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFCDB3D21A69823F002DDD68 /* BaseCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -688,6 +693,7 @@
 				3EB939821A696DCA00535310 /* UIView+WebCacheOperation.m in Sources */,
 				3EB939801A696DCA00535310 /* UIImageView+HighlightedWebCache.m in Sources */,
 				3EB939061A695DA200535310 /* RootTabBarViewController.m in Sources */,
+				CFCDB3D51A69828E002DDD68 /* HYZTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -890,6 +896,7 @@
 				3EB939001A695D2800535310 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3EB939011A695D2800535310 /* Build configuration list for PBXNativeTarget "EKitchenTests" */ = {
 			isa = XCConfigurationList;
@@ -898,6 +905,7 @@
 				3EB939031A695D2800535310 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
