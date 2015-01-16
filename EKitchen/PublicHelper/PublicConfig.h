@@ -14,9 +14,6 @@
 
 + (id)valueForKey:(NSString *)key;//从特定key取得value
 
-//去除空格，回车换行、换行
-+ (NSString *)removeSpaceChangeLine:(NSString *)textString;
-
 //字典转化为字符串
 + (NSString *)dictionaryToJson:(NSDictionary *)dic;
 

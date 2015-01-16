@@ -63,7 +63,7 @@
     //选中字体颜色
     [[UITabBarItem appearance] setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
-      UIColorFromRGB(0xca1407), UITextAttributeTextColor,
+      UIColorFromRGB(0xca1407), NSForegroundColorAttributeName,
       nil]forState:UIControlStateSelected];
 }
 
