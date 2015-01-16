@@ -19,8 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"懒人" image:nil tag:0];
-        [[self tabBarItem] setFinishedSelectedImage:[UIImage imageNamed:@"lazyIconRed.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"lazyIconGray.png"]];
+     self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"懒人" image:[UIImage imageNamed:@"lazyIconGray.png"] selectedImage:[UIImage imageNamed:@"lazyIconRed.png"]];
     }
     return self;
 }

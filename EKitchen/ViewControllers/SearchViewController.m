@@ -19,8 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"搜索" image:nil tag:0];
-        [[self tabBarItem] setFinishedSelectedImage:[UIImage imageNamed:@"searchIconRed.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"searchIconGray.png"]];
+    self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"搜索" image:[UIImage imageNamed:@"searchIconGray.png"] selectedImage:[UIImage imageNamed:@"searchIconRed.png"]];
     }
     return self;
 }

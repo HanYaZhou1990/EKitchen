@@ -19,8 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:nil tag:0];
-        [[self tabBarItem] setFinishedSelectedImage:[UIImage imageNamed:@"homeIconRed.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"homeIconGray.png"]];
+    self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage imageNamed:@"homeIconGray.png"] selectedImage:[UIImage imageNamed:@"homeIconRed.png"]];
     }
     return self;
 }

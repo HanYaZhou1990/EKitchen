@@ -19,8 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"分类" image:nil tag:0];
-        [[self tabBarItem] setFinishedSelectedImage:[UIImage imageNamed:@"categoryIconRed.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"categoryIconGray.png"]];
+    self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"分类" image:[UIImage imageNamed:@"categoryIconGray.png"] selectedImage:[UIImage imageNamed:@"categoryIconRed.png"]];
     }
     return self;
 }
