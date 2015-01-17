@@ -8,7 +8,7 @@
 
 #import "MeViewController.h"
 
-@interface MeViewController ()
+@interface MeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -31,7 +31,9 @@
      self.title = @"我的";
 }
 
-- (void)didReceiveMemoryWarning {
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
