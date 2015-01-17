@@ -23,6 +23,20 @@ bool dataDebug = true;
     return [[NSUserDefaults standardUserDefaults] valueForKey:key];
 }
 
+//判断用户是否登录
++(BOOL)isLogin
+{
+    NSString *userAccountStr = [self valueForKey:userAccountEKitchen];
+    if (userAccountStr!=nil&&userAccountStr.length>0)
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+}
+
 //提示框
 + (void)waringInfo:(NSString *)msgInfo
 {

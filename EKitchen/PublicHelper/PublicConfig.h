@@ -14,6 +14,9 @@
 
 + (id)valueForKey:(NSString *)key;//从特定key取得value
 
+//判断用户是否登录
++(BOOL)isLogin;
+
 //字典转化为字符串
 + (NSString *)dictionaryToJson:(NSDictionary *)dic;
 

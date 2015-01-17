@@ -37,3 +37,8 @@
 #endif
 
 
+#define userAccountEKitchen     @"userCountEKitchen" //用户账号唯一标识符id
+#define userTypeEKitchen        @"userTypeEKitchen" //身份标示 0顾客 1厨师
+
+
+
