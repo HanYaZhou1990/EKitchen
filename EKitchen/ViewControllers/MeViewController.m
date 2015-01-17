@@ -84,6 +84,9 @@
     [myTableView reloadData];
 }
 
+#pragma mark -
+#pragma mark - 按钮点击事件
+
 -(void)logoutButtonClicked:(id)sender
 {
     //退出登录
@@ -91,6 +94,16 @@
     [PublicConfig setValue:@"" forKey:userTypeEKitchen];
     
     [self setViewData];//刷新表格
+}
+//登录按钮
+-(void)loginButtonClicked:(id)sender
+{
+    DLog(@"登录按钮被点击");
+}
+//注册按钮
+-(void)registerButtonClicked:(id)sender
+{
+    DLog(@"注册按钮被点击");
 }
 
 #pragma mark -
@@ -139,9 +152,78 @@
     if (indexPath.section==0)
     {
         UIImageView *imageView = [[UIImageView alloc]init];
-        imageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH);
+        imageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 380);
         imageView.image = [UIImage imageNamed:@"meBackground.png"];
         [cell.contentView addSubview:imageView];
+
+        if ([PublicConfig isLogin])
+        {
+            //已登录
+            NSString *userTypeStr = [PublicConfig valueForKey:userTypeEKitchen];
+            
+           //头像 头像可点击编辑  名字
+            UIImageView *headImageView =  [[UIImageView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-60)/2, 240, 60, 60)];
+            headImageView.image = [UIImage imageNamed:@"meBackground.png"];
+            headImageView.layer.masksToBounds=YES;
+            headImageView.layer.cornerRadius=30;
+            headImageView.layer.borderWidth=2.0;
+            headImageView.layer.borderColor=[UIColor whiteColor].CGColor;
+            headImageView.contentMode = UIViewContentModeScaleAspectFill;
+            [cell.contentView addSubview:headImageView];
+            
+            UILabel *userNameLabel = [[UILabel alloc]init];
+            userNameLabel.frame = CGRectMake(0, headImageView.frame.size.height+headImageView.frame.origin.y+20, SCREEN_WIDTH, 15);
+            userNameLabel.textAlignment = NSTextAlignmentCenter;
+            userNameLabel.textColor = [UIColor whiteColor];
+            userNameLabel.font = [UIFont systemFontOfSize:14];
+            userNameLabel.text = @"韩亚周";
+            userNameLabel.backgroundColor = [UIColor clearColor];
+            [cell.contentView addSubview:userNameLabel];
+
+            if ([userTypeStr isEqualToString:@"1"])
+            {
+                //厨师 级别 菜系
+                UILabel *cookLabel = [[UILabel alloc]init];
+                cookLabel.frame = CGRectMake(0, userNameLabel.frame.size.height+userNameLabel.frame.origin.y+10, SCREEN_WIDTH, 15);
+                cookLabel.textAlignment = NSTextAlignmentCenter;
+                cookLabel.textColor = [UIColor whiteColor];
+                cookLabel.font = [UIFont systemFontOfSize:12];
+                cookLabel.text = @"湘菜 豫菜 淮扬菜";
+                cookLabel.backgroundColor = [UIColor clearColor];
+                [cell.contentView addSubview:cookLabel];
+                
+            }
+        }
+        else
+        {
+            //未登录  登录 注册按钮
+            
+            UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            loginButton.frame = CGRectMake((SCREEN_WIDTH-200)/3, 275, 100, 50);
+            [loginButton setBackgroundColor:RGBA(51, 189, 97, 1)];
+            [loginButton setTitle:@"登录" forState:UIControlStateNormal];
+            [loginButton setTitle:@"登录" forState:UIControlStateHighlighted];
+            loginButton.layer.masksToBounds=YES;
+            loginButton.layer.cornerRadius=4;
+            [loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [loginButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+            [loginButton addTarget:self action:@selector(loginButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+            [cell.contentView addSubview:loginButton];
+            
+            UIButton *registerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            registerButton.frame = CGRectMake((SCREEN_WIDTH-200)/3*2+100, loginButton.frame.origin.y, 100, 50);
+            [registerButton setBackgroundColor:RGBA(255, 136, 0, 1)];
+            [registerButton setTitle:@"注册" forState:UIControlStateNormal];
+            [registerButton setTitle:@"注册" forState:UIControlStateHighlighted];
+            registerButton.layer.masksToBounds=YES;
+            registerButton.layer.cornerRadius=4;
+            [registerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [registerButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+            [registerButton addTarget:self action:@selector(registerButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+            [cell.contentView addSubview:registerButton];
+ 
+        }
+        
     }
     if (indexPath.section==1)
     {
@@ -195,6 +277,8 @@
         [logoutButton setTitle:@"退出登录" forState:UIControlStateHighlighted];
         [logoutButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [logoutButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+        logoutButton.layer.masksToBounds=YES;
+        logoutButton.layer.cornerRadius=4;
         [logoutButton addTarget:self action:@selector(logoutButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         
         UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 90)];
@@ -237,7 +321,7 @@
 {
     if (indexPath.section==0)
     {
-        return SCREEN_WIDTH;
+        return 380;
     }
     return 44;
 }
