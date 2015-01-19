@@ -7,6 +7,8 @@
 //
 
 #import "MeViewController.h"
+#import "LoginViewController.h"
+#import "RegisterViewController.h"
 
 @interface MeViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -36,6 +38,8 @@
     
      self.title = @"我的";
     
+    
+
     [self setTheTableView];
     
     [self setViewData];
@@ -98,12 +102,16 @@
 //登录按钮
 -(void)loginButtonClicked:(id)sender
 {
-    DLog(@"登录按钮被点击");
+    LoginViewController *vc = [[LoginViewController alloc]init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 //注册按钮
 -(void)registerButtonClicked:(id)sender
 {
-    DLog(@"注册按钮被点击");
+    RegisterViewController *vc = [[RegisterViewController alloc]init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark -

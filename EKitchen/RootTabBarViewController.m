@@ -23,9 +23,9 @@
 {
     [super viewDidLoad];
     
-    //测试使用初始登录值 id  type 0顾客 1厨师
-    [PublicConfig setValue:@"wwr" forKey:userAccountEKitchen];
-    [PublicConfig setValue:@"1" forKey:userTypeEKitchen];
+    //测试使用初始登录值 id  type 0顾客 1厨师 空未登录
+    [PublicConfig setValue:@"" forKey:userAccountEKitchen];
+    [PublicConfig setValue:@"" forKey:userTypeEKitchen];
     
     [self initTabbar];
 }

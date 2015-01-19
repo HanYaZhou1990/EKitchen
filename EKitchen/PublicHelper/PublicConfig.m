@@ -119,7 +119,7 @@ bool dataDebug = true;
     UIBarButtonItem *leftBarBtnSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     if (IOS7)
     {
-        leftBarBtnSpace.width = -5;
+        leftBarBtnSpace.width = -10;
     }
     else
         leftBarBtnSpace.width = 5;

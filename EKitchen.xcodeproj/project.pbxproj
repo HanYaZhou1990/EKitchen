@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E63552F1A6CF534006A254B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E63552E1A6CF534006A254B /* LoginViewController.m */; };
+		3E6355321A6CF541006A254B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6355311A6CF541006A254B /* RegisterViewController.m */; };
 		3EA5AF1F1A69FD730058714B /* aboutMeItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EA5AF181A69FD730058714B /* aboutMeItem@2x.png */; };
 		3EA5AF201A69FD730058714B /* calendarMeItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EA5AF191A69FD730058714B /* calendarMeItem@2x.png */; };
 		3EA5AF211A69FD730058714B /* feedbackMeItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EA5AF1A1A69FD730058714B /* feedbackMeItem@2x.png */; };
@@ -105,6 +107,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E63552D1A6CF534006A254B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		3E63552E1A6CF534006A254B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		3E6355301A6CF541006A254B /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		3E6355311A6CF541006A254B /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		3EA5AF181A69FD730058714B /* aboutMeItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aboutMeItem@2x.png"; sourceTree = "<group>"; };
 		3EA5AF191A69FD730058714B /* calendarMeItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendarMeItem@2x.png"; sourceTree = "<group>"; };
 		3EA5AF1A1A69FD730058714B /* feedbackMeItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedbackMeItem@2x.png"; sourceTree = "<group>"; };
@@ -570,6 +576,10 @@
 		3EB939A51A6972EA00535310 /* Me_我的 */ = {
 			isa = PBXGroup;
 			children = (
+				3E63552D1A6CF534006A254B /* LoginViewController.h */,
+				3E63552E1A6CF534006A254B /* LoginViewController.m */,
+				3E6355301A6CF541006A254B /* RegisterViewController.h */,
+				3E6355311A6CF541006A254B /* RegisterViewController.m */,
 			);
 			name = "Me_我的";
 			sourceTree = "<group>";
@@ -732,9 +742,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EB939771A696DCA00535310 /* SDWebImageDecoder.m in Sources */,
+				3E6355321A6CF541006A254B /* RegisterViewController.m in Sources */,
 				3EB939911A69716600535310 /* BaseViewController.m in Sources */,
 				3EB939611A696DCA00535310 /* AFHTTPRequestOperation.m in Sources */,
 				3EB939731A696DCA00535310 /* MKAnnotationView+WebCache.m in Sources */,
+				3E63552F1A6CF534006A254B /* LoginViewController.m in Sources */,
 				3EB939971A69725F00535310 /* CategoryViewController.m in Sources */,
 				3EB9396E1A696DCA00535310 /* UIImageView+AFNetworking.m in Sources */,
 				3EB938E41A695D2800535310 /* AppDelegate.m in Sources */,
