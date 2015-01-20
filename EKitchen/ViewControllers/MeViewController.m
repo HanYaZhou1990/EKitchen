@@ -43,6 +43,9 @@
     [self setTheTableView];
     
     [self setViewData];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setViewData) name:refreshMeVCNotification object:nil];
+    
 }
 
 //设置tableview属性

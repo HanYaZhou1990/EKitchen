@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E63552F1A6CF534006A254B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E63552E1A6CF534006A254B /* LoginViewController.m */; };
 		3E6355321A6CF541006A254B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6355311A6CF541006A254B /* RegisterViewController.m */; };
+		3E8A18501A6E3B4600866D29 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A184F1A6E3B4600866D29 /* FindViewController.m */; };
 		3EA5AF1F1A69FD730058714B /* aboutMeItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EA5AF181A69FD730058714B /* aboutMeItem@2x.png */; };
 		3EA5AF201A69FD730058714B /* calendarMeItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EA5AF191A69FD730058714B /* calendarMeItem@2x.png */; };
 		3EA5AF211A69FD730058714B /* feedbackMeItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EA5AF1A1A69FD730058714B /* feedbackMeItem@2x.png */; };
@@ -111,6 +112,8 @@
 		3E63552E1A6CF534006A254B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3E6355301A6CF541006A254B /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		3E6355311A6CF541006A254B /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		3E8A184E1A6E3B4600866D29 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
+		3E8A184F1A6E3B4600866D29 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		3EA5AF181A69FD730058714B /* aboutMeItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aboutMeItem@2x.png"; sourceTree = "<group>"; };
 		3EA5AF191A69FD730058714B /* calendarMeItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendarMeItem@2x.png"; sourceTree = "<group>"; };
 		3EA5AF1A1A69FD730058714B /* feedbackMeItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedbackMeItem@2x.png"; sourceTree = "<group>"; };
@@ -580,6 +583,8 @@
 				3E63552E1A6CF534006A254B /* LoginViewController.m */,
 				3E6355301A6CF541006A254B /* RegisterViewController.h */,
 				3E6355311A6CF541006A254B /* RegisterViewController.m */,
+				3E8A184E1A6E3B4600866D29 /* FindViewController.h */,
+				3E8A184F1A6E3B4600866D29 /* FindViewController.m */,
 			);
 			name = "Me_我的";
 			sourceTree = "<group>";
@@ -768,6 +773,7 @@
 				3EB9396B1A696DCA00535310 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				3EB939651A696DCA00535310 /* AFSecurityPolicy.m in Sources */,
 				3EB939701A696DCA00535310 /* UIRefreshControl+AFNetworking.m in Sources */,
+				3E8A18501A6E3B4600866D29 /* FindViewController.m in Sources */,
 				3EB939711A696DCA00535310 /* UIWebView+AFNetworking.m in Sources */,
 				3EB939791A696DCA00535310 /* SDWebImageDownloaderOperation.m in Sources */,
 				3EB939721A696DCA00535310 /* MBProgressHUD.m in Sources */,

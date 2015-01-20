@@ -21,7 +21,7 @@
 
 - (void)drawRect:(CGRect)rect{
     CGContextRef context = UIGraphicsGetCurrentContext();//获得处理上下文
-    CGContextSetRGBStrokeColor(context, 255.0/255.0f, 255.0/255.0f, 255.0/255.0f, 1.0f);//设置线条颜色
+    CGContextSetRGBStrokeColor(context, 151.0/255.0f, 151.0/255.0f, 151.0/255.0f, 1.0f);//设置线条颜色
                                                                                         //    下边的横线
     CGContextMoveToPoint(context, 0.5, rect.size.height - 0.5);//设置线的坐标点
     CGContextAddLineToPoint(context,rect.size.width - 0.5,rect.size.height - 0.5);//设置线的结束点

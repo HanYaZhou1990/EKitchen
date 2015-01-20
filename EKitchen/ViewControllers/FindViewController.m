@@ -1,27 +1,26 @@
 //
-//  RegisterViewController.m
+//  FindViewController.m
 //  EKitchen
 //
-//  Created by julong on 15/1/19.
+//  Created by julong on 15/1/20.
 //  Copyright (c) 2015年 renbing. All rights reserved.
 //
 
-#import "RegisterViewController.h"
+#import "FindViewController.h"
 
-@interface RegisterViewController ()
+@interface FindViewController ()
 
 @end
 
-@implementation RegisterViewController
+@implementation FindViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.title = @"注册";
+   
+    self.title = @"忘记密码";
     
     [self leftBarItem];
-    
 }
 
 - (void)leftBarItem

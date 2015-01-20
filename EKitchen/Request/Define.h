@@ -14,6 +14,7 @@
 //屏幕尺寸
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width) //屏幕宽度
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height) //屏幕高度
+
 #define NAV_HEIGHT  ((IOS7)?64:44) //nav的高度
 #define TAB_HEIGHT 49 //tab的高度
 //判断是否为4寸屏
@@ -39,6 +40,9 @@
 
 #define userAccountEKitchen     @"userCountEKitchen" //用户账号唯一标识符id
 #define userTypeEKitchen        @"userTypeEKitchen" //身份标示 0顾客 1厨师
+
+#define refreshMeVCNotification @"refreshMeVCNotification" //刷新设置界面
+
 
 
 
