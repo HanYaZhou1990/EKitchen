@@ -13,8 +13,12 @@
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self) {
-            // Initialization code
+    if (self)
+    {
+        UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, frame.size.height)];
+        leftView.backgroundColor = [UIColor clearColor];
+        self.leftView =  leftView;
+        self.leftViewMode = UITextFieldViewModeAlways;
     }
     return self;
 }

@@ -61,8 +61,8 @@
     phoneTextField = [[HYZTextField alloc]initWithFrame:CGRectMake(20, 20, SCREEN_WIDTH-40, 30)];
     phoneTextField.backgroundColor = [UIColor clearColor];
     phoneTextField.textColor = [UIColor blackColor];
-    phoneTextField.font = [UIFont systemFontOfSize:14];
-    captchaTextField.placeholder = @"请输入手机号码";
+    phoneTextField.font = [UIFont systemFontOfSize:16];
+    phoneTextField.placeholder = @"请输入手机号码";
     phoneTextField.keyboardType = UIKeyboardTypeNumberPad;
     phoneTextField.autocapitalizationType = UITextAutocorrectionTypeNo;
     phoneTextField.autocorrectionType = UITextAutocorrectionTypeNo;
@@ -72,7 +72,7 @@
     captchaTextField = [[HYZTextField alloc]initWithFrame:CGRectMake(phoneTextField.frame.origin.x, phoneTextField.frame.size.height+phoneTextField.frame.origin.y+20, SCREEN_WIDTH-60-115, phoneTextField.frame.size.height)];
     captchaTextField.backgroundColor = [UIColor clearColor];
     captchaTextField.textColor = UIColorFromRGB(0x9D9D9D);
-    captchaTextField.font = [UIFont systemFontOfSize:14];
+    captchaTextField.font = [UIFont systemFontOfSize:16];
     captchaTextField.placeholder = @"验证码";
     captchaTextField.keyboardType = UIKeyboardTypeNumberPad;
     captchaTextField.autocapitalizationType = UITextAutocorrectionTypeNo;
