@@ -98,6 +98,11 @@
 		3EED20DD1A6F4CA500EC264F /* CWStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EED20DC1A6F4CA500EC264F /* CWStarRateView.m */; };
 		3EED20E01A6F4CB000EC264F /* b27_icon_star_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EED20DE1A6F4CB000EC264F /* b27_icon_star_gray@2x.png */; };
 		3EED20E11A6F4CB000EC264F /* b27_icon_star_yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EED20DF1A6F4CB000EC264F /* b27_icon_star_yellow@2x.png */; };
+		3EED20E41A6F753500EC264F /* MyOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EED20E31A6F753500EC264F /* MyOrderViewController.m */; };
+		3EED20E71A6F756D00EC264F /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EED20E61A6F756D00EC264F /* ScheduleViewController.m */; };
+		3EED20EA1A6F758300EC264F /* MyAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EED20E91A6F758300EC264F /* MyAddressViewController.m */; };
+		3EED20ED1A6F759B00EC264F /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EED20EC1A6F759B00EC264F /* FeedbackViewController.m */; };
+		3EED20F01A6F75A900EC264F /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EED20EF1A6F75A900EC264F /* AboutViewController.m */; };
 		CFCDB3D51A69828E002DDD68 /* HYZTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCDB3D41A69828E002DDD68 /* HYZTextField.m */; };
 /* End PBXBuildFile section */
 
@@ -263,6 +268,16 @@
 		3EED20DC1A6F4CA500EC264F /* CWStarRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWStarRateView.m; sourceTree = "<group>"; };
 		3EED20DE1A6F4CB000EC264F /* b27_icon_star_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "b27_icon_star_gray@2x.png"; sourceTree = "<group>"; };
 		3EED20DF1A6F4CB000EC264F /* b27_icon_star_yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "b27_icon_star_yellow@2x.png"; sourceTree = "<group>"; };
+		3EED20E21A6F753500EC264F /* MyOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrderViewController.h; sourceTree = "<group>"; };
+		3EED20E31A6F753500EC264F /* MyOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrderViewController.m; sourceTree = "<group>"; };
+		3EED20E51A6F756D00EC264F /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		3EED20E61A6F756D00EC264F /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		3EED20E81A6F758300EC264F /* MyAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAddressViewController.h; sourceTree = "<group>"; };
+		3EED20E91A6F758300EC264F /* MyAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAddressViewController.m; sourceTree = "<group>"; };
+		3EED20EB1A6F759B00EC264F /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		3EED20EC1A6F759B00EC264F /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		3EED20EE1A6F75A900EC264F /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		3EED20EF1A6F75A900EC264F /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		CFCDB3D31A69828E002DDD68 /* HYZTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYZTextField.h; sourceTree = "<group>"; };
 		CFCDB3D41A69828E002DDD68 /* HYZTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYZTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -598,6 +613,16 @@
 				3E6355311A6CF541006A254B /* RegisterViewController.m */,
 				3E8A184E1A6E3B4600866D29 /* FindViewController.h */,
 				3E8A184F1A6E3B4600866D29 /* FindViewController.m */,
+				3EED20E21A6F753500EC264F /* MyOrderViewController.h */,
+				3EED20E31A6F753500EC264F /* MyOrderViewController.m */,
+				3EED20E51A6F756D00EC264F /* ScheduleViewController.h */,
+				3EED20E61A6F756D00EC264F /* ScheduleViewController.m */,
+				3EED20E81A6F758300EC264F /* MyAddressViewController.h */,
+				3EED20E91A6F758300EC264F /* MyAddressViewController.m */,
+				3EED20EB1A6F759B00EC264F /* FeedbackViewController.h */,
+				3EED20EC1A6F759B00EC264F /* FeedbackViewController.m */,
+				3EED20EE1A6F75A900EC264F /* AboutViewController.h */,
+				3EED20EF1A6F75A900EC264F /* AboutViewController.m */,
 			);
 			name = "Me_我的";
 			sourceTree = "<group>";
@@ -781,8 +806,10 @@
 				3EB9396E1A696DCA00535310 /* UIImageView+AFNetworking.m in Sources */,
 				3EB938E41A695D2800535310 /* AppDelegate.m in Sources */,
 				3EB939621A696DCA00535310 /* AFHTTPRequestOperationManager.m in Sources */,
+				3EED20F01A6F75A900EC264F /* AboutViewController.m in Sources */,
 				3EB9396F1A696DCA00535310 /* UIProgressView+AFNetworking.m in Sources */,
 				3EB939A01A69729500535310 /* MeViewController.m in Sources */,
+				3EED20E71A6F756D00EC264F /* ScheduleViewController.m in Sources */,
 				3EB939841A696DCA00535310 /* SVProgressHUD.m in Sources */,
 				3EB939641A696DCA00535310 /* AFNetworkReachabilityManager.m in Sources */,
 				3EB939761A696DCA00535310 /* SDWebImageCompat.m in Sources */,
@@ -790,6 +817,7 @@
 				3EB9397E1A696DCA00535310 /* UIImage+MultiFormat.m in Sources */,
 				3EB9397D1A696DCA00535310 /* UIImage+GIF.m in Sources */,
 				3EB939781A696DCA00535310 /* SDWebImageDownloader.m in Sources */,
+				3EED20ED1A6F759B00EC264F /* FeedbackViewController.m in Sources */,
 				3EB939681A696DCA00535310 /* AFURLResponseSerialization.m in Sources */,
 				3EED20DD1A6F4CA500EC264F /* CWStarRateView.m in Sources */,
 				3EB939811A696DCA00535310 /* UIImageView+WebCache.m in Sources */,
@@ -817,11 +845,13 @@
 				3EB939671A696DCA00535310 /* AFURLRequestSerialization.m in Sources */,
 				3EB9396A1A696DCA00535310 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				3EB9399D1A69728900535310 /* LazyViewController.m in Sources */,
+				3EED20EA1A6F758300EC264F /* MyAddressViewController.m in Sources */,
 				3EB939C21A69833100535310 /* SizeToLeftLabelCell.m in Sources */,
 				3EB939691A696DCA00535310 /* AFURLSessionManager.m in Sources */,
 				3EB938E11A695D2800535310 /* main.m in Sources */,
 				3EB939821A696DCA00535310 /* UIView+WebCacheOperation.m in Sources */,
 				3EB939801A696DCA00535310 /* UIImageView+HighlightedWebCache.m in Sources */,
+				3EED20E41A6F753500EC264F /* MyOrderViewController.m in Sources */,
 				3EB939061A695DA200535310 /* RootTabBarViewController.m in Sources */,
 				CFCDB3D51A69828E002DDD68 /* HYZTextField.m in Sources */,
 			);

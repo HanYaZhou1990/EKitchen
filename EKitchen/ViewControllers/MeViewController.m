@@ -10,6 +10,11 @@
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
 #import "CWStarRateView.h"
+#import "MyOrderViewController.h"
+#import "ScheduleViewController.h"
+#import "MyAddressViewController.h"
+#import "FeedbackViewController.h"
+#import "AboutViewController.h"
 
 @interface MeViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -293,6 +298,95 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if ([PublicConfig isLogin])
+    {
+        //已登录
+        if (indexPath.section==1)
+        {
+            NSString *userTypeStr = [PublicConfig valueForKey:userTypeEKitchen];
+            if ([userTypeStr isEqualToString:@"0"])
+            {
+                //顾客
+                if (indexPath.row==0)
+                {
+                    MyOrderViewController *vc = [[MyOrderViewController alloc]init];
+                    vc.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
+                else if (indexPath.row==1)
+                {
+                    MyAddressViewController *vc = [[MyAddressViewController alloc]init];
+                    vc.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
+            }
+            if ([userTypeStr isEqualToString:@"1"])
+            {
+                //厨师
+                if (indexPath.row==0)
+                {
+                    MyOrderViewController *vc = [[MyOrderViewController alloc]init];
+                    vc.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
+                else if (indexPath.row==1)
+                {
+                    ScheduleViewController *vc = [[ScheduleViewController alloc]init];
+                    vc.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
+                else if (indexPath.row==2)
+                {
+                    MyAddressViewController *vc = [[MyAddressViewController alloc]init];
+                    vc.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:vc animated:YES];
+                }
+            }
+        }
+        else if (indexPath.section==2)
+        {
+            if (indexPath.row==0)
+            {
+                FeedbackViewController *vc = [[FeedbackViewController alloc]init];
+                vc.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+            else if (indexPath.row==1)
+            {
+                //检测版本
+            }
+            else if (indexPath.row==2)
+            {
+                AboutViewController *vc = [[AboutViewController alloc]init];
+                vc.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+        }
+    }
+    else
+    {
+        //未登录
+        if (indexPath.section==1)
+        {
+            if (indexPath.row==0)
+            {
+                FeedbackViewController *vc = [[FeedbackViewController alloc]init];
+                vc.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+            else if (indexPath.row==1)
+            {
+                //检测版本
+            }
+            else if (indexPath.row==2)
+            {
+                AboutViewController *vc = [[AboutViewController alloc]init];
+                vc.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+        }
+    }
 }
 
 
