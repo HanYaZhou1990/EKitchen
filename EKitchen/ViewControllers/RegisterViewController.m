@@ -19,8 +19,6 @@
     UIButton *captchaBtn;
     UIButton *agreeBtn;
     BOOL isAgree;
-    
-   
 }
 
 @property (nonatomic,strong) NSTimer *timer;
@@ -87,7 +85,7 @@
     
     captchaTextField = [[HYZTextField alloc]initWithFrame:CGRectMake(userPswField.frame.origin.x, userPswField.frame.size.height+userPswField.frame.origin.y+20, SCREEN_WIDTH-60-120, userPswField.frame.size.height)];
     captchaTextField.backgroundColor = [UIColor clearColor];
-    captchaTextField.textColor = UIColorFromRGB(0x9D9D9D);
+    captchaTextField.textColor = [UIColor blackColor];
     captchaTextField.font = [UIFont systemFontOfSize:16];
     captchaTextField.placeholder = @"验证码";
     captchaTextField.keyboardType = UIKeyboardTypeNumberPad;
@@ -279,7 +277,7 @@
         return;
     }
     //验证后成功后发送请求
-    [self registerUserData:phoneStr andPassWord:captchaStr];
+    [self registerUserData:phoneStr andPassCode:captchaStr];
     
 }
 
@@ -296,7 +294,7 @@
 #pragma mark 请求相关
 
 //注册请求
--(void)registerUserData:(NSString *)userName andPassWord:(NSString *)passWord
+-(void)registerUserData:(NSString *)phoneNumber andPassCode:(NSString *)passCode
 {
     
 }

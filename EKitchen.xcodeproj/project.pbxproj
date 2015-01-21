@@ -106,6 +106,7 @@
 		3EED20F31A6F82CA00EC264F /* imageSelectedSmallOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EED20F11A6F82CA00EC264F /* imageSelectedSmallOff@2x.png */; };
 		3EED20F41A6F82CA00EC264F /* imageSelectedSmallOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EED20F21A6F82CA00EC264F /* imageSelectedSmallOn@2x.png */; };
 		3EED20F71A6F85A700EC264F /* UserProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EED20F61A6F85A700EC264F /* UserProtocolViewController.m */; };
+		3EED20FA1A6F928A00EC264F /* ResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EED20F91A6F928A00EC264F /* ResetPwdViewController.m */; };
 		CFCDB3D51A69828E002DDD68 /* HYZTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCDB3D41A69828E002DDD68 /* HYZTextField.m */; };
 /* End PBXBuildFile section */
 
@@ -285,6 +286,8 @@
 		3EED20F21A6F82CA00EC264F /* imageSelectedSmallOn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageSelectedSmallOn@2x.png"; sourceTree = "<group>"; };
 		3EED20F51A6F85A700EC264F /* UserProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProtocolViewController.h; sourceTree = "<group>"; };
 		3EED20F61A6F85A700EC264F /* UserProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProtocolViewController.m; sourceTree = "<group>"; };
+		3EED20F81A6F928A00EC264F /* ResetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPwdViewController.h; sourceTree = "<group>"; };
+		3EED20F91A6F928A00EC264F /* ResetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPwdViewController.m; sourceTree = "<group>"; };
 		CFCDB3D31A69828E002DDD68 /* HYZTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYZTextField.h; sourceTree = "<group>"; };
 		CFCDB3D41A69828E002DDD68 /* HYZTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYZTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -624,6 +627,8 @@
 				3EED20F61A6F85A700EC264F /* UserProtocolViewController.m */,
 				3E8A184E1A6E3B4600866D29 /* FindViewController.h */,
 				3E8A184F1A6E3B4600866D29 /* FindViewController.m */,
+				3EED20F81A6F928A00EC264F /* ResetPwdViewController.h */,
+				3EED20F91A6F928A00EC264F /* ResetPwdViewController.m */,
 				3EED20E21A6F753500EC264F /* MyOrderViewController.h */,
 				3EED20E31A6F753500EC264F /* MyOrderViewController.m */,
 				3EED20E51A6F756D00EC264F /* ScheduleViewController.h */,
@@ -841,6 +846,7 @@
 				3EB9396B1A696DCA00535310 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				3EB939651A696DCA00535310 /* AFSecurityPolicy.m in Sources */,
 				3EB939701A696DCA00535310 /* UIRefreshControl+AFNetworking.m in Sources */,
+				3EED20FA1A6F928A00EC264F /* ResetPwdViewController.m in Sources */,
 				3E8A18501A6E3B4600866D29 /* FindViewController.m in Sources */,
 				3EB939711A696DCA00535310 /* UIWebView+AFNetworking.m in Sources */,
 				3EB939791A696DCA00535310 /* SDWebImageDownloaderOperation.m in Sources */,
