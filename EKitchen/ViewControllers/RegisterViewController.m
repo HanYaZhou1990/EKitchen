@@ -8,13 +8,18 @@
 
 #import "RegisterViewController.h"
 #import "HYZTextField.h"
+#import "UserProtocolViewController.h"
 
-@interface RegisterViewController ()
+@interface RegisterViewController ()<UITextFieldDelegate>
 {
     HYZTextField *phoneTextField;
+    HYZTextField *userPswField;
     HYZTextField *captchaTextField;
     
     UIButton *captchaBtn;
+    UIButton *agreeBtn;
+    BOOL isAgree;
+    
    
 }
 
@@ -29,11 +34,13 @@
 {
     [super viewDidLoad];
     
-    self.title = @"注册";
+    self.title = @"手机注册";
     
     [self leftBarItem];
     
     [self setUseView];
+    
+    isAgree = NO;
     
 }
 
@@ -64,12 +71,21 @@
     phoneTextField.font = [UIFont systemFontOfSize:16];
     phoneTextField.placeholder = @"请输入手机号码";
     phoneTextField.keyboardType = UIKeyboardTypeNumberPad;
-    phoneTextField.autocapitalizationType = UITextAutocorrectionTypeNo;
+    phoneTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     phoneTextField.autocorrectionType = UITextAutocorrectionTypeNo;
-    phoneTextField.returnKeyType = UIReturnKeyDone;
     [self.view addSubview:phoneTextField];
     
-    captchaTextField = [[HYZTextField alloc]initWithFrame:CGRectMake(phoneTextField.frame.origin.x, phoneTextField.frame.size.height+phoneTextField.frame.origin.y+20, SCREEN_WIDTH-60-115, phoneTextField.frame.size.height)];
+    userPswField = [[HYZTextField alloc]initWithFrame:CGRectMake(phoneTextField.frame.origin.x, phoneTextField.frame.size.height+phoneTextField.frame.origin.y+20, phoneTextField.frame.size.width, phoneTextField.frame.size.height)];
+    userPswField.placeholder = @"请输入密码";
+    userPswField.font = [UIFont systemFontOfSize:16];
+    userPswField.textColor = [UIColor blackColor];
+    userPswField.borderStyle = UITextBorderStyleNone;
+    userPswField.returnKeyType = UIReturnKeyDone;
+    userPswField.delegate = self;
+    userPswField.secureTextEntry = YES;//密码样式
+    [self.view addSubview:userPswField];
+    
+    captchaTextField = [[HYZTextField alloc]initWithFrame:CGRectMake(userPswField.frame.origin.x, userPswField.frame.size.height+userPswField.frame.origin.y+20, SCREEN_WIDTH-60-120, userPswField.frame.size.height)];
     captchaTextField.backgroundColor = [UIColor clearColor];
     captchaTextField.textColor = UIColorFromRGB(0x9D9D9D);
     captchaTextField.font = [UIFont systemFontOfSize:16];
@@ -81,7 +97,7 @@
     [self.view addSubview:captchaTextField];
     
     captchaBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    captchaBtn.frame =CGRectMake(SCREEN_WIDTH-20-115, captchaTextField.frame.origin.y, 115, 30);
+    captchaBtn.frame =CGRectMake(SCREEN_WIDTH-20-130, captchaTextField.frame.origin.y-10, 130, 40);
     [captchaBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
     [captchaBtn setTitle:@"获取验证码" forState:UIControlStateHighlighted];
     [captchaBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
@@ -93,7 +109,7 @@
     [self.view addSubview:captchaBtn];
     
      UIButton *registerButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    registerButton.frame = CGRectMake(phoneTextField.frame.origin.x, captchaTextField.frame.size.height+captchaTextField.frame.origin.y+20, phoneTextField.frame.size.width, 50);
+    registerButton.frame = CGRectMake(phoneTextField.frame.origin.x, captchaTextField.frame.size.height+captchaTextField.frame.origin.y+30, phoneTextField.frame.size.width, 50);
     [registerButton setBackgroundColor:RGBA(210, 6, 18, 1)];
     [registerButton setTitle:@"注  册" forState:UIControlStateNormal];
     [registerButton setTitle:@"注  册" forState:UIControlStateHighlighted];
@@ -104,6 +120,31 @@
     [registerButton addTarget:self action:@selector(registerBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:registerButton];
     
+    agreeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    agreeBtn.frame = CGRectMake(phoneTextField.frame.origin.x, registerButton.frame.size.height+registerButton.frame.origin.y+10, 20, 20);
+    [agreeBtn setImage:[UIImage imageNamed:@"imageSelectedSmallOff.png"]forState:UIControlStateNormal];
+    [agreeBtn addTarget:self action:@selector(agreeBtnBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:agreeBtn];
+    
+    UILabel *agreeLabel = [[UILabel alloc]init];
+    agreeLabel.frame = CGRectMake(agreeBtn.frame.size.width+agreeBtn.frame.origin.x+5, agreeBtn.frame.origin.y, 180, 20);
+    agreeLabel.backgroundColor = [UIColor clearColor];
+    NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:@"我同意e厨一味的用户协议"];
+    [str addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:NSMakeRange(0,3)];
+    [str addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(3,9)];
+    [str addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, 3)];
+    [str addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(3, 9)];
+    agreeLabel.attributedText = str;
+    [self.view addSubview:agreeLabel];
+    
+    
+    UIButton *useAgreeBtn =[UIButton buttonWithType:UIButtonTypeCustom];
+    useAgreeBtn.backgroundColor = [UIColor clearColor];
+    useAgreeBtn.frame = CGRectMake(agreeLabel.frame.origin.x+40,agreeLabel.frame.origin.y, agreeLabel.frame.size.width-40, 20);
+    [useAgreeBtn addTarget:self action:@selector(useAgreeBtnBtnBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:useAgreeBtn];
+    
+   
 }
 
 -(void)onTimer
@@ -128,6 +169,26 @@
 
 #pragma mark -
 #pragma mark 按钮点击事件
+//同意或不同意用户协议
+-(void)agreeBtnBtnClick
+{
+    isAgree = !isAgree;
+    if (isAgree)
+    {
+        [agreeBtn setImage:[UIImage imageNamed:@"imageSelectedSmallOn.png"]forState:UIControlStateNormal];
+    }
+    else
+    {
+        [agreeBtn setImage:[UIImage imageNamed:@"imageSelectedSmallOff.png"]forState:UIControlStateNormal];
+    }
+}
+
+//用户协议
+-(void)useAgreeBtnBtnBtnClick
+{
+    UserProtocolViewController *vc = [[UserProtocolViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 //获取验证码
 -(void)captchaBtnClick
@@ -138,8 +199,7 @@
     NSString *phoneStr = [phoneTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if (phoneStr==nil||[phoneStr isEqualToString:@""])
     {
-        //显示错误提示 2秒后消失
-        [MBProgressHUD showHUDAddedTo:self.view withText:@"手机号码不能为空" animated:YES];
+        [PublicConfig waringInfo:@"手机号码不能为空"];
         [phoneTextField becomeFirstResponder];
         return;
     }
@@ -149,13 +209,13 @@
         BOOL isUsed = [self validateMobile:phoneStr];
         if (isUsed==NO)
         {
-            [MBProgressHUD showHUDAddedTo:self.view withText:@"手机号码格式不正确" animated:YES];
+            [PublicConfig waringInfo:@"手机号码格式不正确"];
             [phoneTextField becomeFirstResponder];
             captchaTextField.text = nil;
             return;
         }
     }
-    
+
     //获取校验码
     [self getValidCodeData:phoneStr];
     
@@ -174,14 +234,15 @@
     //发送注册请求 请求成功返回
     [captchaTextField resignFirstResponder];
     [phoneTextField resignFirstResponder];
+    [userPswField resignFirstResponder];
     
     NSString *phoneStr = [phoneTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *pwdStr = [userPswField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *captchaStr = [captchaTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     if (phoneStr==nil||[phoneStr isEqualToString:@""])
     {
-        //显示错误提示 1秒后消失
-        [MBProgressHUD showHUDAddedTo:self.view withText:@"手机号码不能为空" animated:YES];
+        [PublicConfig waringInfo:@"手机号码不能为空"];
         [phoneTextField becomeFirstResponder];
         return;
     }
@@ -191,17 +252,30 @@
         BOOL isUsed = [self validateMobile:phoneStr];
         if (isUsed==NO)
         {
-            [MBProgressHUD showHUDAddedTo:self.view withText:@"手机号码格式不正确" animated:YES];
+            [PublicConfig waringInfo:@"手机号码格式不正确"];
             [phoneTextField becomeFirstResponder];
             captchaTextField.text = nil;
             return;
         }
     }
+    
+    if (pwdStr==nil||[pwdStr isEqualToString:@""])
+    {
+        [PublicConfig waringInfo:@"密码不能为空"];
+        [userPswField becomeFirstResponder];
+        return;
+    }
+    
     if (captchaStr==nil||[captchaStr isEqualToString:@""])
     {
-        //显示错误提示 1秒后消失
-        [MBProgressHUD showHUDAddedTo:self.view withText:@"验证码不能为空" animated:YES];
+        [PublicConfig waringInfo:@"验证码不能为空"];
         [captchaTextField becomeFirstResponder];
+        return;
+    }
+    
+    if (!isAgree)
+    {
+        [PublicConfig waringInfo:@"请您选择同意用户协议"];
         return;
     }
     //验证后成功后发送请求
@@ -240,7 +314,26 @@
 {
     [captchaTextField resignFirstResponder];
     [phoneTextField resignFirstResponder];
+    [userPswField resignFirstResponder];
 }
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    return YES;
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    return YES;
+}
+
+- (BOOL)textFieldShouldClear:(UITextField *)textField
+{
+    textField.text = @"";
+    return YES;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

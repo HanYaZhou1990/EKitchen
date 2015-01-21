@@ -84,9 +84,9 @@
     userPswField.placeholder = @"密码";
     userPswField.font = [UIFont systemFontOfSize:16];
     userPswField.textColor = [UIColor blackColor];
-    userNameField.borderStyle = UITextBorderStyleNone;
-    userNameField.delegate =self;
-    userNameField.returnKeyType = UIReturnKeyDone;
+    userPswField.borderStyle = UITextBorderStyleNone;
+    userPswField.delegate =self;
+    userPswField.returnKeyType = UIReturnKeyDone;
     userPswField.clearButtonMode = UITextFieldViewModeWhileEditing;
     userPswField.secureTextEntry = YES;//密码样式
     [self.view addSubview:userPswField];
