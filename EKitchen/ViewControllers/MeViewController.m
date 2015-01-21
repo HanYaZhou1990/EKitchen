@@ -9,6 +9,7 @@
 #import "MeViewController.h"
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
+#import "CWStarRateView.h"
 
 @interface MeViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -37,8 +38,6 @@
     [super viewDidLoad];
     
      self.title = @"我的";
-    
-    
 
     [self setTheTableView];
     
@@ -243,6 +242,29 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         cell.backgroundColor = [UIColor whiteColor];
+        NSString *useStr = cell.textLabel.text;
+        if ([useStr isEqualToString:@"版本检测"])
+        {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+            NSString *verStr =  [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"当前版本:%@",verStr];
+        }
+        else if ([useStr isEqualToString:@"等级"])
+        {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            CWStarRateView *starRateView = [[CWStarRateView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH-150, 0, 100, 44) numberOfStars:5];
+            starRateView.scorePercent = 0.8;
+            starRateView.allowIncompleteStar = NO;
+            starRateView.hasAnimation = NO;
+            starRateView.isTap = NO;
+            [cell.contentView addSubview:starRateView];
+            
+            NSString *startStr = [NSString stringWithFormat:@"%.0f分",starRateView.scorePercent*10];
+            cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
+            cell.detailTextLabel.text = startStr;
+           
+        }
     }
     if (indexPath.section==2)
     {
@@ -251,6 +273,14 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         cell.backgroundColor = [UIColor whiteColor];
+        NSString *useStr = cell.textLabel.text;
+        if ([useStr isEqualToString:@"版本检测"])
+        {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+           NSString *verStr =  [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+            cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"当前版本:%@",verStr];
+        }
     }
     cell.backgroundView = nil;
     
