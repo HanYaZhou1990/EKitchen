@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     
-    self.title = @"首页";
+    self.title = @"厨师之星";
     
 }
 
