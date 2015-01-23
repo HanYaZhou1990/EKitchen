@@ -15,10 +15,12 @@
 #import "MyAddressViewController.h"
 #import "FeedbackViewController.h"
 #import "AboutViewController.h"
+#import "UserInfoViewController.h"
 
 @interface MeViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView *myTableView;
+    UIButton *rightBtn;
     NSArray *sectionOneLArray;
     NSArray *sectionTwoLArray;
     NSArray *sectionImgOneLArray;
@@ -44,12 +46,26 @@
     
      self.title = @"我的";
 
+    [self setRightBtnItem];
+    
     [self setTheTableView];
     
     [self setViewData];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setViewData) name:refreshMeVCNotification object:nil];
     
+}
+
+-(void)setRightBtnItem
+{
+    rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn.frame = CGRectMake(0, 0, 29, 29);
+    [rightBtn setImage:[UIImage imageNamed:@"selectItem.png"] forState:UIControlStateNormal];
+    [rightBtn setImage:[UIImage imageNamed:@"selectItem.png"] forState:UIControlStateHighlighted];
+    [rightBtn addTarget:self action:@selector(rightButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rigthBar = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem = rigthBar;
+    rightBtn.hidden = YES;
 }
 
 //设置tableview属性
@@ -68,6 +84,7 @@
 {
     if ([PublicConfig isLogin])
     {
+        rightBtn.hidden = NO;
         //已登录
         NSString *userTypeStr = [PublicConfig valueForKey:userTypeEKitchen];
         if ([userTypeStr isEqualToString:@"0"])
@@ -87,6 +104,7 @@
     }
     else
     {
+        rightBtn.hidden = YES;
         //未登录
         sectionOneLArray = @[@"意见反馈",@"版本检测",@"关于"];
         sectionImgOneLArray = @[@"feedbackMeItem.png",@"updateMeItem.png",@"aboutMeItem.png"];
@@ -97,6 +115,13 @@
 
 #pragma mark -
 #pragma mark - 按钮点击事件
+
+-(void)rightButtonClick
+{
+    UserInfoViewController *vc = [[UserInfoViewController alloc]init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 -(void)logoutButtonClicked:(id)sender
 {

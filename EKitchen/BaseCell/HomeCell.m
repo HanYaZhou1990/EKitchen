@@ -177,9 +177,9 @@
     NSRange rangeBookCode = [cookStr rangeOfString:stringBookCode];
     if (rangeBookCode.location != NSNotFound)
     {
-        DLog(@"位置 location = %lu, length = %lu",(unsigned long)rangeBookCode.location,(unsigned long)rangeBookCode.length);
+//        DLog(@"位置 location = %lu, length = %lu",(unsigned long)rangeBookCode.location,(unsigned long)rangeBookCode.length);
         NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:cookStr];
-        [str addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0,rangeBookCode.location)];
+        [str addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0xca1407) range:NSMakeRange(0,rangeBookCode.location)];
         [str addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:NSMakeRange(rangeBookCode.location,allLength-rangeBookCode.location)];
         [str addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0,rangeBookCode.location)];
         [str addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(rangeBookCode.location, allLength-rangeBookCode.location)];

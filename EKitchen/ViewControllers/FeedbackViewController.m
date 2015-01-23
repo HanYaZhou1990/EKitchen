@@ -7,9 +7,13 @@
 //
 
 #import "FeedbackViewController.h"
+#import "HYZTextField.h"
 
-@interface FeedbackViewController ()
-
+@interface FeedbackViewController ()<UITextFieldDelegate>
+{
+    HYZTextField          *feedField;
+    HYZTextField          *phoneField;
+}
 @end
 
 @implementation FeedbackViewController
@@ -21,6 +25,12 @@
     self.title = @"意见反馈";
     
     [self leftBarItem];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithTitle:@"提交" style:UIBarButtonItemStylePlain target:self action:@selector(rightButtonClick)];
+    self.navigationItem.rightBarButtonItem = rightItem;
+    
+    [self setUseView];
+    
 }
 
 - (void)leftBarItem
@@ -37,6 +47,101 @@
 -(void)backAction
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)rightButtonClick
+{
+    [feedField resignFirstResponder];
+    [phoneField resignFirstResponder];
+    
+    NSString *feedStr = [feedField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if (feedStr==nil||[feedStr isEqualToString:@""])
+    {
+        [PublicConfig waringInfo:@"反馈内容不能为空"];
+        [feedField becomeFirstResponder];
+        return;
+    }
+    
+    NSString *phoneStr = [phoneField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if (phoneStr==nil||[phoneStr isEqualToString:@""])
+    {
+        [PublicConfig waringInfo:@"联系方式不能为空"];
+        [phoneField becomeFirstResponder];
+        return;
+    }
+    
+    [self sendFeedBackData];
+}
+
+
+#pragma mark -
+#pragma mark 初始化界面
+
+//初始化登陆界面
+-(void)setUseView
+{
+    feedField = [[HYZTextField alloc]initWithFrame:CGRectMake(20, 20, SCREEN_WIDTH-40, 30)];
+    feedField.placeholder = @"您的意见...";
+    feedField.font = [UIFont systemFontOfSize:16];
+    feedField.textColor = [UIColor blackColor];
+    feedField.borderStyle = UITextBorderStyleNone;
+    feedField.delegate =self;
+    feedField.returnKeyType = UIReturnKeyNext;
+    [self.view addSubview:feedField];
+    
+    
+    phoneField = [[HYZTextField alloc]initWithFrame:CGRectMake(feedField.frame.origin.x, feedField.frame.size.height+feedField.frame.origin.y+20, feedField.frame.size.width, feedField.frame.size.height)];
+    phoneField.placeholder = @"您的姓名,手机号,QQ等";
+    phoneField.font = [UIFont systemFontOfSize:16];
+    phoneField.textColor = [UIColor blackColor];
+    phoneField.borderStyle = UITextBorderStyleNone;
+    phoneField.delegate =self;
+    phoneField.returnKeyType = UIReturnKeyDone;
+    [self.view addSubview:phoneField];
+}
+
+#pragma mark -
+#pragma mark 协议实现
+
+//提交意见反馈协议
+-(void)sendFeedBackData
+{
+    //发送意见反馈协议
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
+#pragma mark -
+#pragma mark 屏幕点击事件
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [feedField resignFirstResponder];
+    [phoneField resignFirstResponder];
+}
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    return YES;
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField ==feedField)
+    {
+        [phoneField becomeFirstResponder];
+    }
+    if (textField.returnKeyType == UIReturnKeyDone)
+    {
+        [self rightButtonClick];
+    }
+    return YES;
+}
+
+- (BOOL)textFieldShouldClear:(UITextField *)textField
+{
+    textField.text = @"";
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {

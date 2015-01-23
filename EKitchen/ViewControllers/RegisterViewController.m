@@ -129,7 +129,7 @@
     agreeLabel.backgroundColor = [UIColor clearColor];
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:@"我同意e厨一味的用户协议"];
     [str addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:NSMakeRange(0,3)];
-    [str addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(3,9)];
+    [str addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0xca1407) range:NSMakeRange(3,9)];
     [str addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, 3)];
     [str addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(3, 9)];
     agreeLabel.attributedText = str;
