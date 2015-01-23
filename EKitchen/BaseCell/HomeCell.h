@@ -10,4 +10,6 @@
 
 @interface HomeCell : UITableViewCell
 
+- (void)setHeadImageStr:(NSString *)headImgStr  andUseName:(NSString *)useNameStr  andScore:(float)score andImgArray:(NSString *)imageArrayStr andInfo:(NSString *)infoStr andCook:(NSString *)cookStr andUseSign:(NSString *)useSign;
+
 @end
