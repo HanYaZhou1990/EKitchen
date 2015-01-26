@@ -12,6 +12,7 @@
 
 -(void)editBtnClicked:(id)sender;
 -(void)deleteBtnClicked:(id)sender;
+-(void)selectBtnClicked:(id)sender;
 
 @end
 

@@ -45,5 +45,8 @@
 //计算左边返回按钮的宽度
 +(CGFloat)leftBtnWidth:(NSString *)contentString maxOfWidth:(CGFloat)maxWidth;
 
+//去空格
++(NSString *)getUseStr:(NSString *)test;
+
 @end
 

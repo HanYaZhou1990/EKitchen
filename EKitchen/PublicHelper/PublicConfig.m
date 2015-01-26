@@ -184,4 +184,15 @@ bool dataDebug = true;
     return result;
 }
 
+//去空格
++(NSString *)getUseStr:(NSString *)test
+{
+    NSString *textStr=@"";
+    if (test.length>0)
+    {
+        textStr = [test stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    }
+    return textStr;
+}
+
 @end

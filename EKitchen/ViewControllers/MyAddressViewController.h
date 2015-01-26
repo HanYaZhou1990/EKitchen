@@ -10,4 +10,6 @@
 
 @interface MyAddressViewController : BaseViewController
 
+@property (nonatomic,strong) NSString *typeStr; //1选择列表 其他查看列表 
+
 @end

@@ -11,6 +11,7 @@
 		3E6355321A6CF541006A254B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6355311A6CF541006A254B /* RegisterViewController.m */; };
 		3E6639661A75EA0100D0E49F /* AddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6639651A75EA0100D0E49F /* AddressCell.m */; };
 		3E6639691A75EA6C00D0E49F /* AddressInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6639681A75EA6C00D0E49F /* AddressInfoViewController.m */; };
+		3E66396D1A76195200D0E49F /* AddressInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E66396C1A76195200D0E49F /* AddressInfo.m */; };
 		3E8A18501A6E3B4600866D29 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A184F1A6E3B4600866D29 /* FindViewController.m */; };
 		3E8A18531A6E4B6B00866D29 /* captchBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E8A18521A6E4B6B00866D29 /* captchBtn@2x.png */; };
 		3EA5AF1F1A69FD730058714B /* aboutMeItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EA5AF181A69FD730058714B /* aboutMeItem@2x.png */; };
@@ -135,6 +136,8 @@
 		3E6639651A75EA0100D0E49F /* AddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressCell.m; sourceTree = "<group>"; };
 		3E6639671A75EA6C00D0E49F /* AddressInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressInfoViewController.h; sourceTree = "<group>"; };
 		3E6639681A75EA6C00D0E49F /* AddressInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressInfoViewController.m; sourceTree = "<group>"; };
+		3E66396B1A76195200D0E49F /* AddressInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressInfo.h; sourceTree = "<group>"; };
+		3E66396C1A76195200D0E49F /* AddressInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressInfo.m; sourceTree = "<group>"; };
 		3E8A184E1A6E3B4600866D29 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
 		3E8A184F1A6E3B4600866D29 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		3E8A18521A6E4B6B00866D29 /* captchBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "captchBtn@2x.png"; sourceTree = "<group>"; };
@@ -331,6 +334,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E66396A1A76192C00D0E49F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E66396B1A76195200D0E49F /* AddressInfo.h */,
+				3E66396C1A76195200D0E49F /* AddressInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3EB938D21A695D2800535310 = {
 			isa = PBXGroup;
 			children = (
@@ -363,7 +375,7 @@
 				CFCDB3D01A6981FA002DDD68 /* Toolkit */,
 				3EB939071A695DDF00535310 /* PublicHelper */,
 				3EB9390B1A695E2100535310 /* Request */,
-				CFCDB3D11A698226002DDD68 /* Model */,
+				3E66396A1A76192C00D0E49F /* Model */,
 				3EB939BA1A69830500535310 /* BaseCell */,
 				3EB939091A695E0100535310 /* ViewControllers */,
 				3EB9390C1A695E5D00535310 /* Libs */,
@@ -702,13 +714,6 @@
 			path = Toolkit;
 			sourceTree = "<group>";
 		};
-		CFCDB3D11A698226002DDD68 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -849,6 +854,7 @@
 				3EB939911A69716600535310 /* BaseViewController.m in Sources */,
 				3E6639691A75EA6C00D0E49F /* AddressInfoViewController.m in Sources */,
 				3EB939611A696DCA00535310 /* AFHTTPRequestOperation.m in Sources */,
+				3E66396D1A76195200D0E49F /* AddressInfo.m in Sources */,
 				3EB939731A696DCA00535310 /* MKAnnotationView+WebCache.m in Sources */,
 				3E63552F1A6CF534006A254B /* LoginViewController.m in Sources */,
 				3EB939971A69725F00535310 /* CategoryViewController.m in Sources */,

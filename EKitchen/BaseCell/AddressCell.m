@@ -13,10 +13,9 @@
     UILabel         *userNameLabel; //用户名手机号码
     UILabel         *addressLabel;  //地址
     
-    UIImageView     *selectImageView; //是否默认
+    UIButton        *selectBtn; //是否默认
     UIButton        *editBtn;
     UIButton        *deleteBtn;
-    
     
 }
 @end
@@ -59,8 +58,12 @@
         lineLabel.frame = CGRectMake(0, 68, SCREEN_WIDTH-10, 0.5);
         [bgView addSubview:lineLabel];
         
-        selectImageView = [[UIImageView alloc]init];
-        selectImageView.frame = CGRectMake(10, 76, 31, 31);        [bgView addSubview:selectImageView];
+        selectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        selectBtn.frame = CGRectMake(10, 76, 31, 31);
+        [selectBtn setImage:[UIImage imageNamed:@"imageSelectedSmallOff.png"] forState:UIControlStateNormal];
+        [selectBtn setImage:[UIImage imageNamed:@"imageSelectedSmallOff.png"] forState:UIControlStateHighlighted];
+        [selectBtn addTarget:self action:@selector(selectBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [bgView addSubview:selectBtn];
         
         UILabel *setDefaultLabel = [[UILabel alloc]init];
         setDefaultLabel.frame = CGRectMake(45, 71, 100, 43);
@@ -110,15 +113,18 @@
     addressLabel.text = addressStr;
     if (isDefult)
     {
-        selectImageView.image = [UIImage imageNamed:@"imageSelectedSmallOn.png"];
+        [selectBtn setImage:[UIImage imageNamed:@"imageSelectedSmallOn.png"] forState:UIControlStateNormal];
+        [selectBtn setImage:[UIImage imageNamed:@"imageSelectedSmallOn.png"] forState:UIControlStateHighlighted];
     }
     else
     {
-        selectImageView.image = [UIImage imageNamed:@"imageSelectedSmallOff.png"];
+        [selectBtn setImage:[UIImage imageNamed:@"imageSelectedSmallOff.png"] forState:UIControlStateNormal];
+        [selectBtn setImage:[UIImage imageNamed:@"imageSelectedSmallOff.png"] forState:UIControlStateHighlighted];
     }
     
     editBtn.tag = row+100;
     deleteBtn.tag = row+10000;
+    selectBtn.tag = row+20000;
 }
 
 //编辑按钮被点击
@@ -131,6 +137,12 @@
 -(void)deleteBtnClicked:(id)sender
 {
      [_addressDelegate deleteBtnClicked:sender];
+}
+
+//设置默认按钮被点击
+-(void)selectBtnClicked:(id)sender
+{
+    [_addressDelegate selectBtnClicked:sender];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

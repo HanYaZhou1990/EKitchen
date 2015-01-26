@@ -7,10 +7,12 @@
 //
 
 #import "BaseViewController.h"
+#import "AddressInfo.h"
 
 @interface AddressInfoViewController : BaseViewController
 
-@property (nonatomic,strong) NSString *typeStr; //0 新增 1编辑 2订单选择
+@property (nonatomic,strong) NSString *typeStr; //0 新增 1编辑
+@property (nonatomic,strong) AddressInfo *_addressInfo; //0 新增 1编辑
 
 
 @end

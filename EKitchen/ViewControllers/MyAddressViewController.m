@@ -8,11 +8,13 @@
 
 #import "MyAddressViewController.h"
 #import "AddressCell.h"
-@interface MyAddressViewController ()<UITableViewDataSource,UITableViewDelegate,AddressCellDelegate>
+#import "AddressInfoViewController.h"
+#import "AddressInfo.h"
+
+@interface MyAddressViewController ()<UITableViewDataSource,UITableViewDelegate,AddressCellDelegate,UIAlertViewDelegate>
 {
     UITableView *myTableView;
-    
-    NSInteger selectIndex;
+    NSInteger selectIndex; //设置默认选择参数
 }
 
 @end
@@ -23,11 +25,21 @@
 {
     [super viewDidLoad];
     
-    self.title = @"我的地址";
+    if ([self.typeStr isEqualToString:@"1"])
+    {
+         self.title = @"选择收货地址";
+    }
+    else
+    {
+         self.title = @"我的地址";
+    }
     
     selectIndex = 0;
     
     [self leftBarItem];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithTitle:@"添加" style:UIBarButtonItemStylePlain target:self action:@selector(rightButtonClick)];
+    self.navigationItem.rightBarButtonItem = rightItem;
     
     [self setTheTableView];
 }
@@ -48,6 +60,12 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(void)rightButtonClick
+{
+    AddressInfoViewController *vc = [[AddressInfoViewController alloc]init];
+    vc.typeStr = @"0"; //新增
+    [self.navigationController pushViewController:vc animated:YES];
+}
 - (void)setTheTableView
 {
     myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAV_HEIGHT) style:UITableViewStylePlain];
@@ -66,15 +84,40 @@
 {
     UIButton *btn = (UIButton *)sender;
     DLog(@"第%ld个编辑按钮被点击",btn.tag-100);
+    
+    //临时
+    AddressInfo *_addressInfo = [[AddressInfo alloc]init];
+    _addressInfo.userName = @"韩亚周";
+    _addressInfo.phoneNumber = @"15092377782";
+    _addressInfo.area = @"河南省郑州市金水区";
+    _addressInfo.address = @"庙里多菱路与溜达大街交叉口富甲小区15号楼225室";
+    
+    AddressInfoViewController *vc = [[AddressInfoViewController alloc]init];
+    vc.typeStr = @"1"; //编辑
+    vc._addressInfo = _addressInfo;
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 //删除按钮被点击
 -(void)deleteBtnClicked:(id)sender
 {
     UIButton *btn = (UIButton *)sender;
-    DLog(@"第%ld个删除按钮被点击",btn.tag-10000);
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"确定要删除收货地址么?" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    alertView.tag = btn.tag;
+    [alertView show];
+    
 }
 
+//设置默认按钮被点击
+-(void)selectBtnClicked:(id)sender
+{
+    UIButton *btn = (UIButton *)sender;
+    DLog(@"第%ld个设置默认按钮被点击",btn.tag-20000);
+    
+    selectIndex = btn.tag-20000;
+    [myTableView reloadData];
+}
 
 #pragma mark -
 #pragma mark - UITableViewDataSource
@@ -119,8 +162,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    selectIndex = indexPath.row;
-    [myTableView reloadData];
+    
+    //选择收货地址 点击后退并往外传值
+  
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -128,7 +172,22 @@
     return 124;
 }
 
+#pragma mark -
+#pragma mark - UIAlertViewDelegate
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+      DLog(@"第%ld个确定删除按钮被点击",alertView.tag-10000);
+    if (buttonIndex==0)
+    {
+        DLog(@"取消");
+    }
+    else
+    {
+        DLog(@"删除");
+        
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
