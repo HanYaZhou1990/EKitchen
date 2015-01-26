@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "MenuView.h"
 
 @interface SearchViewController : BaseViewController
 

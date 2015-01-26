@@ -7,7 +7,9 @@
 //
 
 #import "BaseViewController.h"
+#import "YZSegment.h"
+#import "OneCategoryViewController.h"
 
-@interface CategoryViewController : BaseViewController
+@interface CategoryViewController : BaseViewController<YZSegmentDelegate,UITableViewDataSource,UITableViewDelegate>
 
 @end

@@ -82,7 +82,6 @@
 		3EB9398D1A696F0400535310 /* PublicConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9398C1A696F0400535310 /* PublicConfig.m */; };
 		3EB939911A69716600535310 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB939901A69716600535310 /* BaseViewController.m */; };
 		3EB939941A69723000535310 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB939931A69723000535310 /* HomeViewController.m */; };
-		3EB939971A69725F00535310 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB939961A69725F00535310 /* CategoryViewController.m */; };
 		3EB9399A1A69726C00535310 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB939991A69726C00535310 /* SearchViewController.m */; };
 		3EB9399D1A69728900535310 /* LazyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9399C1A69728900535310 /* LazyViewController.m */; };
 		3EB939A01A69729500535310 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9399F1A69729500535310 /* MeViewController.m */; };
@@ -114,6 +113,10 @@
 		3EED20F41A6F82CA00EC264F /* imageSelectedSmallOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EED20F21A6F82CA00EC264F /* imageSelectedSmallOn@2x.png */; };
 		3EED20F71A6F85A700EC264F /* UserProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EED20F61A6F85A700EC264F /* UserProtocolViewController.m */; };
 		3EED20FA1A6F928A00EC264F /* ResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EED20F91A6F928A00EC264F /* ResetPwdViewController.m */; };
+		CF48829A1A767455004CB66D /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4882971A767455004CB66D /* CategoryViewController.m */; };
+		CF48829B1A767455004CB66D /* YZSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4882991A767455004CB66D /* YZSegment.m */; };
+		CF48829E1A767462004CB66D /* OneCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48829D1A767462004CB66D /* OneCategoryViewController.m */; };
+		CF4882A11A768785004CB66D /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4882A01A768785004CB66D /* MenuView.m */; };
 		CFCDB3D51A69828E002DDD68 /* HYZTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCDB3D41A69828E002DDD68 /* HYZTextField.m */; };
 /* End PBXBuildFile section */
 
@@ -259,8 +262,6 @@
 		3EB939901A69716600535310 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		3EB939921A69723000535310 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		3EB939931A69723000535310 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		3EB939951A69725F00535310 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
-		3EB939961A69725F00535310 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		3EB939981A69726C00535310 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		3EB939991A69726C00535310 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		3EB9399B1A69728900535310 /* LazyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyViewController.h; sourceTree = "<group>"; };
@@ -308,6 +309,14 @@
 		3EED20F61A6F85A700EC264F /* UserProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProtocolViewController.m; sourceTree = "<group>"; };
 		3EED20F81A6F928A00EC264F /* ResetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPwdViewController.h; sourceTree = "<group>"; };
 		3EED20F91A6F928A00EC264F /* ResetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPwdViewController.m; sourceTree = "<group>"; };
+		CF4882961A767455004CB66D /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		CF4882971A767455004CB66D /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		CF4882981A767455004CB66D /* YZSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YZSegment.h; path = ../ViewControllers/YZSegment.h; sourceTree = "<group>"; };
+		CF4882991A767455004CB66D /* YZSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YZSegment.m; path = ../ViewControllers/YZSegment.m; sourceTree = "<group>"; };
+		CF48829C1A767462004CB66D /* OneCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneCategoryViewController.h; sourceTree = "<group>"; };
+		CF48829D1A767462004CB66D /* OneCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneCategoryViewController.m; sourceTree = "<group>"; };
+		CF48829F1A768785004CB66D /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
+		CF4882A01A768785004CB66D /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
 		CFCDB3D31A69828E002DDD68 /* HYZTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYZTextField.h; sourceTree = "<group>"; };
 		CFCDB3D41A69828E002DDD68 /* HYZTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYZTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -436,8 +445,8 @@
 				3EB939901A69716600535310 /* BaseViewController.m */,
 				3EB939921A69723000535310 /* HomeViewController.h */,
 				3EB939931A69723000535310 /* HomeViewController.m */,
-				3EB939951A69725F00535310 /* CategoryViewController.h */,
-				3EB939961A69725F00535310 /* CategoryViewController.m */,
+				CF4882961A767455004CB66D /* CategoryViewController.h */,
+				CF4882971A767455004CB66D /* CategoryViewController.m */,
 				3EB939981A69726C00535310 /* SearchViewController.h */,
 				3EB939991A69726C00535310 /* SearchViewController.m */,
 				3EB9399B1A69728900535310 /* LazyViewController.h */,
@@ -628,6 +637,8 @@
 		3EB939A21A6972AD00535310 /* Category_分类 */ = {
 			isa = PBXGroup;
 			children = (
+				CF48829C1A767462004CB66D /* OneCategoryViewController.h */,
+				CF48829D1A767462004CB66D /* OneCategoryViewController.m */,
 			);
 			name = "Category_分类";
 			sourceTree = "<group>";
@@ -710,6 +721,10 @@
 			children = (
 				CFCDB3D31A69828E002DDD68 /* HYZTextField.h */,
 				CFCDB3D41A69828E002DDD68 /* HYZTextField.m */,
+				CF4882981A767455004CB66D /* YZSegment.h */,
+				CF4882991A767455004CB66D /* YZSegment.m */,
+				CF48829F1A768785004CB66D /* MenuView.h */,
+				CF4882A01A768785004CB66D /* MenuView.m */,
 			);
 			path = Toolkit;
 			sourceTree = "<group>";
@@ -857,16 +872,18 @@
 				3E66396D1A76195200D0E49F /* AddressInfo.m in Sources */,
 				3EB939731A696DCA00535310 /* MKAnnotationView+WebCache.m in Sources */,
 				3E63552F1A6CF534006A254B /* LoginViewController.m in Sources */,
-				3EB939971A69725F00535310 /* CategoryViewController.m in Sources */,
 				3EB9396E1A696DCA00535310 /* UIImageView+AFNetworking.m in Sources */,
 				3EED20F71A6F85A700EC264F /* UserProtocolViewController.m in Sources */,
 				3EB938E41A695D2800535310 /* AppDelegate.m in Sources */,
 				3EB939621A696DCA00535310 /* AFHTTPRequestOperationManager.m in Sources */,
+				CF48829E1A767462004CB66D /* OneCategoryViewController.m in Sources */,
 				3EED20F01A6F75A900EC264F /* AboutViewController.m in Sources */,
 				3EB9396F1A696DCA00535310 /* UIProgressView+AFNetworking.m in Sources */,
 				3EB939A01A69729500535310 /* MeViewController.m in Sources */,
 				3EED20E71A6F756D00EC264F /* ScheduleViewController.m in Sources */,
 				3EE135691A723ADC003E9E03 /* UserInfoViewController.m in Sources */,
+				CF48829B1A767455004CB66D /* YZSegment.m in Sources */,
+				CF4882A11A768785004CB66D /* MenuView.m in Sources */,
 				3EB939841A696DCA00535310 /* SVProgressHUD.m in Sources */,
 				3EB939641A696DCA00535310 /* AFNetworkReachabilityManager.m in Sources */,
 				3EB939761A696DCA00535310 /* SDWebImageCompat.m in Sources */,
@@ -907,6 +924,7 @@
 				3EB9399D1A69728900535310 /* LazyViewController.m in Sources */,
 				3EED20EA1A6F758300EC264F /* MyAddressViewController.m in Sources */,
 				3EB939C21A69833100535310 /* SizeToLeftLabelCell.m in Sources */,
+				CF48829A1A767455004CB66D /* CategoryViewController.m in Sources */,
 				3EB939691A696DCA00535310 /* AFURLSessionManager.m in Sources */,
 				3EB938E11A695D2800535310 /* main.m in Sources */,
 				3EB939821A696DCA00535310 /* UIView+WebCacheOperation.m in Sources */,

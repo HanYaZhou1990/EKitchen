@@ -29,6 +29,11 @@
     [super viewDidLoad];
     
     self.title = @"搜索";
+    
+    MenuView *itemView = [[MenuView alloc] initWithFrame:CGRectMake(0, 0, 320, 44*3)];
+    itemView.backgroundColor = [UIColor redColor];
+    itemView.itemArray = @[@"粤菜",@"鲁菜",@"川菜",@"湘菜",@"闵菜",@"浙菜",@"苏菜",@"徽菜"];
+    [self.view addSubview:itemView];
 }
 
 - (void)didReceiveMemoryWarning {
