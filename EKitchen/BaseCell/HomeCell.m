@@ -50,22 +50,22 @@
         [bgView addSubview:headImageView];
         
         userNameLabel = [[UILabel alloc]init];
-        userNameLabel.frame = CGRectMake(40, 14, (SCREEN_WIDTH-50)/2, 15);
+        userNameLabel.frame = CGRectMake(40, 14, SCREEN_WIDTH-200, 15);
         userNameLabel.textAlignment = NSTextAlignmentLeft;
         userNameLabel.textColor = [UIColor blackColor];
         userNameLabel.font = [UIFont systemFontOfSize:14];
         userNameLabel.backgroundColor = [UIColor clearColor];
         [bgView addSubview:userNameLabel];
         
-        starRateView = [[CWStarRateView alloc] initWithFrame:CGRectMake(userNameLabel.frame.size.width+userNameLabel.frame.origin.x+25, 10, 100, 20) numberOfStars:5];
+        starRateView = [[CWStarRateView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH-150, 10, 100, 20) numberOfStars:5];
         starRateView.allowIncompleteStar = NO;
         starRateView.hasAnimation = NO;
         starRateView.isTap = NO;
         [bgView addSubview:starRateView];
         
         scoreLabel = [[UILabel alloc]init];
-        scoreLabel.frame = CGRectMake(starRateView.frame.size.width+starRateView.frame.origin.x+5, 14, 50, 15);
-        scoreLabel.textAlignment = NSTextAlignmentLeft;
+        scoreLabel.frame = CGRectMake(SCREEN_WIDTH-50, 14, 38, 15);
+        scoreLabel.textAlignment = NSTextAlignmentCenter;
         scoreLabel.textColor = [UIColor blackColor];
         scoreLabel.font = [UIFont systemFontOfSize:14];
         scoreLabel.backgroundColor = [UIColor clearColor];
