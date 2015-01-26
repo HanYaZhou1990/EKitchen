@@ -18,6 +18,9 @@
 {
     [super viewDidLoad];
     
+//    开放平台访问地址：http://121.199.49.131/open/api
+//    开放平台文档地址：http://121.199.49.131/open/open/index
+    
     [PublicConfig removerCoverView:self];
     self.view.backgroundColor = RGBA(244, 244, 244, 1);
     if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)])

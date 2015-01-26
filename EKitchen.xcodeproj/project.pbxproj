@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3E63552F1A6CF534006A254B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E63552E1A6CF534006A254B /* LoginViewController.m */; };
 		3E6355321A6CF541006A254B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6355311A6CF541006A254B /* RegisterViewController.m */; };
+		3E6639661A75EA0100D0E49F /* AddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6639651A75EA0100D0E49F /* AddressCell.m */; };
+		3E6639691A75EA6C00D0E49F /* AddressInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6639681A75EA6C00D0E49F /* AddressInfoViewController.m */; };
 		3E8A18501A6E3B4600866D29 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A184F1A6E3B4600866D29 /* FindViewController.m */; };
 		3E8A18531A6E4B6B00866D29 /* captchBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E8A18521A6E4B6B00866D29 /* captchBtn@2x.png */; };
 		3EA5AF1F1A69FD730058714B /* aboutMeItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EA5AF181A69FD730058714B /* aboutMeItem@2x.png */; };
@@ -129,6 +131,10 @@
 		3E63552E1A6CF534006A254B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3E6355301A6CF541006A254B /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		3E6355311A6CF541006A254B /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		3E6639641A75EA0100D0E49F /* AddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressCell.h; sourceTree = "<group>"; };
+		3E6639651A75EA0100D0E49F /* AddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressCell.m; sourceTree = "<group>"; };
+		3E6639671A75EA6C00D0E49F /* AddressInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressInfoViewController.h; sourceTree = "<group>"; };
+		3E6639681A75EA6C00D0E49F /* AddressInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressInfoViewController.m; sourceTree = "<group>"; };
 		3E8A184E1A6E3B4600866D29 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
 		3E8A184F1A6E3B4600866D29 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		3E8A18521A6E4B6B00866D29 /* captchBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "captchBtn@2x.png"; sourceTree = "<group>"; };
@@ -647,6 +653,8 @@
 				3EED20E61A6F756D00EC264F /* ScheduleViewController.m */,
 				3EED20E81A6F758300EC264F /* MyAddressViewController.h */,
 				3EED20E91A6F758300EC264F /* MyAddressViewController.m */,
+				3E6639671A75EA6C00D0E49F /* AddressInfoViewController.h */,
+				3E6639681A75EA6C00D0E49F /* AddressInfoViewController.m */,
 				3EED20EB1A6F759B00EC264F /* FeedbackViewController.h */,
 				3EED20EC1A6F759B00EC264F /* FeedbackViewController.m */,
 				3EED20EE1A6F75A900EC264F /* AboutViewController.h */,
@@ -670,6 +678,8 @@
 				3EB939C01A69833100535310 /* SizeToRightLabelCell.m */,
 				3EACE8021A70CC2C0075A685 /* HomeCell.h */,
 				3EACE8031A70CC2C0075A685 /* HomeCell.m */,
+				3E6639641A75EA0100D0E49F /* AddressCell.h */,
+				3E6639651A75EA0100D0E49F /* AddressCell.m */,
 			);
 			path = BaseCell;
 			sourceTree = "<group>";
@@ -837,6 +847,7 @@
 				3EE1356C1A723AEC003E9E03 /* EditUserInfoViewController.m in Sources */,
 				3E6355321A6CF541006A254B /* RegisterViewController.m in Sources */,
 				3EB939911A69716600535310 /* BaseViewController.m in Sources */,
+				3E6639691A75EA6C00D0E49F /* AddressInfoViewController.m in Sources */,
 				3EB939611A696DCA00535310 /* AFHTTPRequestOperation.m in Sources */,
 				3EB939731A696DCA00535310 /* MKAnnotationView+WebCache.m in Sources */,
 				3E63552F1A6CF534006A254B /* LoginViewController.m in Sources */,
@@ -879,6 +890,7 @@
 				3EB9398D1A696F0400535310 /* PublicConfig.m in Sources */,
 				3EB9397B1A696DCA00535310 /* SDWebImagePrefetcher.m in Sources */,
 				3EB9397F1A696DCA00535310 /* UIImage+WebP.m in Sources */,
+				3E6639661A75EA0100D0E49F /* AddressCell.m in Sources */,
 				3EACE8041A70CC2C0075A685 /* HomeCell.m in Sources */,
 				3EB9397A1A696DCA00535310 /* SDWebImageManager.m in Sources */,
 				3EB939741A696DCA00535310 /* NSData+ImageContentType.m in Sources */,
