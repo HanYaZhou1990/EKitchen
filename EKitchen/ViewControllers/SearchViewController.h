@@ -8,8 +8,9 @@
 
 #import "BaseViewController.h"
 #import "RecommendCell.h"
+#import "OneCategoryViewController.h"
 
-@interface SearchViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
+@interface SearchViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate,RecommendCellDelegate>
 
 @property (nonatomic, strong) UITableView     *searchTableView;
 

@@ -20,7 +20,8 @@
 //        NSArray *array = @[@"粤菜",@"鲁菜",@"川菜",@"湘菜",@"闵菜",@"浙菜",@"苏菜",@"徽菜"];
 //        itemView = [[MenuView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, ITEM_Height*ceil((double)array.count/WIDTH_COUNT))];
         itemView = [[MenuView alloc] init];
-        itemView.backgroundColor = UIColorFromRGB(0xF0F0F0);
+        itemView.backgroundColor = UIColorFromRGB(0xFFFFFF);
+        itemView.delegate = self;
 //        itemView.itemArray = array;
         [self.contentView addSubview:itemView];
         }
@@ -31,6 +32,13 @@
     itemView.frame = CGRectMake(0, 0, SCREEN_WIDTH, ITEM_Height*ceil((double)_itemArray.count/WIDTH_COUNT));
     itemView.itemArray = _itemArray;
     [super layoutSubviews];
+}
+
+#pragma mark - MenuViewDelegate
+- (void)itemClick:(MenuView *)view itemIndex:(NSInteger)index{
+    if ([_cellDelegate respondsToSelector:@selector(tableViewcell:itemClick:itemIndex:)]) {
+        [_cellDelegate tableViewcell:self itemClick:view itemIndex:index];
+    }
 }
 - (void)awakeFromNib {}
 

@@ -47,15 +47,25 @@
 }
 
 #pragma mark - UITableViewDataSource
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    return __sectionTitleArray[section];
-}
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 36;
 }
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return __sectionTitleArray.count;
 }
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UILabel *sectionLable = [[UILabel alloc] init];
+    sectionLable.font = [UIFont systemFontOfSize:14.0];
+    sectionLable.textColor = UIColorFromRGB(0x666666);
+    sectionLable.backgroundColor = UIColorFromRGB(0xF0F0F0);
+    sectionLable.layer.borderWidth = 0.5;
+    sectionLable.layer.borderColor = UIColorFromRGB(0xCACACA).CGColor;
+    sectionLable.text = [NSString stringWithFormat:@"    %@",__sectionTitleArray[section]];
+    return sectionLable;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {
         return 1;
@@ -77,11 +87,13 @@
         RecommendCell *cell = [tableView dequeueReusableCellWithIdentifier:@"commendCell" forIndexPath:indexPath];
         cell.itemArray = @[@"粤菜",@"鲁菜",@"川菜",@"湘菜",@"闵菜",@"浙菜",@"苏菜",@"徽菜"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.cellDelegate = self;
         return cell;
     }else {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.textLabel.text = __section2Array[indexPath.row];
+        cell.textLabel.textColor = UIColorFromRGB(0x3D3D3D);
+        cell.textLabel.font = [UIFont systemFontOfSize:14.0];
         if (indexPath.row == __section2Array.count-1) {
             cell.textLabel.textColor = [UIColor redColor];
             cell.textLabel.textAlignment = NSTextAlignmentCenter;
@@ -90,6 +102,24 @@
     }
     
 }
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    OneCategoryViewController *categoryViewController = [[OneCategoryViewController alloc] init];
+    categoryViewController.categoryString = __section2Array[indexPath.row];
+    categoryViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:categoryViewController animated:YES];
+}
+
+#pragma mark -RecommendCellDelegate
+- (void)tableViewcell:(RecommendCell *)cell itemClick:(MenuView *)view itemIndex:(NSInteger)index{
+    OneCategoryViewController *categoryViewController = [[OneCategoryViewController alloc] init];
+    categoryViewController.categoryString = @[@"粤菜",@"鲁菜",@"川菜",@"湘菜",@"闵菜",@"浙菜",@"苏菜",@"徽菜"][index];
+    categoryViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:categoryViewController animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -26,11 +26,20 @@
         UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
         button.tag=(i+1);
         [button setTitle:_itemArray[i] forState:UIControlStateNormal];
+        button.titleLabel.font = [UIFont systemFontOfSize:14.0];
+        [button.titleLabel adjustsFontSizeToFitWidth];
         [button setTitleColor:UIColorFromRGB(0x3D3D3D) forState:UIControlStateNormal];
         button.frame=CGRectMake(x, y, ITEM_Width, ITEM_Height);
+        [button addTarget:self action:@selector(itemButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:button];
         }
     [super layoutSubviews];
+}
+
+- (void)itemButtonClicked:(UIButton *)sender{
+    if ([_delegate respondsToSelector:@selector(itemClick:itemIndex:)]) {
+        [_delegate itemClick:self itemIndex:sender.tag-1];
+    }
 }
 
 - (void)drawRect:(CGRect)rect {

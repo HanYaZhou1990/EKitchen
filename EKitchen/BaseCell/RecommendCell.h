@@ -10,9 +10,17 @@
 #import "MenuView.h"
 /*!用于搜索页面的第一个区*/
 
-@interface RecommendCell : UITableViewCell
+@class RecommendCell;
+
+@protocol RecommendCellDelegate <NSObject>
+
+- (void)tableViewcell:(RecommendCell *)cell itemClick:(MenuView *)view itemIndex:(NSInteger)index;
+
+@end
+@interface RecommendCell : UITableViewCell<MenuViewDelegate>
 
 /*!cell上边需要展示的按钮个数*/
-@property (nonatomic, strong) NSArray           *itemArray;
-
+@property (nonatomic, strong) NSArray                      *itemArray;
+/*!代理*/
+@property (nonatomic, assign) id<RecommendCellDelegate>    cellDelegate;
 @end

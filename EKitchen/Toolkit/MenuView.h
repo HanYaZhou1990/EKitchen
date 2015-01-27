@@ -8,13 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
+@class MenuView;
+
 #define ITEM_Width SCREEN_WIDTH/3
 #define ITEM_Height 36
 #define WIDTH_COUNT 3
 
+@protocol MenuViewDelegate <NSObject>
+
+@optional
+- (void)itemClick:(MenuView *)view itemIndex:(NSInteger)index;
+
+@end
+
 @interface MenuView : UIView
 
 /*!需要展示的对象*/
-@property (nonatomic, strong) NSArray        *itemArray;
+@property (nonatomic, strong) NSArray                *itemArray;
+/*!代理 */
+@property (nonatomic, assign) id<MenuViewDelegate>  delegate;
 
 @end
