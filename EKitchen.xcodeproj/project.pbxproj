@@ -12,6 +12,11 @@
 		3E6639661A75EA0100D0E49F /* AddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6639651A75EA0100D0E49F /* AddressCell.m */; };
 		3E6639691A75EA6C00D0E49F /* AddressInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6639681A75EA6C00D0E49F /* AddressInfoViewController.m */; };
 		3E66396D1A76195200D0E49F /* AddressInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E66396C1A76195200D0E49F /* AddressInfo.m */; };
+		3E6639711A76363A00D0E49F /* PublicSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6639701A76363A00D0E49F /* PublicSaveViewController.m */; };
+		3E6639741A76364A00D0E49F /* FormTheSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6639731A76364A00D0E49F /* FormTheSelectorViewController.m */; };
+		3E6639771A7636FF00D0E49F /* MessageSave.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6639761A7636FF00D0E49F /* MessageSave.m */; };
+		3E66397A1A76371800D0E49F /* ValidateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6639791A76371800D0E49F /* ValidateTool.m */; };
+		3E66397D1A7637D300D0E49F /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E66397C1A7637D300D0E49F /* UserInfo.m */; };
 		3E8A18501A6E3B4600866D29 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A184F1A6E3B4600866D29 /* FindViewController.m */; };
 		3E8A18531A6E4B6B00866D29 /* captchBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E8A18521A6E4B6B00866D29 /* captchBtn@2x.png */; };
 		3EA5AF1F1A69FD730058714B /* aboutMeItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EA5AF181A69FD730058714B /* aboutMeItem@2x.png */; };
@@ -141,6 +146,16 @@
 		3E6639681A75EA6C00D0E49F /* AddressInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressInfoViewController.m; sourceTree = "<group>"; };
 		3E66396B1A76195200D0E49F /* AddressInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressInfo.h; sourceTree = "<group>"; };
 		3E66396C1A76195200D0E49F /* AddressInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressInfo.m; sourceTree = "<group>"; };
+		3E66396F1A76363A00D0E49F /* PublicSaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicSaveViewController.h; sourceTree = "<group>"; };
+		3E6639701A76363A00D0E49F /* PublicSaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicSaveViewController.m; sourceTree = "<group>"; };
+		3E6639721A76364A00D0E49F /* FormTheSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormTheSelectorViewController.h; sourceTree = "<group>"; };
+		3E6639731A76364A00D0E49F /* FormTheSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormTheSelectorViewController.m; sourceTree = "<group>"; };
+		3E6639751A7636FF00D0E49F /* MessageSave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageSave.h; sourceTree = "<group>"; };
+		3E6639761A7636FF00D0E49F /* MessageSave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageSave.m; sourceTree = "<group>"; };
+		3E6639781A76371800D0E49F /* ValidateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidateTool.h; sourceTree = "<group>"; };
+		3E6639791A76371800D0E49F /* ValidateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidateTool.m; sourceTree = "<group>"; };
+		3E66397B1A7637D300D0E49F /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		3E66397C1A7637D300D0E49F /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		3E8A184E1A6E3B4600866D29 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
 		3E8A184F1A6E3B4600866D29 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		3E8A18521A6E4B6B00866D29 /* captchBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "captchBtn@2x.png"; sourceTree = "<group>"; };
@@ -348,8 +363,25 @@
 			children = (
 				3E66396B1A76195200D0E49F /* AddressInfo.h */,
 				3E66396C1A76195200D0E49F /* AddressInfo.m */,
+				3E6639751A7636FF00D0E49F /* MessageSave.h */,
+				3E6639761A7636FF00D0E49F /* MessageSave.m */,
+				3E66397B1A7637D300D0E49F /* UserInfo.h */,
+				3E66397C1A7637D300D0E49F /* UserInfo.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3E66396E1A76361E00D0E49F /* PublicVC_公共文件 */ = {
+			isa = PBXGroup;
+			children = (
+				3EB9398F1A69716600535310 /* BaseViewController.h */,
+				3EB939901A69716600535310 /* BaseViewController.m */,
+				3E66396F1A76363A00D0E49F /* PublicSaveViewController.h */,
+				3E6639701A76363A00D0E49F /* PublicSaveViewController.m */,
+				3E6639721A76364A00D0E49F /* FormTheSelectorViewController.h */,
+				3E6639731A76364A00D0E49F /* FormTheSelectorViewController.m */,
+			);
+			name = "PublicVC_公共文件";
 			sourceTree = "<group>";
 		};
 		3EB938D21A695D2800535310 = {
@@ -436,13 +468,12 @@
 		3EB939091A695E0100535310 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3E66396E1A76361E00D0E49F /* PublicVC_公共文件 */,
 				3EB939A11A69729E00535310 /* Home_首页 */,
 				3EB939A21A6972AD00535310 /* Category_分类 */,
 				3EB939A31A6972BE00535310 /* Search_搜索 */,
 				3EB939A41A6972CC00535310 /* Lazy_懒人 */,
 				3EB939A51A6972EA00535310 /* Me_我的 */,
-				3EB9398F1A69716600535310 /* BaseViewController.h */,
-				3EB939901A69716600535310 /* BaseViewController.m */,
 				3EB939921A69723000535310 /* HomeViewController.h */,
 				3EB939931A69723000535310 /* HomeViewController.m */,
 				CF4882961A767455004CB66D /* CategoryViewController.h */,
@@ -721,10 +752,15 @@
 			children = (
 				CFCDB3D31A69828E002DDD68 /* HYZTextField.h */,
 				CFCDB3D41A69828E002DDD68 /* HYZTextField.m */,
+<<<<<<< Updated upstream
 				CF4882981A767455004CB66D /* YZSegment.h */,
 				CF4882991A767455004CB66D /* YZSegment.m */,
 				CF48829F1A768785004CB66D /* MenuView.h */,
 				CF4882A01A768785004CB66D /* MenuView.m */,
+=======
+				3E6639781A76371800D0E49F /* ValidateTool.h */,
+				3E6639791A76371800D0E49F /* ValidateTool.m */,
+>>>>>>> Stashed changes
 			);
 			path = Toolkit;
 			sourceTree = "<group>";
@@ -868,10 +904,16 @@
 				3E6355321A6CF541006A254B /* RegisterViewController.m in Sources */,
 				3EB939911A69716600535310 /* BaseViewController.m in Sources */,
 				3E6639691A75EA6C00D0E49F /* AddressInfoViewController.m in Sources */,
+				3E66397D1A7637D300D0E49F /* UserInfo.m in Sources */,
 				3EB939611A696DCA00535310 /* AFHTTPRequestOperation.m in Sources */,
 				3E66396D1A76195200D0E49F /* AddressInfo.m in Sources */,
 				3EB939731A696DCA00535310 /* MKAnnotationView+WebCache.m in Sources */,
 				3E63552F1A6CF534006A254B /* LoginViewController.m in Sources */,
+<<<<<<< Updated upstream
+=======
+				3E6639771A7636FF00D0E49F /* MessageSave.m in Sources */,
+				3EB939971A69725F00535310 /* CategoryViewController.m in Sources */,
+>>>>>>> Stashed changes
 				3EB9396E1A696DCA00535310 /* UIImageView+AFNetworking.m in Sources */,
 				3EED20F71A6F85A700EC264F /* UserProtocolViewController.m in Sources */,
 				3EB938E41A695D2800535310 /* AppDelegate.m in Sources */,
@@ -887,6 +929,7 @@
 				3EB939841A696DCA00535310 /* SVProgressHUD.m in Sources */,
 				3EB939641A696DCA00535310 /* AFNetworkReachabilityManager.m in Sources */,
 				3EB939761A696DCA00535310 /* SDWebImageCompat.m in Sources */,
+				3E66397A1A76371800D0E49F /* ValidateTool.m in Sources */,
 				3EB939751A696DCA00535310 /* SDImageCache.m in Sources */,
 				3EB9397E1A696DCA00535310 /* UIImage+MultiFormat.m in Sources */,
 				3EB9397D1A696DCA00535310 /* UIImage+GIF.m in Sources */,
@@ -894,6 +937,7 @@
 				3EED20ED1A6F759B00EC264F /* FeedbackViewController.m in Sources */,
 				3EB939681A696DCA00535310 /* AFURLResponseSerialization.m in Sources */,
 				3EED20DD1A6F4CA500EC264F /* CWStarRateView.m in Sources */,
+				3E6639711A76363A00D0E49F /* PublicSaveViewController.m in Sources */,
 				3EB939811A696DCA00535310 /* UIImageView+WebCache.m in Sources */,
 				3EB9397C1A696DCA00535310 /* UIButton+WebCache.m in Sources */,
 				3EB939661A696DCA00535310 /* AFURLConnectionOperation.m in Sources */,
@@ -907,6 +951,7 @@
 				3EB939791A696DCA00535310 /* SDWebImageDownloaderOperation.m in Sources */,
 				3EB939721A696DCA00535310 /* MBProgressHUD.m in Sources */,
 				3EB939631A696DCA00535310 /* AFHTTPSessionManager.m in Sources */,
+				3E6639741A76364A00D0E49F /* FormTheSelectorViewController.m in Sources */,
 				3EB939941A69723000535310 /* HomeViewController.m in Sources */,
 				3EB9399A1A69726C00535310 /* SearchViewController.m in Sources */,
 				3EB939C31A69833100535310 /* SizeToRightLabelCell.m in Sources */,
