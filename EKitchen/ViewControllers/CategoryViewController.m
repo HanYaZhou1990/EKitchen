@@ -48,8 +48,10 @@
 }
 
 #pragma mark - YZSegmentDelegate
-- (void)view:(UIScrollView *)view didSelectIndex:(NSInteger)indexOfButton{
-    switch (indexOfButton) {
+- (void)view:(UIScrollView *)view didSelectIndex:(NSInteger)indexOfButton
+{
+    switch (indexOfButton)
+    {
         case 0:
         {
             __listArray = @[@"粤菜",@"鲁菜",@"川菜",@"湘菜",@"闵菜",@"浙菜",@"苏菜",@"徽菜"];

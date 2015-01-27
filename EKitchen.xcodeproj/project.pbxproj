@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E06D5D91A778AA100F3717A /* OrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E06D5D81A778AA100F3717A /* OrderCell.m */; };
 		3E63552F1A6CF534006A254B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E63552E1A6CF534006A254B /* LoginViewController.m */; };
 		3E6355321A6CF541006A254B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6355311A6CF541006A254B /* RegisterViewController.m */; };
 		3E6639661A75EA0100D0E49F /* AddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6639651A75EA0100D0E49F /* AddressCell.m */; };
@@ -136,6 +137,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E06D5D71A778AA100F3717A /* OrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderCell.h; sourceTree = "<group>"; };
+		3E06D5D81A778AA100F3717A /* OrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderCell.m; sourceTree = "<group>"; };
 		3E63552D1A6CF534006A254B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3E63552E1A6CF534006A254B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3E6355301A6CF541006A254B /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -734,6 +737,8 @@
 				3EACE8031A70CC2C0075A685 /* HomeCell.m */,
 				3E6639641A75EA0100D0E49F /* AddressCell.h */,
 				3E6639651A75EA0100D0E49F /* AddressCell.m */,
+				3E06D5D71A778AA100F3717A /* OrderCell.h */,
+				3E06D5D81A778AA100F3717A /* OrderCell.m */,
 			);
 			path = BaseCell;
 			sourceTree = "<group>";
@@ -907,7 +912,6 @@
 				3EB939731A696DCA00535310 /* MKAnnotationView+WebCache.m in Sources */,
 				3E63552F1A6CF534006A254B /* LoginViewController.m in Sources */,
 				3E6639771A7636FF00D0E49F /* MessageSave.m in Sources */,
-				3EB939971A69725F00535310 /* CategoryViewController.m in Sources */,
 				3EB9396E1A696DCA00535310 /* UIImageView+AFNetworking.m in Sources */,
 				3EED20F71A6F85A700EC264F /* UserProtocolViewController.m in Sources */,
 				3EB938E41A695D2800535310 /* AppDelegate.m in Sources */,
@@ -951,6 +955,7 @@
 				3EB939C31A69833100535310 /* SizeToRightLabelCell.m in Sources */,
 				3EB9398D1A696F0400535310 /* PublicConfig.m in Sources */,
 				3EB9397B1A696DCA00535310 /* SDWebImagePrefetcher.m in Sources */,
+				3E06D5D91A778AA100F3717A /* OrderCell.m in Sources */,
 				3EB9397F1A696DCA00535310 /* UIImage+WebP.m in Sources */,
 				3E6639661A75EA0100D0E49F /* AddressCell.m in Sources */,
 				3EACE8041A70CC2C0075A685 /* HomeCell.m in Sources */,
