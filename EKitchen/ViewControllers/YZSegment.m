@@ -22,6 +22,7 @@
         self.layer.borderColor = [UIColorFromRGB(0xC8C7CC) CGColor];
         self.layer.borderWidth = 0.5;
         self.showsHorizontalScrollIndicator = NO;
+        self.backgroundColor = RGBA(244, 244, 244, 1);
         [self drawUIWithArray:btnInformation rect:frame contentOffSet:offSet];
     }
     return self;

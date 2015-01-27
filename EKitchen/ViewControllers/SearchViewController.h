@@ -7,8 +7,10 @@
 //
 
 #import "BaseViewController.h"
-#import "MenuView.h"
+#import "RecommendCell.h"
 
-@interface SearchViewController : BaseViewController
+@interface SearchViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView     *searchTableView;
 
 @end

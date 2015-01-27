@@ -88,7 +88,6 @@
 		3EB9398D1A696F0400535310 /* PublicConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9398C1A696F0400535310 /* PublicConfig.m */; };
 		3EB939911A69716600535310 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB939901A69716600535310 /* BaseViewController.m */; };
 		3EB939941A69723000535310 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB939931A69723000535310 /* HomeViewController.m */; };
-		3EB9399A1A69726C00535310 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB939991A69726C00535310 /* SearchViewController.m */; };
 		3EB9399D1A69728900535310 /* LazyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9399C1A69728900535310 /* LazyViewController.m */; };
 		3EB939A01A69729500535310 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9399F1A69729500535310 /* MeViewController.m */; };
 		3EB939B01A69759400535310 /* categoryIconGray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB939A61A69759400535310 /* categoryIconGray@2x.png */; };
@@ -122,7 +121,9 @@
 		CF48829A1A767455004CB66D /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4882971A767455004CB66D /* CategoryViewController.m */; };
 		CF48829B1A767455004CB66D /* YZSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4882991A767455004CB66D /* YZSegment.m */; };
 		CF48829E1A767462004CB66D /* OneCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48829D1A767462004CB66D /* OneCategoryViewController.m */; };
-		CF4882A11A768785004CB66D /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4882A01A768785004CB66D /* MenuView.m */; };
+		CF856F7C1A77CA3E00852D89 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF856F7B1A77CA3E00852D89 /* SearchViewController.m */; };
+		CF856F7F1A77CA5400852D89 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF856F7E1A77CA5400852D89 /* MenuView.m */; };
+		CF856F821A77CA6600852D89 /* RecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF856F811A77CA6600852D89 /* RecommendCell.m */; };
 		CFCDB3D51A69828E002DDD68 /* HYZTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCDB3D41A69828E002DDD68 /* HYZTextField.m */; };
 /* End PBXBuildFile section */
 
@@ -280,8 +281,6 @@
 		3EB939901A69716600535310 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		3EB939921A69723000535310 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		3EB939931A69723000535310 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		3EB939981A69726C00535310 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		3EB939991A69726C00535310 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		3EB9399B1A69728900535310 /* LazyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyViewController.h; sourceTree = "<group>"; };
 		3EB9399C1A69728900535310 /* LazyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyViewController.m; sourceTree = "<group>"; };
 		3EB9399E1A69729500535310 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
@@ -333,8 +332,12 @@
 		CF4882991A767455004CB66D /* YZSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YZSegment.m; path = ../ViewControllers/YZSegment.m; sourceTree = "<group>"; };
 		CF48829C1A767462004CB66D /* OneCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneCategoryViewController.h; sourceTree = "<group>"; };
 		CF48829D1A767462004CB66D /* OneCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneCategoryViewController.m; sourceTree = "<group>"; };
-		CF48829F1A768785004CB66D /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
-		CF4882A01A768785004CB66D /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
+		CF856F7A1A77CA3E00852D89 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		CF856F7B1A77CA3E00852D89 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		CF856F7D1A77CA5400852D89 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
+		CF856F7E1A77CA5400852D89 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
+		CF856F801A77CA6600852D89 /* RecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCell.h; sourceTree = "<group>"; };
+		CF856F811A77CA6600852D89 /* RecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCell.m; sourceTree = "<group>"; };
 		CFCDB3D31A69828E002DDD68 /* HYZTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYZTextField.h; sourceTree = "<group>"; };
 		CFCDB3D41A69828E002DDD68 /* HYZTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYZTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -481,8 +484,8 @@
 				3EB939931A69723000535310 /* HomeViewController.m */,
 				CF4882961A767455004CB66D /* CategoryViewController.h */,
 				CF4882971A767455004CB66D /* CategoryViewController.m */,
-				3EB939981A69726C00535310 /* SearchViewController.h */,
-				3EB939991A69726C00535310 /* SearchViewController.m */,
+				CF856F7A1A77CA3E00852D89 /* SearchViewController.h */,
+				CF856F7B1A77CA3E00852D89 /* SearchViewController.m */,
 				3EB9399B1A69728900535310 /* LazyViewController.h */,
 				3EB9399C1A69728900535310 /* LazyViewController.m */,
 				3EB9399E1A69729500535310 /* MeViewController.h */,
@@ -739,6 +742,8 @@
 				3E6639651A75EA0100D0E49F /* AddressCell.m */,
 				3E06D5D71A778AA100F3717A /* OrderCell.h */,
 				3E06D5D81A778AA100F3717A /* OrderCell.m */,
+				CF856F801A77CA6600852D89 /* RecommendCell.h */,
+				CF856F811A77CA6600852D89 /* RecommendCell.m */,
 			);
 			path = BaseCell;
 			sourceTree = "<group>";
@@ -759,8 +764,8 @@
 				CFCDB3D41A69828E002DDD68 /* HYZTextField.m */,
 				CF4882981A767455004CB66D /* YZSegment.h */,
 				CF4882991A767455004CB66D /* YZSegment.m */,
-				CF48829F1A768785004CB66D /* MenuView.h */,
-				CF4882A01A768785004CB66D /* MenuView.m */,
+				CF856F7D1A77CA5400852D89 /* MenuView.h */,
+				CF856F7E1A77CA5400852D89 /* MenuView.m */,
 				3E6639781A76371800D0E49F /* ValidateTool.h */,
 				3E6639791A76371800D0E49F /* ValidateTool.m */,
 			);
@@ -915,6 +920,7 @@
 				3EB9396E1A696DCA00535310 /* UIImageView+AFNetworking.m in Sources */,
 				3EED20F71A6F85A700EC264F /* UserProtocolViewController.m in Sources */,
 				3EB938E41A695D2800535310 /* AppDelegate.m in Sources */,
+				CF856F7F1A77CA5400852D89 /* MenuView.m in Sources */,
 				3EB939621A696DCA00535310 /* AFHTTPRequestOperationManager.m in Sources */,
 				CF48829E1A767462004CB66D /* OneCategoryViewController.m in Sources */,
 				3EED20F01A6F75A900EC264F /* AboutViewController.m in Sources */,
@@ -923,7 +929,6 @@
 				3EED20E71A6F756D00EC264F /* ScheduleViewController.m in Sources */,
 				3EE135691A723ADC003E9E03 /* UserInfoViewController.m in Sources */,
 				CF48829B1A767455004CB66D /* YZSegment.m in Sources */,
-				CF4882A11A768785004CB66D /* MenuView.m in Sources */,
 				3EB939841A696DCA00535310 /* SVProgressHUD.m in Sources */,
 				3EB939641A696DCA00535310 /* AFNetworkReachabilityManager.m in Sources */,
 				3EB939761A696DCA00535310 /* SDWebImageCompat.m in Sources */,
@@ -938,6 +943,7 @@
 				3E6639711A76363A00D0E49F /* PublicSaveViewController.m in Sources */,
 				3EB939811A696DCA00535310 /* UIImageView+WebCache.m in Sources */,
 				3EB9397C1A696DCA00535310 /* UIButton+WebCache.m in Sources */,
+				CF856F7C1A77CA3E00852D89 /* SearchViewController.m in Sources */,
 				3EB939661A696DCA00535310 /* AFURLConnectionOperation.m in Sources */,
 				3EB9396D1A696DCA00535310 /* UIButton+AFNetworking.m in Sources */,
 				3EB9396B1A696DCA00535310 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -951,7 +957,6 @@
 				3EB939631A696DCA00535310 /* AFHTTPSessionManager.m in Sources */,
 				3E6639741A76364A00D0E49F /* FormTheSelectorViewController.m in Sources */,
 				3EB939941A69723000535310 /* HomeViewController.m in Sources */,
-				3EB9399A1A69726C00535310 /* SearchViewController.m in Sources */,
 				3EB939C31A69833100535310 /* SizeToRightLabelCell.m in Sources */,
 				3EB9398D1A696F0400535310 /* PublicConfig.m in Sources */,
 				3EB9397B1A696DCA00535310 /* SDWebImagePrefetcher.m in Sources */,
@@ -969,6 +974,7 @@
 				3EED20EA1A6F758300EC264F /* MyAddressViewController.m in Sources */,
 				3EB939C21A69833100535310 /* SizeToLeftLabelCell.m in Sources */,
 				CF48829A1A767455004CB66D /* CategoryViewController.m in Sources */,
+				CF856F821A77CA6600852D89 /* RecommendCell.m in Sources */,
 				3EB939691A696DCA00535310 /* AFURLSessionManager.m in Sources */,
 				3EB938E11A695D2800535310 /* main.m in Sources */,
 				3EB939821A696DCA00535310 /* UIView+WebCacheOperation.m in Sources */,
