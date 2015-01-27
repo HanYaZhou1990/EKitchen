@@ -752,15 +752,12 @@
 			children = (
 				CFCDB3D31A69828E002DDD68 /* HYZTextField.h */,
 				CFCDB3D41A69828E002DDD68 /* HYZTextField.m */,
-<<<<<<< Updated upstream
 				CF4882981A767455004CB66D /* YZSegment.h */,
 				CF4882991A767455004CB66D /* YZSegment.m */,
 				CF48829F1A768785004CB66D /* MenuView.h */,
 				CF4882A01A768785004CB66D /* MenuView.m */,
-=======
 				3E6639781A76371800D0E49F /* ValidateTool.h */,
 				3E6639791A76371800D0E49F /* ValidateTool.m */,
->>>>>>> Stashed changes
 			);
 			path = Toolkit;
 			sourceTree = "<group>";
@@ -909,11 +906,8 @@
 				3E66396D1A76195200D0E49F /* AddressInfo.m in Sources */,
 				3EB939731A696DCA00535310 /* MKAnnotationView+WebCache.m in Sources */,
 				3E63552F1A6CF534006A254B /* LoginViewController.m in Sources */,
-<<<<<<< Updated upstream
-=======
 				3E6639771A7636FF00D0E49F /* MessageSave.m in Sources */,
 				3EB939971A69725F00535310 /* CategoryViewController.m in Sources */,
->>>>>>> Stashed changes
 				3EB9396E1A696DCA00535310 /* UIImageView+AFNetworking.m in Sources */,
 				3EED20F71A6F85A700EC264F /* UserProtocolViewController.m in Sources */,
 				3EB938E41A695D2800535310 /* AppDelegate.m in Sources */,
