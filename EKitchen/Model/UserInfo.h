@@ -17,8 +17,8 @@
 @property (nonatomic, copy) NSString *picture; //头像
 @property (nonatomic, copy) NSString *nickName; //会员昵称
 @property (nonatomic, copy) NSString *realName; //会员真实姓名
-@property (nonatomic, assign) int sex; //保密（-1）、男（0）、女（1）
+@property (nonatomic, assign) long sex; //保密（-1）、男（0）、女（1）
 @property (nonatomic, copy) NSString *birthday; //会员生日
-@property (nonatomic, assign) int  age; //年龄
+@property (nonatomic, assign) long  age; //年龄
 
 @end

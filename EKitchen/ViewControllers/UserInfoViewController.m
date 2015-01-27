@@ -11,6 +11,7 @@
 #import "FormTheSelectorViewController.h"
 #import "UserInfo.h"
 #import "MessageSave.h"
+#import "SizeToRightLabelCell.h"
 
 @interface UserInfoViewController ()<UITableViewDataSource,UITableViewDelegate,PublicSaveViewControllerDelegate,FormTheSelectorViewControllerDelegate>
 {
@@ -32,6 +33,7 @@
     [super viewDidLoad];
     
     self.title = @"个人资料";
+    sexArray = @[@"保密",@"男",@"女"];
     
     [self leftBarItem];
     
@@ -54,6 +56,7 @@
         sectionTwoLArray = @[@"擅长菜系",@"可预约时间",@"拿手菜",@"介绍"];
     }
     
+    [self setTheTableView];
     
 }
 
@@ -71,6 +74,17 @@
 -(void)backAction
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+//设置tableview属性
+- (void)setTheTableView
+{
+    myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAV_HEIGHT) style:UITableViewStyleGrouped];
+    [myTableView setDelegate:self];
+    [myTableView setDataSource:self];
+    myTableView.backgroundColor = [UIColor clearColor];
+    myTableView.showsVerticalScrollIndicator = NO;//隐藏垂直滚动条
+    [self.view addSubview:myTableView];
 }
 
 #pragma -
@@ -120,7 +134,7 @@
     
     if ([titleStr isEqualToString:@"性别"])
     {
-        _userInfo.sex = [[NSString stringWithFormat:@"%ld",(long)mS.indexPathRow] intValue];
+        _userInfo.sex = mS.indexPathRow-1;
     }
     //修改个人信息
     [self upLoadMyUserInfoData];
@@ -145,160 +159,117 @@
     {
         return sectionTwoLArray.count;;
     }
-    if (section==2)
-    {
-        return sectionThreeLArray.count;;
-    }
     return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section==0&&indexPath.row==0)
+    
+    static NSString *identifier = @"cellIdentifier";
+    
+    SizeToRightLabelCell *cell = (SizeToRightLabelCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell==nil)
     {
-        static NSString *identifier = @"cellIdentifier";
-        
-        UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
+        cell = [[SizeToRightLabelCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.textLabel.text = [sectionOneLArray objectAtIndex:indexPath.row];
-        cell.backgroundColor = [UIColor whiteColor];
-        cell.backgroundView = nil;
-        
-        CGFloat xxUse = SCREEN_WIDTH-87;
-        if (IOS7)
-        {
-            xxUse = SCREEN_WIDTH-72;
-        }
-        //头像
-        headImageView = [[UIImageView alloc] initWithFrame:CGRectMake(xxUse, 11.5, 37, 37)];
-        headImageView.layer.cornerRadius = 4.0;
-        headImageView.layer.masksToBounds = YES;
-        headImageView.userInteractionEnabled = YES;
-        headImageView = [PublicConfig setHeadImageView:headImageView withImageStr:_userInfo.headImageUrl andUserObject:_userInfo];
-        headImageView.contentMode = UIViewContentModeScaleAspectFill;
-        
-        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapMyDetailImg:)];
-        [headImageView addGestureRecognizer:singleTap];
-        [cell.contentView addSubview:headImageView];
-        return cell;
-        
     }
-    else
+    if (indexPath.section == 0)
     {
-        static NSString *identifier = @"cellIdentifier";
-        
-        SizeToRightLabelCell *cell = (SizeToRightLabelCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
-        if (cell==nil)
+        NSString *leftStr = [sectionOneLArray objectAtIndex:indexPath.row];
+        if ([leftStr isEqualToString:@"姓名"])
         {
-            cell = [[SizeToRightLabelCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            //姓名
+            NSString *contentStr = [PublicConfig isSpaceString:_userInfo.userName andReplace:@"韩亚周"];
+            [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
+            cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        }
+        else if ([leftStr isEqualToString:@"性别"])
+        {
+            //性别
+            NSString *sexString = @"";
+            if (_userInfo.sex ==0)
+            {
+                sexString = @"男";
+            }
+            else if (_userInfo.sex ==1)
+            {
+                sexString = @"女";
+            }
+            else
+            {
+                sexString = @"保密";
+            }
+            [cell setTitleLeftLabelStr:leftStr andRightLabelStr:sexString andUseSign:@"1"];
+            cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        }
+        else if ([leftStr isEqualToString:@"联系方式"])
+        {
+            //联系方式
+            NSString *contentStr = [PublicConfig isSpaceString:_userInfo.nickName andReplace:@"15073377787"];
+            [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
+            cell.selectionStyle = UITableViewCellSelectionStyleGray;
             
         }
-        if (indexPath.section == 0)
+        else if ([leftStr isEqualToString:@"地址"])
         {
-            NSString *leftStr = [sectionOneLArray objectAtIndex:indexPath.row];
-            if (indexPath.row==1)
-            {
-                //真实姓名
-                NSString *contentStr = [PublicConfig isSpaceString:_userInfo.nickName andReplace:@"无"];
-                [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
-                cell.selectionStyle = UITableViewCellSelectionStyleGray;
-            }
-            else if (indexPath.row==2)
-            {
-                //O信号
-                NSString *contentStr = [PublicConfig isSpaceString:_userInfo.account andReplace:_userInfo.userId];
-                [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
-                cell.accessoryType = UITableViewCellAccessoryNone;
-            }
-            else if (indexPath.row==3)
-            {
-                //性别
-                NSString *sexString = @"";
-                if ([_userInfo.sex isEqualToString:@"0"])
-                {
-                    sexString = @"男";
-                }
-                if ([_userInfo.sex isEqualToString:@"1"])
-                {
-                    sexString = @"女";
-                }
-                [cell setTitleLeftLabelStr:leftStr andRightLabelStr:sexString andUseSign:@"1"];
-                cell.selectionStyle = UITableViewCellSelectionStyleGray;
-            }
-            else if (indexPath.row==4)
-            {
-                //年龄
-                NSString *contentStr = [PublicConfig isSpaceString:_userInfo.age andReplace:@""];
-                [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
-                cell.selectionStyle = UITableViewCellSelectionStyleGray;
-            }
-            
+            NSString *contentStr = [PublicConfig isSpaceString:_userInfo.nickName andReplace:@""];
+            [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
+            cell.selectionStyle = UITableViewCellSelectionStyleGray;
         }
-        if (indexPath.section == 1)
+        else if ([leftStr isEqualToString:@"年龄"])
         {
-            NSString *leftStr = [sectionTwoLArray objectAtIndex:indexPath.row];
-            if (indexPath.row==0)
-            {
-                //身份
-                NSString *contentStr = @"其他";
-                if ([_userInfo.role isEqualToString:@"4"])
-                {
-                    contentStr = @"学生";
-                }
-                else if ([_userInfo.role isEqualToString:@"5"])
-                {
-                    contentStr = @"老师";
-                }
-                else if ([_userInfo.role isEqualToString:@"6"])
-                {
-                    contentStr = @"家长及其他";
-                }
-                [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
-                cell.accessoryType = UITableViewCellAccessoryNone;
-            }
-            if (indexPath.row==1)
-            {
-                //所在地
-                NSString *contentStr = [PublicConfig isSpaceString:_userInfo.regionName andReplace:@""];
-                [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
-                cell.selectionStyle = UITableViewCellSelectionStyleGray;
-            }
-            if (indexPath.row==2)
-            {
-                //学校
-                NSString *contentStr = [PublicConfig isSpaceString:_userInfo.schoolName andReplace:@"未填写"];
-                [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
-                cell.selectionStyle = UITableViewCellSelectionStyleGray;
-            }
-            if (indexPath.row==3)
-            {
-                //注册时间
-                NSString *contentStr = [PublicConfig isSpaceString:_userInfo.regtime andReplace:@""];
-                [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
-                cell.accessoryType = UITableViewCellAccessoryNone;
-            }
+            NSString *contentStr = [PublicConfig isSpaceString:_userInfo.nickName andReplace:@""];
+            [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
+            cell.selectionStyle = UITableViewCellSelectionStyleGray;
         }
-        if (indexPath.section == 2)
+        else if ([leftStr isEqualToString:@"籍贯"])
         {
-            NSString *leftStr = [sectionThreeLArray objectAtIndex:indexPath.row];
-            if (indexPath.row==0)
-            {
-                NSString *contentStr = [PublicConfig isSpaceString:_userInfo.personSign andReplace:@""];
-                [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
-                cell.selectionStyle = UITableViewCellSelectionStyleGray;
-            }
+            NSString *contentStr = [PublicConfig isSpaceString:_userInfo.nickName andReplace:@""];
+            [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
+            cell.selectionStyle = UITableViewCellSelectionStyleGray;
         }
-        cell.backgroundColor = [UIColor whiteColor];
-        cell.backgroundView = nil;
+        else if ([leftStr isEqualToString:@"职业"])
+        {
+            NSString *contentStr = [PublicConfig isSpaceString:_userInfo.nickName andReplace:@""];
+            [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
+            cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        }
         
-        
-        return cell;
     }
-    return nil;
+    if (indexPath.section == 1)
+    {
+        NSString *leftStr = [sectionTwoLArray objectAtIndex:indexPath.row];
+        if ([leftStr isEqualToString:@"擅长菜系"])
+        {
+            NSString *contentStr = [PublicConfig isSpaceString:_userInfo.nickName andReplace:@""];
+            [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
+            cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        }
+        else if ([leftStr isEqualToString:@"可预约时间"])
+        {
+            NSString *contentStr = [PublicConfig isSpaceString:_userInfo.nickName andReplace:@""];
+            [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
+            cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        }
+        else if ([leftStr isEqualToString:@"拿手菜"])
+        {
+            NSString *contentStr = [PublicConfig isSpaceString:_userInfo.nickName andReplace:@""];
+            [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
+            cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        }
+        else if ([leftStr isEqualToString:@"介绍"])
+        {
+            NSString *contentStr = [PublicConfig isSpaceString:_userInfo.nickName andReplace:@""];
+            [cell setTitleLeftLabelStr:leftStr andRightLabelStr:contentStr andUseSign:@"1"];
+            cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        }
+    }
+    cell.backgroundColor = [UIColor whiteColor];
+    cell.backgroundView = nil;
+    
+    
+    return cell;
 }
 
 #pragma mark -
@@ -311,36 +282,34 @@
     {
         if (indexPath.row==0)
         {
-            //选择头像
-            //判断用户没有选择图片 弹出相机界面
-            [self pickImageFromAlbum];
+            
         }
         if (indexPath.row==1)
         {
-            //名字
-            PublicSaveViewController *psVC = [[PublicSaveViewController alloc]init];
-            //传个人信息
-            psVC.isSaveVerification = @"1";
-            psVC.titleStr = [sectionOneLArray objectAtIndex:indexPath.row];
-            psVC.textFieldStr = _userInfo.nickName;
-            psVC.isUsedStr = @"短文本";
-            psVC.publicSaveVCdelegate = self;
-            psVC.maxLenth = 15;
-            psVC.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:psVC animated:YES];
+            //            //名字
+            //            PublicSaveViewController *psVC = [[PublicSaveViewController alloc]init];
+            //            //传个人信息
+            //            psVC.isSaveVerification = @"1";
+            //            psVC.titleStr = [sectionOneLArray objectAtIndex:indexPath.row];
+            //            psVC.textFieldStr = _userInfo.nickName;
+            //            psVC.isUsedStr = @"短文本";
+            //            psVC.publicSaveVCdelegate = self;
+            //            psVC.maxLenth = 15;
+            //            psVC.hidesBottomBarWhenPushed = YES;
+            //            [self.navigationController pushViewController:psVC animated:YES];
         }
         if (indexPath.row==3)
         {
-            //性别
-            FormTheSelectorViewController *ftsvc = [[FormTheSelectorViewController alloc] init];
-            ftsvc.titleStr = @"性别";
-            ftsvc.formTheSelectorVCdelegate = self;
-            NSString *typeStr=_userInfo.sex;
-            NSIndexPath *index = [NSIndexPath indexPathForRow:[typeStr integerValue] inSection:0];
-            ftsvc.lastIndexPath =index;
-            ftsvc.dataSource = sexArray;
-            ftsvc.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:ftsvc animated:YES];
+            //            //性别
+            //            FormTheSelectorViewController *ftsvc = [[FormTheSelectorViewController alloc] init];
+            //            ftsvc.titleStr = @"性别";
+            //            ftsvc.formTheSelectorVCdelegate = self;
+            //            NSString *typeStr=_userInfo.sex;
+            //            NSIndexPath *index = [NSIndexPath indexPathForRow:[typeStr integerValue] inSection:0];
+            //            ftsvc.lastIndexPath =index;
+            //            ftsvc.dataSource = sexArray;
+            //            ftsvc.hidesBottomBarWhenPushed = YES;
+            //            [self.navigationController pushViewController:ftsvc animated:YES];
         }
         if (indexPath.row==4)
         {
@@ -348,7 +317,7 @@
             PublicSaveViewController *psVC = [[PublicSaveViewController alloc]init];
             psVC.isSaveVerification = @"1";
             psVC.titleStr = [sectionOneLArray objectAtIndex:indexPath.row];
-            psVC.textFieldStr = _userInfo.age;
+            psVC.textFieldStr = [NSString stringWithFormat:@"%ld",_userInfo.age];
             psVC.isUsedStr = @"短文本";
             psVC.publicSaveVCdelegate = self;
             psVC.maxLenth = 2;
@@ -360,41 +329,21 @@
     {
         if (indexPath.row==1)
         {
-            //所在地
-            SelectRegionViewController *vc = [[SelectRegionViewController alloc]init];
-            vc.selectRegionVCdelegate = self;
-            vc.titleStr = @"选择所在地";
-            [self.navigationController pushViewController:vc animated:YES];
+            
             
         }
         if (indexPath.row==2)
         {
             //学校
-            PublicSaveViewController *psVC = [[PublicSaveViewController alloc]init];
-            psVC.isSaveVerification = @"1";
-            psVC.titleStr = [sectionTwoLArray objectAtIndex:indexPath.row];
-            psVC.textFieldStr = _userInfo.schoolName;
-            psVC.isUsedStr = @"短文本";
-            psVC.publicSaveVCdelegate = self;
-            psVC.maxLenth = 30;
-            psVC.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:psVC animated:YES];
-        }
-    }
-    if (indexPath.section==2)
-    {
-        if (indexPath.row==0)
-        {
-            PublicSaveViewController *psVC = [[PublicSaveViewController alloc]init];
-            //传个人信息
-            psVC.isSaveVerification = @"1";
-            psVC.titleStr = [sectionThreeLArray objectAtIndex:indexPath.row];
-            psVC.textFieldStr = _userInfo.personSign;
-            psVC.isUsedStr = @"长文本";
-            psVC.maxLenth = 60;
-            psVC.publicSaveVCdelegate = self;
-            psVC.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:psVC animated:YES];
+            //            PublicSaveViewController *psVC = [[PublicSaveViewController alloc]init];
+            //            psVC.isSaveVerification = @"1";
+            //            psVC.titleStr = [sectionTwoLArray objectAtIndex:indexPath.row];
+            //            psVC.textFieldStr = _userInfo.schoolName;
+            //            psVC.isUsedStr = @"短文本";
+            //            psVC.publicSaveVCdelegate = self;
+            //            psVC.maxLenth = 30;
+            //            psVC.hidesBottomBarWhenPushed = YES;
+            //            [self.navigationController pushViewController:psVC animated:YES];
         }
     }
 }
@@ -426,37 +375,37 @@
     }
     CGFloat heightUse=44;
     
-    if (indexPath.section==0&&indexPath.row==0)
-    {
-        return 60;
-    }
-    if (indexPath.section==1)
-    {
-        if (indexPath.row==1)
-        {
-            //所在地
-            NSString *ruleString = [PublicConfig isSpaceString:_userInfo.regionName andReplace:@"无"];
-            heightUse = [PublicConfig height:ruleString widthOfFatherView:widthUse  textFont:[UIFont systemFontOfSize:14]]+24;
-        }
-        if (indexPath.row==2)
-        {
-            //学校
-            NSString *ruleString = [PublicConfig isSpaceString:_userInfo.schoolName andReplace:@"无"];
-            heightUse = [PublicConfig height:ruleString widthOfFatherView:widthUse  textFont:[UIFont systemFontOfSize:14]]+24;
-        }
-    }
-    if (indexPath.section==2)
-    {
-        if (indexPath.row==0)
-        {
-            NSString *ruleString = [PublicConfig isSpaceString:_userInfo.personSign andReplace:@"未填写"];
-            heightUse = [PublicConfig height:ruleString widthOfFatherView:widthUse  textFont:[UIFont systemFontOfSize:14]]+24;
-        }
-    }
-    if (heightUse<44)
-    {
-        heightUse=44;
-    }
+    //    if (indexPath.section==0)
+    //    {
+    //        return 44;
+    //    }
+    //    if (indexPath.section==1)
+    //    {
+    //        if (indexPath.row==1)
+    //        {
+    //            //所在地
+    ////            NSString *ruleString = [PublicConfig isSpaceString:_userInfo.regionName andReplace:@"无"];
+    ////            heightUse = [PublicConfig height:ruleString widthOfFatherView:widthUse  textFont:[UIFont systemFontOfSize:14]]+24;
+    //        }
+    //        if (indexPath.row==2)
+    //        {
+    //            //学校
+    //            NSString *ruleString = [PublicConfig isSpaceString:_userInfo.schoolName andReplace:@"无"];
+    //            heightUse = [PublicConfig height:ruleString widthOfFatherView:widthUse  textFont:[UIFont systemFontOfSize:14]]+24;
+    //        }
+    //    }
+    //    if (indexPath.section==2)
+    //    {
+    //        if (indexPath.row==0)
+    //        {
+    //            NSString *ruleString = [PublicConfig isSpaceString:_userInfo.personSign andReplace:@"未填写"];
+    //            heightUse = [PublicConfig height:ruleString widthOfFatherView:widthUse  textFont:[UIFont systemFontOfSize:14]]+24;
+    //        }
+    //    }
+    //    if (heightUse<44)
+    //    {
+    //        heightUse=44;
+    //    }
     return heightUse;
 }
 
@@ -469,13 +418,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
