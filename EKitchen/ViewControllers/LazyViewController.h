@@ -7,7 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "BMapKit.h"
 
-@interface LazyViewController : BaseViewController
+@interface LazyViewController : BaseViewController<BMKMapViewDelegate>
+
+@property (nonatomic, strong) BMKMapView *mapView;
 
 @end

@@ -16,6 +16,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+        // 要使用百度地图，请先启动BaiduMapManager
+    _mapManager = [[BMKMapManager alloc]init];
+    BOOL ret = [_mapManager start:@"pshbDYQ3EmjvwmLUeCPOT3vf" generalDelegate:self];
+    
+    if (!ret) {
+        NSLog(@"manager start failed!");
+    }
+    
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES]; //偏移
     [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0xca1407)];//设置导航栏背景颜色
