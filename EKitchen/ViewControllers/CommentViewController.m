@@ -163,7 +163,7 @@
 - (void)starRateView:(CWStarRateView *)starRateView scroePercentDidChange:(CGFloat)newScorePercent
 {
     DLog(@"变值 = %f",newScorePercent);
-    starRateView.scorePercent = 0;
+    starRateView.scorePercent = newScorePercent;
 }
 
 - (void)didReceiveMemoryWarning {

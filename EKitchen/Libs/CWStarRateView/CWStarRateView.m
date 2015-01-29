@@ -63,20 +63,23 @@
     [self addSubview:self.backgroundStarView];
     [self addSubview:self.foregroundStarView];
     
-    if (_isTap)
-    {
-        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userTapRateView:)];
-        tapGesture.numberOfTapsRequired = 1;
-        [self addGestureRecognizer:tapGesture];
-    }
+
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userTapRateView:)];
+    tapGesture.numberOfTapsRequired = 1;
+    [self addGestureRecognizer:tapGesture];
 }
 
-- (void)userTapRateView:(UITapGestureRecognizer *)gesture {
-    CGPoint tapPoint = [gesture locationInView:self];
-    CGFloat offset = tapPoint.x;
-    CGFloat realStarScore = offset / (self.bounds.size.width / self.numberOfStars);
-    CGFloat starScore = self.allowIncompleteStar ? realStarScore : ceilf(realStarScore);
-    self.scorePercent = starScore / self.numberOfStars;
+- (void)userTapRateView:(UITapGestureRecognizer *)gesture
+{
+    if (_isTap)
+    {
+        CGPoint tapPoint = [gesture locationInView:self];
+        CGFloat offset = tapPoint.x;
+        CGFloat realStarScore = offset / (self.bounds.size.width / self.numberOfStars);
+        CGFloat starScore = self.allowIncompleteStar ? realStarScore : ceilf(realStarScore);
+        self.scorePercent = starScore / self.numberOfStars;
+    }
+  
 }
 
 - (UIView *)createStarViewWithImage:(NSString *)imageName {
