@@ -9,6 +9,7 @@
 #import "MyOrderViewController.h"
 #import "YZSegment.h"
 #import "OrderCell.h"
+#import "CommentViewController.h"
 
 @interface MyOrderViewController ()<YZSegmentDelegate,UITableViewDataSource,UITableViewDelegate,OrderCellDelegate>
 {
@@ -114,6 +115,10 @@
 {
     UIButton *btn = (UIButton *)sender;
     DLog(@"第%ld个评论按钮被点击",btn.tag-20000);
+    
+    CommentViewController *vc = [[CommentViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 

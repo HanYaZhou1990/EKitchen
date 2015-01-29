@@ -56,7 +56,6 @@
     _scorePercent = 1;//默认为1
     _hasAnimation = NO;//默认为NO
     _allowIncompleteStar = NO;//默认为NO
-    _isTap = YES; //默认为NO
 
     self.foregroundStarView = [self createStarViewWithImage:FOREGROUND_STAR_IMAGE_NAME];
     self.backgroundStarView = [self createStarViewWithImage:BACKGROUND_STAR_IMAGE_NAME];
