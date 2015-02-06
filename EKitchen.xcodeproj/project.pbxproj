@@ -41,7 +41,6 @@
 		3EACE8041A70CC2C0075A685 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EACE8031A70CC2C0075A685 /* HomeCell.m */; };
 		3EB938E11A695D2800535310 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB938E01A695D2800535310 /* main.m */; };
 		3EB938E41A695D2800535310 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB938E31A695D2800535310 /* AppDelegate.m */; };
-		3EB938EA1A695D2800535310 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EB938E81A695D2800535310 /* Main.storyboard */; };
 		3EB938EC1A695D2800535310 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EB938EB1A695D2800535310 /* Images.xcassets */; };
 		3EB938EF1A695D2800535310 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EB938ED1A695D2800535310 /* LaunchScreen.xib */; };
 		3EB938FB1A695D2800535310 /* EKitchenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB938FA1A695D2800535310 /* EKitchenTests.m */; };
@@ -122,9 +121,11 @@
 		CF48829A1A767455004CB66D /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4882971A767455004CB66D /* CategoryViewController.m */; };
 		CF48829B1A767455004CB66D /* YZSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4882991A767455004CB66D /* YZSegment.m */; };
 		CF48829E1A767462004CB66D /* OneCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF48829D1A767462004CB66D /* OneCategoryViewController.m */; };
+		CF6B6AD21A7FD39E00A6CBA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6B6AD11A7FD39E00A6CBA2 /* Main.storyboard */; };
 		CF856F7C1A77CA3E00852D89 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF856F7B1A77CA3E00852D89 /* SearchViewController.m */; };
 		CF856F7F1A77CA5400852D89 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF856F7E1A77CA5400852D89 /* MenuView.m */; };
 		CF856F821A77CA6600852D89 /* RecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF856F811A77CA6600852D89 /* RecommendCell.m */; };
+		CF8EE41E1A85211100AC3DCF /* libYYDes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8EE41D1A85211100AC3DCF /* libYYDes.a */; };
 		CF9C01E61A793B3A005BF01B /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CF9C01E51A793B3A005BF01B /* mapapi.bundle */; };
 		CF9C01E81A793B45005BF01B /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9C01E71A793B45005BF01B /* libbaidumapapi.a */; };
 		CF9C01EA1A793B8E005BF01B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9C01E91A793B8E005BF01B /* CoreLocation.framework */; };
@@ -197,7 +198,6 @@
 		3EB938E01A695D2800535310 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3EB938E21A695D2800535310 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3EB938E31A695D2800535310 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3EB938E91A695D2800535310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3EB938EB1A695D2800535310 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3EB938EE1A695D2800535310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3EB938F41A695D2800535310 /* EKitchenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EKitchenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -342,12 +342,15 @@
 		CF4882991A767455004CB66D /* YZSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YZSegment.m; path = ../ViewControllers/YZSegment.m; sourceTree = "<group>"; };
 		CF48829C1A767462004CB66D /* OneCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneCategoryViewController.h; sourceTree = "<group>"; };
 		CF48829D1A767462004CB66D /* OneCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneCategoryViewController.m; sourceTree = "<group>"; };
+		CF6B6AD11A7FD39E00A6CBA2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CF856F7A1A77CA3E00852D89 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		CF856F7B1A77CA3E00852D89 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		CF856F7D1A77CA5400852D89 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
 		CF856F7E1A77CA5400852D89 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
 		CF856F801A77CA6600852D89 /* RecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCell.h; sourceTree = "<group>"; };
 		CF856F811A77CA6600852D89 /* RecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCell.m; sourceTree = "<group>"; };
+		CF8EE41D1A85211100AC3DCF /* libYYDes.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYYDes.a; sourceTree = "<group>"; };
+		CF8EE41F1A85211C00AC3DCF /* YYDes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYDes.h; sourceTree = "<group>"; };
 		CF9C01A81A793B2D005BF01B /* BMapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMapKit.h; sourceTree = "<group>"; };
 		CF9C01A91A793B2D005BF01B /* BMKActionPaopaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKActionPaopaoView.h; sourceTree = "<group>"; };
 		CF9C01AA1A793B2D005BF01B /* BMKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKAnnotation.h; sourceTree = "<group>"; };
@@ -435,6 +438,7 @@
 				CF9C01E81A793B45005BF01B /* libbaidumapapi.a in Frameworks */,
 				3EB939861A696DF300535310 /* Foundation.framework in Frameworks */,
 				3EB939111A696D9700535310 /* UIKit.framework in Frameworks */,
+				CF8EE41E1A85211100AC3DCF /* libYYDes.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,10 +517,10 @@
 				3EB9390B1A695E2100535310 /* Request */,
 				3E66396A1A76192C00D0E49F /* Model */,
 				3EB939BA1A69830500535310 /* BaseCell */,
-				3EB939091A695E0100535310 /* ViewControllers */,
 				3EB9390C1A695E5D00535310 /* Libs */,
+				3EB939091A695E0100535310 /* ViewControllers */,
 				3EB9390A1A695E0C00535310 /* Images */,
-				3EB938E81A695D2800535310 /* Main.storyboard */,
+				CF6B6AD11A7FD39E00A6CBA2 /* Main.storyboard */,
 				3EB938EB1A695D2800535310 /* Images.xcassets */,
 				3EB938ED1A695D2800535310 /* LaunchScreen.xib */,
 				3EB938DE1A695D2800535310 /* Supporting Files */,
@@ -634,6 +638,7 @@
 		3EB9390C1A695E5D00535310 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				CF8EE41C1A85210A00AC3DCF /* DES */,
 				CF9C01A61A793B0C005BF01B /* BaiduMap */,
 				3EED20DA1A6F4C8D00EC264F /* CWStarRateView */,
 				3EB939121A696DC900535310 /* AFNetWorking */,
@@ -849,6 +854,15 @@
 			path = CWStarRateView;
 			sourceTree = "<group>";
 		};
+		CF8EE41C1A85210A00AC3DCF /* DES */ = {
+			isa = PBXGroup;
+			children = (
+				CF8EE41F1A85211C00AC3DCF /* YYDes.h */,
+				CF8EE41D1A85211100AC3DCF /* libYYDes.a */,
+			);
+			path = DES;
+			sourceTree = "<group>";
+		};
 		CF9C01A61A793B0C005BF01B /* BaiduMap */ = {
 			isa = PBXGroup;
 			children = (
@@ -1023,7 +1037,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EB939B81A69759400535310 /* searchIconGray@2x.png in Resources */,
-				3EB938EA1A695D2800535310 /* Main.storyboard in Resources */,
 				3EA5AF321A69FE7F0058714B /* locationItem@2x.png in Resources */,
 				CF9C01E61A793B3A005BF01B /* mapapi.bundle in Resources */,
 				3EB939B51A69759400535310 /* lazyIconRed@2x.png in Resources */,
@@ -1040,6 +1053,7 @@
 				3EB939B61A69759400535310 /* meIconGray@2x.png in Resources */,
 				3EED20F41A6F82CA00EC264F /* imageSelectedSmallOn@2x.png in Resources */,
 				3EB938EF1A695D2800535310 /* LaunchScreen.xib in Resources */,
+				CF6B6AD21A7FD39E00A6CBA2 /* Main.storyboard in Resources */,
 				3EA5AF341A69FE7F0058714B /* orderItem@2x.png in Resources */,
 				3EB938EC1A695D2800535310 /* Images.xcassets in Resources */,
 				3EA5AF371A69FE7F0058714B /* shareItem@2x.png in Resources */,
@@ -1176,14 +1190,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3EB938E81A695D2800535310 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3EB938E91A695D2800535310 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3EB938ED1A695D2800535310 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1287,6 +1293,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EKitchen/Libs/BaiduMap",
+					"$(PROJECT_DIR)/EKitchen/Libs/DES",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = EKitchen;
@@ -1309,6 +1316,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EKitchen/Libs/BaiduMap",
+					"$(PROJECT_DIR)/EKitchen/Libs/DES",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = EKitchen;
