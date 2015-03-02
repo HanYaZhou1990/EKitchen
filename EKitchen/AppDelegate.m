@@ -8,14 +8,47 @@
 
 #import "AppDelegate.h"
 #import "RootTabBarViewController.h"
+#import "YYDes.h"
+#import "AFNetworking.h"
+#import <AdSupport/ASIdentifierManager.h>
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+- (void)test{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970]*1000;
+    NSString *timeStampString = [NSString stringWithFormat:@"%.f",timeStamp];
+    
+    /*! 假如mobile 是   13598084041*/
+    NSString *mobileString = @"13598084041";
+    
+    /*因为密码需要经过DES加密，所以需要先取key,key是手机号的前八位*/
+    NSString *key = [mobileString substringToIndex:8];
+    /*!假如密码是  123456*/
+    NSString *passwordString = [YYDes DESEncrypt:[@"123456" dataUsingEncoding:NSUTF8StringEncoding] WithKey:key];
+    
+    NSDictionary *parameters = @{@"appKey":@"00001",@"method":@"member.login",@"v":@"1.0",@"format":@"json",@"locale":@"zh_CN",@"timestamp":timeStampString,@"mobile":mobileString,@"client":@"iPhone"};
+    NSDictionary *dic = @{@"appKey":@"00001",@"method":@"member.login",@"v":@"1.0",@"format":@"json",@"locale":@"zh_CN",@"timestamp":timeStampString,@"mobile":mobileString,@"client":@"iPhone",@"password":passwordString,@"sign":[YYDes generate:parameters],@"identify":[[[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString] stringByReplacingOccurrencesOfString:@"-" withString:@""]};
+        //    http://zzbaoyuan.f3322.org:8089/api
+    [manager POST:@"http://121.199.49.131/open/api" parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"json = %@",responseObject);
+        NSLog(@"message = %@",responseObject[@"message"]);
+        NSLog(@"solution = %@",responseObject[@"solution"]);
+        NSLog(@"%@     +++    %@",responseObject[@"subErrors"][0][@"message"],responseObject[@"subErrors"][0][@"code"]);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"**************** = %@",error);
+    }];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self test];
+    
+    
         // 要使用百度地图，请先启动BaiduMapManager
     _mapManager = [[BMKMapManager alloc]init];
     BOOL ret = [_mapManager start:@"pshbDYQ3EmjvwmLUeCPOT3vf" generalDelegate:self];

@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <CommonCrypto/CommonCrypto.h>
-#import "GTMBase64.h"
 
 @interface YYDes : NSObject
 /******************************************************************************
