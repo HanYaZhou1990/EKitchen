@@ -45,7 +45,7 @@
     UINavigationController *snav = [[UINavigationController alloc]initWithRootViewController:svc];
     [viewControllers addObject:snav];
     
-    //搜索
+    //懒人
     LazyViewController *lvc = [[LazyViewController alloc]init];
     UINavigationController *lnav = [[UINavigationController alloc]initWithRootViewController:lvc];
     [viewControllers addObject:lnav];
