@@ -9,6 +9,9 @@
 #import "RegisterViewController.h"
 #import "HYZTextField.h"
 #import "UserProtocolViewController.h"
+#import "ValidateTool.h"
+#import "AFNetworking.h"
+#import "YYDes.h"
 
 @interface RegisterViewController ()<UITextFieldDelegate>
 {
@@ -204,7 +207,7 @@
     else
     {
         //手机号码2
-        BOOL isUsed = [self validateMobile:phoneStr];
+        BOOL isUsed = [ValidateTool validateMobile:phoneStr];
         if (isUsed==NO)
         {
             [PublicConfig waringInfo:@"手机号码格式不正确"];
@@ -247,7 +250,7 @@
     else
     {
         //手机号码2
-        BOOL isUsed = [self validateMobile:phoneStr];
+        BOOL isUsed = [ValidateTool validateMobile:phoneStr];
         if (isUsed==NO)
         {
             [PublicConfig waringInfo:@"手机号码格式不正确"];
@@ -277,25 +280,59 @@
         return;
     }
     //验证后成功后发送请求
-    [self registerUserData:phoneStr andPassCode:captchaStr];
+    [self registerUserData:phoneStr andPassWord:pwdStr andPassCode:captchaStr];
     
-}
-
-//手机号码验证
-- (BOOL)validateMobile:(NSString *)mobile
-{
-    //手机号以13， 15，18开头，八个 \d 数字字符
-    NSString *phoneRegex = @"^((13[0-9])|(15[^4,\\D])|(18[0,0-9]))\\d{8}$";
-    NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
-    return [phoneTest evaluateWithObject:mobile];
 }
 
 #pragma mark -
 #pragma mark 请求相关
 
 //注册请求
--(void)registerUserData:(NSString *)phoneNumber andPassCode:(NSString *)passCode
+-(void)registerUserData:(NSString *)phoneNumber andPassWord:(NSString *)passWord andPassCode:(NSString *)passCode
 {
+    //用户密码,明文采用DES算法,密钥：取用户名前8字节,不足后补空格
+    NSString *key = [phoneNumber substringToIndex:8];
+    NSString *passwordString = [YYDes DESEncrypt:[passWord dataUsingEncoding:NSUTF8StringEncoding] WithKey:key];
+    
+    NSDictionary *params = @{@"appKey":appKeyEkitchen,@"method":member_register,@"v":versionEkitchen,@"format":formatEkitchen,@"locale":localeEkitchen,@"timestamp":timeStampEkitchen,@"mobile":phoneNumber,@"client":clientEkitchen,@"verificationCode":passCode};
+    
+    //追加参数签名字段
+    NSDictionary *addParams = @{@"password":passwordString,@"sign":[YYDes generate:params]};
+    
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+    [dic addEntriesFromDictionary:params];
+    [dic addEntriesFromDictionary:addParams];
+    
+    [MBProgressHUD showHUDAddedToExt:self.view showMessage:@"注册中..." animated:YES];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager POST:BASE_PLAN_URL parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         DLog(@"json = %@",responseObject);
+         
+         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+         
+//         NSDictionary *responseDic = (NSDictionary *)responseObject;
+//         NSString *resultCode = [responseDic valueForKey:@"code"]; //0成功 1失败
+//         if ([resultCode boolValue]==NO)
+//         {
+//             [PublicConfig waringInfo:@"注册成功"];
+//             //注册成功 返回去登陆
+//             [self.navigationController popViewControllerAnimated:YES];
+//         }
+//         else
+//         {
+//             NSString *msgStr = [responseDic valueForKey:@"msg"];
+//             [SVProgressHUD showErrorWithStatus:[PublicConfig isSpaceString:msgStr andReplace:@"注册失败"]];
+//         }
+    }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+         [SVProgressHUD showErrorWithStatus:@"注册请求失败"];
+    }];
+
+    
     
 }
 
