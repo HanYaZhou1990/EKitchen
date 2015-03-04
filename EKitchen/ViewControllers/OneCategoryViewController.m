@@ -29,7 +29,7 @@
     __categoryTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - NAV_HEIGHT) style:UITableViewStylePlain];
     __categoryTableView.dataSource = self;
     __categoryTableView.delegate = self;
-    [__categoryTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [__categoryTableView registerClass:[CategoryCell class] forCellReuseIdentifier:@"cell"];
     __categoryTableView.tableFooterView = [UIView new];
     [self.view addSubview:__categoryTableView];
     
@@ -70,14 +70,29 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 44;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 108;
+}
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     return __segment;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = __listArray[indexPath.row];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    CategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.hederImage = [UIImage imageNamed:@"meBackground.png"];
+    cell.userNameString = @"韩亚周";
+    if (indexPath.row == 1) {
+        cell.userType = CategoryCellUserTypeTeam;
+        cell.levelType = CategoryCellLevelTypeIntermediate;
+        cell.fractionString = @"9.7分";
+    }else if (indexPath.row == 2){
+        cell.levelType = CategoryCellLevelTypeAdvanced;
+        cell.fractionString = @"10分";
+    }else {
+        cell.fractionString = @"0.1分";
+    }
+    cell.distanceString = @"10000km";
+    
     return cell;
 }
 

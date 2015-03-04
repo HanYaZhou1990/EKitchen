@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 #import "YZSegment.h"
+#import "CategoryCell.h"
 
 @interface OneCategoryViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource,YZSegmentDelegate>
 
