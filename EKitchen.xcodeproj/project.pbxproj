@@ -119,6 +119,7 @@
 		3EED20F71A6F85A700EC264F /* UserProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EED20F61A6F85A700EC264F /* UserProtocolViewController.m */; };
 		3EED20FA1A6F928A00EC264F /* ResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EED20F91A6F928A00EC264F /* ResetPwdViewController.m */; };
 		CF48829B1A767455004CB66D /* YZSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4882991A767455004CB66D /* YZSegment.m */; };
+		CF680ADB1AA8B919009CDF29 /* CookerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF680ADA1AA8B919009CDF29 /* CookerDetailViewController.m */; };
 		CF6B6AD21A7FD39E00A6CBA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6B6AD11A7FD39E00A6CBA2 /* Main.storyboard */; };
 		CF856F7C1A77CA3E00852D89 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF856F7B1A77CA3E00852D89 /* SearchViewController.m */; };
 		CF856F7F1A77CA5400852D89 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF856F7E1A77CA5400852D89 /* MenuView.m */; };
@@ -345,6 +346,8 @@
 		3EED20F91A6F928A00EC264F /* ResetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPwdViewController.m; sourceTree = "<group>"; };
 		CF4882981A767455004CB66D /* YZSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YZSegment.h; path = ../ViewControllers/YZSegment.h; sourceTree = "<group>"; };
 		CF4882991A767455004CB66D /* YZSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YZSegment.m; path = ../ViewControllers/YZSegment.m; sourceTree = "<group>"; };
+		CF680AD91AA8B919009CDF29 /* CookerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookerDetailViewController.h; sourceTree = "<group>"; };
+		CF680ADA1AA8B919009CDF29 /* CookerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookerDetailViewController.m; sourceTree = "<group>"; };
 		CF6B6AD11A7FD39E00A6CBA2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CF856F7A1A77CA3E00852D89 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		CF856F7B1A77CA3E00852D89 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
@@ -792,6 +795,8 @@
 			children = (
 				CFAAA4521AA7478900BA0384 /* OneCategoryViewController.h */,
 				CFAAA4531AA7478900BA0384 /* OneCategoryViewController.m */,
+				CF680AD91AA8B919009CDF29 /* CookerDetailViewController.h */,
+				CF680ADA1AA8B919009CDF29 /* CookerDetailViewController.m */,
 			);
 			name = "Category_分类";
 			sourceTree = "<group>";
@@ -1165,6 +1170,7 @@
 				3EB939661A696DCA00535310 /* AFURLConnectionOperation.m in Sources */,
 				3EB9396D1A696DCA00535310 /* UIButton+AFNetworking.m in Sources */,
 				3EB9396B1A696DCA00535310 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				CF680ADB1AA8B919009CDF29 /* CookerDetailViewController.m in Sources */,
 				CFAAA4631AA75DF900BA0384 /* CalculationTool.m in Sources */,
 				3EB939651A696DCA00535310 /* AFSecurityPolicy.m in Sources */,
 				3EB939701A696DCA00535310 /* UIRefreshControl+AFNetworking.m in Sources */,

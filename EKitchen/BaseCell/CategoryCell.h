@@ -39,5 +39,9 @@ typedef enum {
 @property (nonatomic, strong) NSString   *distanceString;
 /*用户类型*/
 @property (nonatomic, assign) CategoryCellUserType    userType;
+/*!Specialty 拿手菜*/
+@property (nonatomic, strong) NSArray    *specialtyArray;
+/*!简介*/
+@property (nonatomic, strong) NSString   *introductionString;
 
 @end

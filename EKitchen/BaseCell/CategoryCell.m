@@ -15,6 +15,8 @@
     UILabel       *_fractionLable;
     UILabel       *_distanceLable;
     UIImageView   *_userTypeImageView;
+    UILabel       *_specialtyLable;
+    UILabel       *_introductionLable;
 }
 
 @end
@@ -53,6 +55,18 @@
         
         _userTypeImageView = [[UIImageView alloc] init];
         [self.contentView addSubview:_userTypeImageView];
+        
+        
+        _specialtyLable = [[UILabel alloc] init];
+        _specialtyLable.font = [UIFont systemFontOfSize:14.0];
+        _specialtyLable.textColor = UIColorFromRGB(0x666666);
+        [self.contentView addSubview:_specialtyLable];
+        
+        _introductionLable = [[UILabel alloc] init];
+        _introductionLable.font = [UIFont systemFontOfSize:12.0];
+        _introductionLable.textColor = UIColorFromRGB(0x999999);
+        _introductionLable.numberOfLines = 0;
+        [self.contentView addSubview:_introductionLable];
         }
     return self;
 }
@@ -105,6 +119,18 @@
     }else {
         _userTypeImageView.image = [UIImage imageNamed:@"tuandui.png"];
     }
+    
+    NSString *specialtyString = @"";
+    for (NSString *string in _specialtyArray) {
+        specialtyString = [specialtyString stringByAppendingString:[NSString stringWithFormat:@"%@ ",string]];
+    }
+    
+    CGFloat specialtyWidth = [CalculationTool width:specialtyString heightOfFatherView:20 textFont:[UIFont systemFontOfSize:14.0]];
+    _specialtyLable.frame = CGRectMake(CGRectGetMaxX(_userTypeImageView.frame)+10, 35, specialtyWidth, 20);
+    _specialtyLable.text = specialtyString;
+    
+    _introductionLable.frame = CGRectMake(CGRectGetMaxX(_headerImageView.frame)+10, 60, SCREEN_WIDTH -(CGRectGetMaxX(_headerImageView.frame)+(10*2)) , 33);
+    _introductionLable.text = _introductionString;
 }
 - (void)awakeFromNib {}
 

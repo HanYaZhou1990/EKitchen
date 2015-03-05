@@ -9,6 +9,7 @@
 #import "BaseViewController.h"
 #import "YZSegment.h"
 #import "CategoryCell.h"
+#import "CookerDetailViewController.h"
 
 @interface OneCategoryViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource,YZSegmentDelegate>
 

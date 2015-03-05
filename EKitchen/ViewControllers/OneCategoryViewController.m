@@ -20,7 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@",_categoryString);
     
     NSArray *itemTitleArray = @[@"等级优先",@"评分最好",@"离我最近"];
     __segment = [[YZSegment alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 44) btnInformation:itemTitleArray contentOffSet:0];
@@ -92,6 +91,8 @@
         cell.fractionString = @"0.1分";
     }
     cell.distanceString = @"10000km";
+    cell.specialtyArray = @[@"湘菜",@"豫菜",@"淮南菜"];
+    cell.introductionString = @"公路喜剧最近几年在国内属于现象级题材，随着《人在囧途》、《泰囧》、《心花路放》等片";
     
     return cell;
 }
@@ -99,6 +100,8 @@
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    CookerDetailViewController *cookerViewController = [[CookerDetailViewController alloc] init];
+    [self.navigationController pushViewController:cookerViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
