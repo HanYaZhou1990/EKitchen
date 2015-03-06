@@ -7,6 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "ExpandHeader.h"
+#import "CookerHeaderView.h"
+#import "CategoryCell.h"
+#import "CookerTimeCell.h"
 
 @interface CookerDetailViewController : BaseViewController
 

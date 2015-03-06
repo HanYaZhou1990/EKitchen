@@ -132,6 +132,10 @@
 		CF9C01EE1A793BBE005BF01B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9C01ED1A793BBE005BF01B /* SystemConfiguration.framework */; };
 		CF9C01F01A793BC9005BF01B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9C01EF1A793BC9005BF01B /* CoreGraphics.framework */; };
 		CF9C01F21A793BD4005BF01B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9C01F11A793BD4005BF01B /* Security.framework */; };
+		CFA3ACD81AA9ECCE00683A12 /* ExpandHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA3ACD71AA9ECCE00683A12 /* ExpandHeader.m */; };
+		CFA3ACDF1AA9F17500683A12 /* CookerHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA3ACDE1AA9F17500683A12 /* CookerHeaderView.m */; };
+		CFA3ACE11AA9FF7C00683A12 /* time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA3ACE01AA9FF7C00683A12 /* time@2x.png */; };
+		CFA3ACE41AA9FFDE00683A12 /* CookerTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA3ACE31AA9FFDE00683A12 /* CookerTimeCell.m */; };
 		CFAAA44E1AA7473E00BA0384 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAAA44D1AA7473E00BA0384 /* CategoryViewController.m */; };
 		CFAAA4511AA7475900BA0384 /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAAA4501AA7475900BA0384 /* CategoryCell.m */; };
 		CFAAA4541AA7478900BA0384 /* OneCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAAA4531AA7478900BA0384 /* OneCategoryViewController.m */; };
@@ -425,6 +429,13 @@
 		CF9C01ED1A793BBE005BF01B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CF9C01EF1A793BC9005BF01B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CF9C01F11A793BD4005BF01B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CFA3ACD61AA9ECCE00683A12 /* ExpandHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandHeader.h; sourceTree = "<group>"; };
+		CFA3ACD71AA9ECCE00683A12 /* ExpandHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandHeader.m; sourceTree = "<group>"; };
+		CFA3ACDD1AA9F17500683A12 /* CookerHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookerHeaderView.h; sourceTree = "<group>"; };
+		CFA3ACDE1AA9F17500683A12 /* CookerHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookerHeaderView.m; sourceTree = "<group>"; };
+		CFA3ACE01AA9FF7C00683A12 /* time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@2x.png"; sourceTree = "<group>"; };
+		CFA3ACE21AA9FFDE00683A12 /* CookerTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookerTimeCell.h; sourceTree = "<group>"; };
+		CFA3ACE31AA9FFDE00683A12 /* CookerTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookerTimeCell.m; sourceTree = "<group>"; };
 		CFAAA44C1AA7473E00BA0384 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		CFAAA44D1AA7473E00BA0384 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		CFAAA44F1AA7475900BA0384 /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
@@ -609,6 +620,7 @@
 		3EB9390A1A695E0C00535310 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CFA3ACE01AA9FF7C00683A12 /* time@2x.png */,
 				CFAAA4591AA7513D00BA0384 /* advanced.png */,
 				CFAAA45A1AA7513D00BA0384 /* intermediate.png */,
 				CFAAA45B1AA7513D00BA0384 /* primary.png */,
@@ -869,6 +881,8 @@
 				CF856F811A77CA6600852D89 /* RecommendCell.m */,
 				CFAAA44F1AA7475900BA0384 /* CategoryCell.h */,
 				CFAAA4501AA7475900BA0384 /* CategoryCell.m */,
+				CFA3ACE21AA9FFDE00683A12 /* CookerTimeCell.h */,
+				CFA3ACE31AA9FFDE00683A12 /* CookerTimeCell.m */,
 			);
 			path = BaseCell;
 			sourceTree = "<group>";
@@ -972,6 +986,8 @@
 		CFCDB3D01A6981FA002DDD68 /* Toolkit */ = {
 			isa = PBXGroup;
 			children = (
+				CFA3ACD61AA9ECCE00683A12 /* ExpandHeader.h */,
+				CFA3ACD71AA9ECCE00683A12 /* ExpandHeader.m */,
 				CFCDB3D31A69828E002DDD68 /* HYZTextField.h */,
 				CFCDB3D41A69828E002DDD68 /* HYZTextField.m */,
 				CF4882981A767455004CB66D /* YZSegment.h */,
@@ -982,6 +998,8 @@
 				3E6639791A76371800D0E49F /* ValidateTool.m */,
 				CFAAA4611AA75DF900BA0384 /* CalculationTool.h */,
 				CFAAA4621AA75DF900BA0384 /* CalculationTool.m */,
+				CFA3ACDD1AA9F17500683A12 /* CookerHeaderView.h */,
+				CFA3ACDE1AA9F17500683A12 /* CookerHeaderView.m */,
 			);
 			path = Toolkit;
 			sourceTree = "<group>";
@@ -1109,6 +1127,7 @@
 				3EA5AF211A69FD730058714B /* feedbackMeItem@2x.png in Resources */,
 				3EB939831A696DCA00535310 /* SVProgressHUD.bundle in Resources */,
 				3EB939B01A69759400535310 /* categoryIconGray@2x.png in Resources */,
+				CFA3ACE11AA9FF7C00683A12 /* time@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1172,10 +1191,13 @@
 				3EB9396B1A696DCA00535310 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				CF680ADB1AA8B919009CDF29 /* CookerDetailViewController.m in Sources */,
 				CFAAA4631AA75DF900BA0384 /* CalculationTool.m in Sources */,
+				CFA3ACDF1AA9F17500683A12 /* CookerHeaderView.m in Sources */,
 				3EB939651A696DCA00535310 /* AFSecurityPolicy.m in Sources */,
 				3EB939701A696DCA00535310 /* UIRefreshControl+AFNetworking.m in Sources */,
 				3EED20FA1A6F928A00EC264F /* ResetPwdViewController.m in Sources */,
+				CFA3ACD81AA9ECCE00683A12 /* ExpandHeader.m in Sources */,
 				3E8A18501A6E3B4600866D29 /* FindViewController.m in Sources */,
+				CFA3ACE41AA9FFDE00683A12 /* CookerTimeCell.m in Sources */,
 				3EB939711A696DCA00535310 /* UIWebView+AFNetworking.m in Sources */,
 				3EB939791A696DCA00535310 /* SDWebImageDownloaderOperation.m in Sources */,
 				3EB939721A696DCA00535310 /* MBProgressHUD.m in Sources */,
