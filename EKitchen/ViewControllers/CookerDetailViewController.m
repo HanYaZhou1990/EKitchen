@@ -11,6 +11,7 @@
 @interface CookerDetailViewController ()<UITableViewDataSource,UITableViewDelegate>{
     UITableView     *_detailTableView;
     ExpandHeader    *_headerView;
+    NSArray         *_workTimeArray;
 }
 
 @end
@@ -25,6 +26,7 @@
     _detailTableView.delegate = self;
     _detailTableView.dataSource = self;
     [_detailTableView registerClass:[CookerHeaderView class] forHeaderFooterViewReuseIdentifier:@"header"];
+    [_detailTableView registerClass:[CookerHeaderView class] forHeaderFooterViewReuseIdentifier:@"openHeader;"];
     [_detailTableView registerClass:[CategoryCell class] forCellReuseIdentifier:@"cell"];
     [_detailTableView registerClass:[CookerTimeCell class] forCellReuseIdentifier:@"CookerTimeCell"];
     [self.view addSubview:_detailTableView];
@@ -33,13 +35,15 @@
     [imageView setImage:[UIImage imageNamed:@"meBackground.png"]];
     
     _headerView = [ExpandHeader expandWithScrollView:_detailTableView expandView:imageView];
+    
+    _workTimeArray = @[@"工作日 : 每周五5:30到17:30",@"工作日 : 每周五5:30到17:30"];
 }
 
 #pragma mark -
 #pragma mark UITableViewDataSource -
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section == 0) {
+    if (section == 0 || section == 2) {
         return 44;
     }
     return 0.1;
@@ -50,7 +54,14 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 108;
+    if (indexPath.section == 0 ) {
+        return 108;
+    }else {
+        if (_workTimeArray.count > 2) {
+            return 108;
+        }
+        return 108;
+    }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -60,6 +71,9 @@
         cookerHadder.titleLable.text = @"900000人预定过该厨师";
         cookerHadder.titleString = @"立即预约";
         return cookerHadder;
+    }else if (section == 2){
+        OpenHeaderView *openView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"openHeader"];
+        return openView;
     }
     return nil;
 }
@@ -86,7 +100,7 @@
         return cell;
     }else if (indexPath.section == 1) {
         CookerTimeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CookerTimeCell" forIndexPath:indexPath];
-        cell.workDayArray = @[@"工作日 : 每周五5:30到17:30"];
+        cell.workDayArray = _workTimeArray;
         cell.addressString = @"河南省郑州市金水区丰庆路国基路丰庆佳怨15号楼";
         return cell;
     }else {

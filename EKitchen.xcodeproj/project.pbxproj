@@ -119,8 +119,14 @@
 		3EED20F71A6F85A700EC264F /* UserProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EED20F61A6F85A700EC264F /* UserProtocolViewController.m */; };
 		3EED20FA1A6F928A00EC264F /* ResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EED20F91A6F928A00EC264F /* ResetPwdViewController.m */; };
 		CF48829B1A767455004CB66D /* YZSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4882991A767455004CB66D /* YZSegment.m */; };
-		CF680ADB1AA8B919009CDF29 /* CookerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF680ADA1AA8B919009CDF29 /* CookerDetailViewController.m */; };
 		CF6B6AD21A7FD39E00A6CBA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6B6AD11A7FD39E00A6CBA2 /* Main.storyboard */; };
+		CF82C6F11AAC7F9E0026C3EF /* advanced@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF82C6EE1AAC7F9E0026C3EF /* advanced@2x.png */; };
+		CF82C6F21AAC7F9E0026C3EF /* intermediate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF82C6EF1AAC7F9E0026C3EF /* intermediate@2x.png */; };
+		CF82C6F31AAC7F9E0026C3EF /* primary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF82C6F01AAC7F9E0026C3EF /* primary@2x.png */; };
+		CF82C6F61AAC7FB00026C3EF /* OpenHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF82C6F51AAC7FB00026C3EF /* OpenHeaderView.m */; };
+		CF82C6FB1AAC7FD00026C3EF /* OneCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF82C6F81AAC7FD00026C3EF /* OneCategoryViewController.m */; };
+		CF82C6FC1AAC7FD00026C3EF /* CookerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF82C6FA1AAC7FD00026C3EF /* CookerDetailViewController.m */; };
+		CF82C6FF1AAC80440026C3EF /* CookerTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF82C6FE1AAC80440026C3EF /* CookerTimeCell.m */; };
 		CF856F7C1A77CA3E00852D89 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF856F7B1A77CA3E00852D89 /* SearchViewController.m */; };
 		CF856F7F1A77CA5400852D89 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF856F7E1A77CA5400852D89 /* MenuView.m */; };
 		CF856F821A77CA6600852D89 /* RecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF856F811A77CA6600852D89 /* RecommendCell.m */; };
@@ -135,15 +141,10 @@
 		CFA3ACD81AA9ECCE00683A12 /* ExpandHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA3ACD71AA9ECCE00683A12 /* ExpandHeader.m */; };
 		CFA3ACDF1AA9F17500683A12 /* CookerHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA3ACDE1AA9F17500683A12 /* CookerHeaderView.m */; };
 		CFA3ACE11AA9FF7C00683A12 /* time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA3ACE01AA9FF7C00683A12 /* time@2x.png */; };
-		CFA3ACE41AA9FFDE00683A12 /* CookerTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA3ACE31AA9FFDE00683A12 /* CookerTimeCell.m */; };
 		CFAAA44E1AA7473E00BA0384 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAAA44D1AA7473E00BA0384 /* CategoryViewController.m */; };
 		CFAAA4511AA7475900BA0384 /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAAA4501AA7475900BA0384 /* CategoryCell.m */; };
-		CFAAA4541AA7478900BA0384 /* OneCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAAA4531AA7478900BA0384 /* OneCategoryViewController.m */; };
 		CFAAA4571AA7481800BA0384 /* geren.png in Resources */ = {isa = PBXBuildFile; fileRef = CFAAA4551AA7481800BA0384 /* geren.png */; };
 		CFAAA4581AA7481800BA0384 /* tuandui.png in Resources */ = {isa = PBXBuildFile; fileRef = CFAAA4561AA7481800BA0384 /* tuandui.png */; };
-		CFAAA45C1AA7513D00BA0384 /* advanced.png in Resources */ = {isa = PBXBuildFile; fileRef = CFAAA4591AA7513D00BA0384 /* advanced.png */; };
-		CFAAA45D1AA7513D00BA0384 /* intermediate.png in Resources */ = {isa = PBXBuildFile; fileRef = CFAAA45A1AA7513D00BA0384 /* intermediate.png */; };
-		CFAAA45E1AA7513D00BA0384 /* primary.png in Resources */ = {isa = PBXBuildFile; fileRef = CFAAA45B1AA7513D00BA0384 /* primary.png */; };
 		CFAAA4631AA75DF900BA0384 /* CalculationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAAA4621AA75DF900BA0384 /* CalculationTool.m */; };
 		CFCDB3D51A69828E002DDD68 /* HYZTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCDB3D41A69828E002DDD68 /* HYZTextField.m */; };
 /* End PBXBuildFile section */
@@ -350,9 +351,18 @@
 		3EED20F91A6F928A00EC264F /* ResetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPwdViewController.m; sourceTree = "<group>"; };
 		CF4882981A767455004CB66D /* YZSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YZSegment.h; path = ../ViewControllers/YZSegment.h; sourceTree = "<group>"; };
 		CF4882991A767455004CB66D /* YZSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YZSegment.m; path = ../ViewControllers/YZSegment.m; sourceTree = "<group>"; };
-		CF680AD91AA8B919009CDF29 /* CookerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookerDetailViewController.h; sourceTree = "<group>"; };
-		CF680ADA1AA8B919009CDF29 /* CookerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookerDetailViewController.m; sourceTree = "<group>"; };
 		CF6B6AD11A7FD39E00A6CBA2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CF82C6EE1AAC7F9E0026C3EF /* advanced@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "advanced@2x.png"; sourceTree = "<group>"; };
+		CF82C6EF1AAC7F9E0026C3EF /* intermediate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "intermediate@2x.png"; sourceTree = "<group>"; };
+		CF82C6F01AAC7F9E0026C3EF /* primary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "primary@2x.png"; sourceTree = "<group>"; };
+		CF82C6F41AAC7FB00026C3EF /* OpenHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenHeaderView.h; sourceTree = "<group>"; };
+		CF82C6F51AAC7FB00026C3EF /* OpenHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenHeaderView.m; sourceTree = "<group>"; };
+		CF82C6F71AAC7FD00026C3EF /* OneCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneCategoryViewController.h; sourceTree = "<group>"; };
+		CF82C6F81AAC7FD00026C3EF /* OneCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneCategoryViewController.m; sourceTree = "<group>"; };
+		CF82C6F91AAC7FD00026C3EF /* CookerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookerDetailViewController.h; sourceTree = "<group>"; };
+		CF82C6FA1AAC7FD00026C3EF /* CookerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookerDetailViewController.m; sourceTree = "<group>"; };
+		CF82C6FD1AAC80440026C3EF /* CookerTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookerTimeCell.h; sourceTree = "<group>"; };
+		CF82C6FE1AAC80440026C3EF /* CookerTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookerTimeCell.m; sourceTree = "<group>"; };
 		CF856F7A1A77CA3E00852D89 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		CF856F7B1A77CA3E00852D89 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		CF856F7D1A77CA5400852D89 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
@@ -434,19 +444,12 @@
 		CFA3ACDD1AA9F17500683A12 /* CookerHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookerHeaderView.h; sourceTree = "<group>"; };
 		CFA3ACDE1AA9F17500683A12 /* CookerHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookerHeaderView.m; sourceTree = "<group>"; };
 		CFA3ACE01AA9FF7C00683A12 /* time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@2x.png"; sourceTree = "<group>"; };
-		CFA3ACE21AA9FFDE00683A12 /* CookerTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookerTimeCell.h; sourceTree = "<group>"; };
-		CFA3ACE31AA9FFDE00683A12 /* CookerTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookerTimeCell.m; sourceTree = "<group>"; };
 		CFAAA44C1AA7473E00BA0384 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		CFAAA44D1AA7473E00BA0384 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		CFAAA44F1AA7475900BA0384 /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
 		CFAAA4501AA7475900BA0384 /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
-		CFAAA4521AA7478900BA0384 /* OneCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneCategoryViewController.h; sourceTree = "<group>"; };
-		CFAAA4531AA7478900BA0384 /* OneCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneCategoryViewController.m; sourceTree = "<group>"; };
 		CFAAA4551AA7481800BA0384 /* geren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = geren.png; sourceTree = "<group>"; };
 		CFAAA4561AA7481800BA0384 /* tuandui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tuandui.png; sourceTree = "<group>"; };
-		CFAAA4591AA7513D00BA0384 /* advanced.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = advanced.png; sourceTree = "<group>"; };
-		CFAAA45A1AA7513D00BA0384 /* intermediate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intermediate.png; sourceTree = "<group>"; };
-		CFAAA45B1AA7513D00BA0384 /* primary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = primary.png; sourceTree = "<group>"; };
 		CFAAA4611AA75DF900BA0384 /* CalculationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculationTool.h; sourceTree = "<group>"; };
 		CFAAA4621AA75DF900BA0384 /* CalculationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculationTool.m; sourceTree = "<group>"; };
 		CFCDB3D31A69828E002DDD68 /* HYZTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYZTextField.h; sourceTree = "<group>"; };
@@ -621,9 +624,9 @@
 			isa = PBXGroup;
 			children = (
 				CFA3ACE01AA9FF7C00683A12 /* time@2x.png */,
-				CFAAA4591AA7513D00BA0384 /* advanced.png */,
-				CFAAA45A1AA7513D00BA0384 /* intermediate.png */,
-				CFAAA45B1AA7513D00BA0384 /* primary.png */,
+				CF82C6EE1AAC7F9E0026C3EF /* advanced@2x.png */,
+				CF82C6EF1AAC7F9E0026C3EF /* intermediate@2x.png */,
+				CF82C6F01AAC7F9E0026C3EF /* primary@2x.png */,
 				CFAAA4551AA7481800BA0384 /* geren.png */,
 				CFAAA4561AA7481800BA0384 /* tuandui.png */,
 				3EED20DE1A6F4CB000EC264F /* b27_icon_star_gray@2x.png */,
@@ -805,10 +808,10 @@
 		3EB939A21A6972AD00535310 /* Category_分类 */ = {
 			isa = PBXGroup;
 			children = (
-				CFAAA4521AA7478900BA0384 /* OneCategoryViewController.h */,
-				CFAAA4531AA7478900BA0384 /* OneCategoryViewController.m */,
-				CF680AD91AA8B919009CDF29 /* CookerDetailViewController.h */,
-				CF680ADA1AA8B919009CDF29 /* CookerDetailViewController.m */,
+				CF82C6F71AAC7FD00026C3EF /* OneCategoryViewController.h */,
+				CF82C6F81AAC7FD00026C3EF /* OneCategoryViewController.m */,
+				CF82C6F91AAC7FD00026C3EF /* CookerDetailViewController.h */,
+				CF82C6FA1AAC7FD00026C3EF /* CookerDetailViewController.m */,
 			);
 			name = "Category_分类";
 			sourceTree = "<group>";
@@ -881,8 +884,8 @@
 				CF856F811A77CA6600852D89 /* RecommendCell.m */,
 				CFAAA44F1AA7475900BA0384 /* CategoryCell.h */,
 				CFAAA4501AA7475900BA0384 /* CategoryCell.m */,
-				CFA3ACE21AA9FFDE00683A12 /* CookerTimeCell.h */,
-				CFA3ACE31AA9FFDE00683A12 /* CookerTimeCell.m */,
+				CF82C6FD1AAC80440026C3EF /* CookerTimeCell.h */,
+				CF82C6FE1AAC80440026C3EF /* CookerTimeCell.m */,
 			);
 			path = BaseCell;
 			sourceTree = "<group>";
@@ -1000,6 +1003,8 @@
 				CFAAA4621AA75DF900BA0384 /* CalculationTool.m */,
 				CFA3ACDD1AA9F17500683A12 /* CookerHeaderView.h */,
 				CFA3ACDE1AA9F17500683A12 /* CookerHeaderView.m */,
+				CF82C6F41AAC7FB00026C3EF /* OpenHeaderView.h */,
+				CF82C6F51AAC7FB00026C3EF /* OpenHeaderView.m */,
 			);
 			path = Toolkit;
 			sourceTree = "<group>";
@@ -1088,7 +1093,7 @@
 				3EA5AF321A69FE7F0058714B /* locationItem@2x.png in Resources */,
 				CF9C01E61A793B3A005BF01B /* mapapi.bundle in Resources */,
 				3EB939B51A69759400535310 /* lazyIconRed@2x.png in Resources */,
-				CFAAA45D1AA7513D00BA0384 /* intermediate.png in Resources */,
+				CF82C6F11AAC7F9E0026C3EF /* advanced@2x.png in Resources */,
 				3E8A18531A6E4B6B00866D29 /* captchBtn@2x.png in Resources */,
 				3EA5AF231A69FD730058714B /* mapMeItem@2x.png in Resources */,
 				3EA5AF351A69FE7F0058714B /* refreshItem@2x.png in Resources */,
@@ -1099,6 +1104,7 @@
 				3EA5AF331A69FE7F0058714B /* openItem@2x.png in Resources */,
 				3EED20E11A6F4CB000EC264F /* b27_icon_star_yellow@2x.png in Resources */,
 				3EA5AF311A69FE7F0058714B /* finishItem@2x.png in Resources */,
+				CF82C6F31AAC7F9E0026C3EF /* primary@2x.png in Resources */,
 				3EB939B61A69759400535310 /* meIconGray@2x.png in Resources */,
 				3EED20F41A6F82CA00EC264F /* imageSelectedSmallOn@2x.png in Resources */,
 				3EB938EF1A695D2800535310 /* LaunchScreen.xib in Resources */,
@@ -1106,7 +1112,6 @@
 				3EA5AF341A69FE7F0058714B /* orderItem@2x.png in Resources */,
 				3EB938EC1A695D2800535310 /* Images.xcassets in Resources */,
 				3EA5AF371A69FE7F0058714B /* shareItem@2x.png in Resources */,
-				CFAAA45C1AA7513D00BA0384 /* advanced.png in Resources */,
 				3EA5AF301A69FE7F0058714B /* dataItem@2x.png in Resources */,
 				3EA5AF221A69FD730058714B /* gradeMeItem@2x.png in Resources */,
 				3EA5AF251A69FD730058714B /* updateMeItem@2x.png in Resources */,
@@ -1121,8 +1126,8 @@
 				3EED20F31A6F82CA00EC264F /* imageSelectedSmallOff@2x.png in Resources */,
 				3EB939B41A69759400535310 /* lazyIconGray@2x.png in Resources */,
 				3EED20E01A6F4CB000EC264F /* b27_icon_star_gray@2x.png in Resources */,
-				CFAAA45E1AA7513D00BA0384 /* primary.png in Resources */,
 				3EB939B91A69759400535310 /* searchIconRed@2x.png in Resources */,
+				CF82C6F21AAC7F9E0026C3EF /* intermediate@2x.png in Resources */,
 				3EA5AF1F1A69FD730058714B /* aboutMeItem@2x.png in Resources */,
 				3EA5AF211A69FD730058714B /* feedbackMeItem@2x.png in Resources */,
 				3EB939831A696DCA00535310 /* SVProgressHUD.bundle in Resources */,
@@ -1146,6 +1151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EB939771A696DCA00535310 /* SDWebImageDecoder.m in Sources */,
+				CF82C6FF1AAC80440026C3EF /* CookerTimeCell.m in Sources */,
 				3EE1356C1A723AEC003E9E03 /* EditUserInfoViewController.m in Sources */,
 				3E6355321A6CF541006A254B /* RegisterViewController.m in Sources */,
 				3EB939911A69716600535310 /* BaseViewController.m in Sources */,
@@ -1154,6 +1160,7 @@
 				3EB939611A696DCA00535310 /* AFHTTPRequestOperation.m in Sources */,
 				3E66396D1A76195200D0E49F /* AddressInfo.m in Sources */,
 				3EB939731A696DCA00535310 /* MKAnnotationView+WebCache.m in Sources */,
+				CF82C6F61AAC7FB00026C3EF /* OpenHeaderView.m in Sources */,
 				3E63552F1A6CF534006A254B /* LoginViewController.m in Sources */,
 				3E6639771A7636FF00D0E49F /* MessageSave.m in Sources */,
 				3EB9396E1A696DCA00535310 /* UIImageView+AFNetworking.m in Sources */,
@@ -1176,7 +1183,6 @@
 				3EB9397E1A696DCA00535310 /* UIImage+MultiFormat.m in Sources */,
 				3EB9397D1A696DCA00535310 /* UIImage+GIF.m in Sources */,
 				CFAAA4511AA7475900BA0384 /* CategoryCell.m in Sources */,
-				CFAAA4541AA7478900BA0384 /* OneCategoryViewController.m in Sources */,
 				3EA0618F1A7A088500D365DA /* CommentViewController.m in Sources */,
 				3EB939781A696DCA00535310 /* SDWebImageDownloader.m in Sources */,
 				3EED20ED1A6F759B00EC264F /* FeedbackViewController.m in Sources */,
@@ -1189,7 +1195,6 @@
 				3EB939661A696DCA00535310 /* AFURLConnectionOperation.m in Sources */,
 				3EB9396D1A696DCA00535310 /* UIButton+AFNetworking.m in Sources */,
 				3EB9396B1A696DCA00535310 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				CF680ADB1AA8B919009CDF29 /* CookerDetailViewController.m in Sources */,
 				CFAAA4631AA75DF900BA0384 /* CalculationTool.m in Sources */,
 				CFA3ACDF1AA9F17500683A12 /* CookerHeaderView.m in Sources */,
 				3EB939651A696DCA00535310 /* AFSecurityPolicy.m in Sources */,
@@ -1197,7 +1202,6 @@
 				3EED20FA1A6F928A00EC264F /* ResetPwdViewController.m in Sources */,
 				CFA3ACD81AA9ECCE00683A12 /* ExpandHeader.m in Sources */,
 				3E8A18501A6E3B4600866D29 /* FindViewController.m in Sources */,
-				CFA3ACE41AA9FFDE00683A12 /* CookerTimeCell.m in Sources */,
 				3EB939711A696DCA00535310 /* UIWebView+AFNetworking.m in Sources */,
 				3EB939791A696DCA00535310 /* SDWebImageDownloaderOperation.m in Sources */,
 				3EB939721A696DCA00535310 /* MBProgressHUD.m in Sources */,
@@ -1207,8 +1211,10 @@
 				3EB939C31A69833100535310 /* SizeToRightLabelCell.m in Sources */,
 				3EB9398D1A696F0400535310 /* PublicConfig.m in Sources */,
 				3EB9397B1A696DCA00535310 /* SDWebImagePrefetcher.m in Sources */,
+				CF82C6FB1AAC7FD00026C3EF /* OneCategoryViewController.m in Sources */,
 				3E06D5D91A778AA100F3717A /* OrderCell.m in Sources */,
 				3EB9397F1A696DCA00535310 /* UIImage+WebP.m in Sources */,
+				CF82C6FC1AAC7FD00026C3EF /* CookerDetailViewController.m in Sources */,
 				3E6639661A75EA0100D0E49F /* AddressCell.m in Sources */,
 				3EACE8041A70CC2C0075A685 /* HomeCell.m in Sources */,
 				3EB9397A1A696DCA00535310 /* SDWebImageManager.m in Sources */,

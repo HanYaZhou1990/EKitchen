@@ -11,6 +11,7 @@
 #import "CookerHeaderView.h"
 #import "CategoryCell.h"
 #import "CookerTimeCell.h"
+#import "OpenHeaderView.h"
 
 @interface CookerDetailViewController : BaseViewController
 

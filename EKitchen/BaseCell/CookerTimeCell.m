@@ -61,7 +61,11 @@
     
     NSString *timeString = @"";
     for (int i = 0; i < _workDayArray.count; i ++) {
-        timeString = [timeString stringByAppendingString:[NSString stringWithFormat:@"%@\n",_workDayArray[i]]];
+        if (i == _workDayArray.count - 1) {
+            timeString = [timeString stringByAppendingString:[NSString stringWithFormat:@"%@",_workDayArray[i]]];
+        }else {
+            timeString = [timeString stringByAppendingString:[NSString stringWithFormat:@"%@\n",_workDayArray[i]]];
+        }
     }
     _workTimeLable.frame = CGRectMake(54+10, 0, SCREEN_WIDTH - 74, currentHeight*2);
     _workTimeLable.text = timeString;
