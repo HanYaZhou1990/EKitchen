@@ -26,7 +26,7 @@
     _detailTableView.delegate = self;
     _detailTableView.dataSource = self;
     [_detailTableView registerClass:[CookerHeaderView class] forHeaderFooterViewReuseIdentifier:@"header"];
-    [_detailTableView registerClass:[CookerHeaderView class] forHeaderFooterViewReuseIdentifier:@"openHeader;"];
+    [_detailTableView registerClass:[OpenHeaderView class] forHeaderFooterViewReuseIdentifier:@"openHeader"];
     [_detailTableView registerClass:[CategoryCell class] forCellReuseIdentifier:@"cell"];
     [_detailTableView registerClass:[CookerTimeCell class] forCellReuseIdentifier:@"CookerTimeCell"];
     [self.view addSubview:_detailTableView];
@@ -43,10 +43,13 @@
 #pragma mark UITableViewDataSource -
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section == 0 || section == 2) {
+    if (section == 0) {
         return 44;
+    }else if (section == 2) {
+        return 44;
+    }else {
+        return 0.1;
     }
-    return 0.1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -73,6 +76,8 @@
         return cookerHadder;
     }else if (section == 2){
         OpenHeaderView *openView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"openHeader"];
+        openView.headerImageView.image = [UIImage imageNamed:@"dataItem.png"];
+        openView.contentString = @"详细介绍";
         return openView;
     }
     return nil;
