@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CWStarRateView.h"
+
+typedef enum {
+    OpenHeaderViewTypeOpenItem,
+    OpenHeaderViewTypeStar,
+}OpenHeaderViewType;
 
 typedef enum {
     OpenHeaderViewStateTypeClose,
     OpenHeaderViewStateTypeOpen,
-    
 }OpenHeaderViewStateType;
 
 @interface OpenHeaderView : UITableViewHeaderFooterView
@@ -22,5 +27,6 @@ typedef enum {
 @property (nonatomic, retain) NSString    *contentString;
 /*!展开和闭合状态（尾部的图片，可以旋转的）*/
 @property (nonatomic, assign) BOOL          isOpen;
+@property (nonatomic, assign) OpenHeaderViewType   openHeaderViewType;
 
 @end

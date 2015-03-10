@@ -22,7 +22,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-    self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage imageNamed:@"homeIconGray.png"] selectedImage:[UIImage imageNamed:@"homeIconRed.png"]];
+    self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"厨师之星" image:[UIImage imageNamed:@"homeIconGray.png"] selectedImage:[UIImage imageNamed:@"homeIconRed.png"]];
     }
     return self;
 }

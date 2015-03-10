@@ -47,6 +47,10 @@
         return 44;
     }else if (section == 2) {
         return 44;
+    }else if (section == 3) {
+        return 44;
+    }else if (section == 4) {
+        return 44;
     }else {
         return 0.1;
     }
@@ -79,16 +83,31 @@
         openView.headerImageView.image = [UIImage imageNamed:@"dataItem.png"];
         openView.contentString = @"详细介绍";
         return openView;
+    }else if (section == 3){
+        OpenHeaderView *openView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"openHeader"];
+        openView.headerImageView.image = [UIImage imageNamed:@"orderItem.png"];
+        openView.contentString = @"预定订单";
+        return openView;
+    }else if (section == 4){
+        OpenHeaderView *openView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"openHeader"];
+        openView.headerImageView.image = [UIImage imageNamed:@"scoreItem.png"];
+        openView.contentString = @"顾客评价";
+        openView.openHeaderViewType = OpenHeaderViewTypeStar;
+        return openView;
     }
     return nil;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
+    return 5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    if (section == 0 || section == 1) {
+        return 1;
+    }else {
+        return 0;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
