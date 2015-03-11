@@ -29,6 +29,7 @@
     [_detailTableView registerClass:[OpenHeaderView class] forHeaderFooterViewReuseIdentifier:@"openHeader"];
     [_detailTableView registerClass:[CategoryCell class] forCellReuseIdentifier:@"cell"];
     [_detailTableView registerClass:[CookerTimeCell class] forCellReuseIdentifier:@"CookerTimeCell"];
+    [_detailTableView registerClass:[CommentCell class] forCellReuseIdentifier:@"CommentCell"];
     [self.view addSubview:_detailTableView];
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 180)];
@@ -94,8 +95,10 @@
         openView.contentString = @"顾客评价";
         openView.openHeaderViewType = OpenHeaderViewTypeStar;
         return openView;
+    }else {
+        CommentCell *commentCell = [tableView dequeueReusableCellWithIdentifier:@"CommentCell"];
+        return commentCell;
     }
-    return nil;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
