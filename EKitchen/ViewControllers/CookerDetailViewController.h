@@ -14,6 +14,6 @@
 #import "OpenHeaderView.h"
 #import "CommentCell.h"
 
-@interface CookerDetailViewController : BaseViewController
+@interface CookerDetailViewController : BaseViewController<OpenHeaderViewDelegate>
 
 @end

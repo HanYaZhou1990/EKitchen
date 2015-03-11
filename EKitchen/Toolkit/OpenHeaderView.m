@@ -80,6 +80,10 @@
     }else {
         _statuesImageView.transform = CGAffineTransformMakeRotation(0);
     }
+    NSLog(@"+++++%d",_isOpen);
+    if ([_delegate respondsToSelector:@selector(headerView:didSelected:)]) {
+        [_delegate headerView:self didSelected:_isOpen];
+    }
 }
 
 @end

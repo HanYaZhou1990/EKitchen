@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "CWStarRateView.h"
 
+@class OpenHeaderView;
+
 typedef enum {
     OpenHeaderViewTypeOpenItem,
     OpenHeaderViewTypeStar,
@@ -19,6 +21,12 @@ typedef enum {
     OpenHeaderViewStateTypeOpen,
 }OpenHeaderViewStateType;
 
+@protocol OpenHeaderViewDelegate <NSObject>
+
+- (void)headerView:(OpenHeaderView *)headerView didSelected:(BOOL)selected;
+
+@end
+
 @interface OpenHeaderView : UITableViewHeaderFooterView
 
 /*!前边的图片*/
@@ -28,5 +36,9 @@ typedef enum {
 /*!展开和闭合状态（尾部的图片，可以旋转的）*/
 @property (nonatomic, assign) BOOL          isOpen;
 @property (nonatomic, assign) OpenHeaderViewType   openHeaderViewType;
+
+@property (nonatomic, assign) id <OpenHeaderViewDelegate> delegate;
+
+@property (nonatomic, assign) NSInteger headerViewSection;
 
 @end

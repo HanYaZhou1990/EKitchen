@@ -82,17 +82,23 @@
     }else if (section == 2){
         OpenHeaderView *openView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"openHeader"];
         openView.headerImageView.image = [UIImage imageNamed:@"dataItem.png"];
+        openView.headerViewSection = section;
+        openView.delegate = self;
         openView.contentString = @"详细介绍";
         return openView;
     }else if (section == 3){
         OpenHeaderView *openView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"openHeader"];
         openView.headerImageView.image = [UIImage imageNamed:@"orderItem.png"];
         openView.contentString = @"预定订单";
+        openView.headerViewSection = section;
+        openView.delegate = self;
         return openView;
     }else if (section == 4){
         OpenHeaderView *openView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"openHeader"];
         openView.headerImageView.image = [UIImage imageNamed:@"scoreItem.png"];
         openView.contentString = @"顾客评价";
+        openView.headerViewSection = section;
+        openView.delegate = self;
         openView.openHeaderViewType = OpenHeaderViewTypeStar;
         return openView;
     }else {
@@ -109,7 +115,7 @@
     if (section == 0 || section == 1) {
         return 1;
     }else {
-        return 0;
+        return 2;
     }
 }
 
@@ -144,6 +150,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark -
+#pragma mark OpenHeaderViewDelegate -
+- (void)headerView:(OpenHeaderView *)headerView didSelected:(BOOL)selected {
+    NSLog(@"%ld",(long)headerView.headerViewSection);
 }
 
 - (void)didReceiveMemoryWarning {
