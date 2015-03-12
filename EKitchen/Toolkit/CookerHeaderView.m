@@ -43,10 +43,17 @@
         [_button setTitleColor:UIColorFromRGB(0xF0F0F0) forState:UIControlStateNormal];
         _button.layer.cornerRadius = 2.0;
         _button.clipsToBounds = YES;
+        [_button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_button];
         
         }
     return self;
+}
+
+- (void)buttonClicked:(UIButton *)sender {
+    if ([_delegate respondsToSelector:@selector(headerView:clickbutton:)]) {
+        [_delegate headerView:self clickbutton:sender];
+    }
 }
 
 - (void)layoutSubviews{

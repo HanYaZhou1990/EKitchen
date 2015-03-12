@@ -7,6 +7,9 @@
 //
 
 #import "BaseViewController.h"
+#import "OpenHeaderView.h"
+#import "CommentCell.h"
+#import "CommentTypeCell.h"
 
 @interface AllCommentsViewController : BaseViewController
 

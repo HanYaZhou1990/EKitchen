@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "CookerDetailViewController.h"
 
 @interface HomeViewController : BaseViewController
 

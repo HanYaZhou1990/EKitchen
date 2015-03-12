@@ -50,11 +50,19 @@
 }
 - (void)layoutSubviews{
     [super layoutSubviews];
-    _headerImageView.frame = CGRectMake(10, 7, 30, 30);
+    if (_headerImageView.image) {
+        _headerImageView.frame = CGRectMake(10, 7, 30, 30);
+    }else {
+        _headerImageView.frame = CGRectMake(10, 7, 0.1, 0.1);
+    }
     
     if (_openHeaderViewType == OpenHeaderViewTypeOpenItem) {
         _statuesImageView.frame = CGRectMake(SCREEN_WIDTH - 40, 7, 30, 30);
         _starRateView.hidden = YES;
+    }else if (_openHeaderViewType == OpenHeaderViewTypeNone) {
+        _starRateView.hidden = YES;
+        _statuesImageView.hidden = YES;
+        _statuesImageView.frame = CGRectZero;
     }else {
         _statuesImageView.frame = CGRectZero;
     }
@@ -70,7 +78,7 @@
 }
 
 - (void)headerViewClicked:(UITapGestureRecognizer *)gestureRecognizer {
-    if (_openHeaderViewType == OpenHeaderViewTypeStar) {
+    if (_openHeaderViewType == OpenHeaderViewTypeStar || _openHeaderViewType == OpenHeaderViewTypeNone) {
         return;
     }else {
         if ([_delegate respondsToSelector:@selector(headerView:didSelectedSection:)]) {

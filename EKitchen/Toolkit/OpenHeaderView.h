@@ -14,6 +14,7 @@
 typedef enum {
     OpenHeaderViewTypeOpenItem,
     OpenHeaderViewTypeStar,
+    OpenHeaderViewTypeNone,
 }OpenHeaderViewType;
 
 typedef enum {

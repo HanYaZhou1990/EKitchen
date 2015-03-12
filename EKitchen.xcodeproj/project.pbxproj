@@ -122,6 +122,13 @@
 		CF39535B1AB1C319008EF4A8 /* OpenHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF39535A1AB1C319008EF4A8 /* OpenHeaderView.m */; };
 		CF39535E1AB1C327008EF4A8 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF39535D1AB1C327008EF4A8 /* CommentCell.m */; };
 		CF3953611AB1CF84008EF4A8 /* AllCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3953601AB1CF84008EF4A8 /* AllCommentsViewController.m */; };
+		CF3953641AB1D6CA008EF4A8 /* CommentTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3953631AB1D6CA008EF4A8 /* CommentTypeCell.m */; };
+		CF3953691AB1E7D9008EF4A8 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3953681AB1E7D9008EF4A8 /* UIImage+Color.m */; };
+		CF39536C1AB1F527008EF4A8 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF39536B1AB1F527008EF4A8 /* BookViewController.m */; };
+		CF39536F1AB2005A008EF4A8 /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF39536E1AB2005A008EF4A8 /* PayViewController.m */; };
+		CF3953721AB201BE008EF4A8 /* PackageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3953711AB201BE008EF4A8 /* PackageViewController.m */; };
+		CF3953751AB20251008EF4A8 /* ServiceTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3953741AB20251008EF4A8 /* ServiceTimeViewController.m */; };
+		CF3953781AB202C7008EF4A8 /* TextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3953771AB202C7008EF4A8 /* TextViewCell.m */; };
 		CF48829B1A767455004CB66D /* YZSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4882991A767455004CB66D /* YZSegment.m */; };
 		CF6B6AD21A7FD39E00A6CBA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6B6AD11A7FD39E00A6CBA2 /* Main.storyboard */; };
 		CF82C6F11AAC7F9E0026C3EF /* advanced@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF82C6EE1AAC7F9E0026C3EF /* advanced@2x.png */; };
@@ -359,6 +366,20 @@
 		CF39535D1AB1C327008EF4A8 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
 		CF39535F1AB1CF84008EF4A8 /* AllCommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllCommentsViewController.h; sourceTree = "<group>"; };
 		CF3953601AB1CF84008EF4A8 /* AllCommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllCommentsViewController.m; sourceTree = "<group>"; };
+		CF3953621AB1D6CA008EF4A8 /* CommentTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTypeCell.h; sourceTree = "<group>"; };
+		CF3953631AB1D6CA008EF4A8 /* CommentTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTypeCell.m; sourceTree = "<group>"; };
+		CF3953671AB1E7D9008EF4A8 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		CF3953681AB1E7D9008EF4A8 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		CF39536A1AB1F527008EF4A8 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
+		CF39536B1AB1F527008EF4A8 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
+		CF39536D1AB2005A008EF4A8 /* PayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
+		CF39536E1AB2005A008EF4A8 /* PayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
+		CF3953701AB201BE008EF4A8 /* PackageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageViewController.h; sourceTree = "<group>"; };
+		CF3953711AB201BE008EF4A8 /* PackageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageViewController.m; sourceTree = "<group>"; };
+		CF3953731AB20251008EF4A8 /* ServiceTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceTimeViewController.h; sourceTree = "<group>"; };
+		CF3953741AB20251008EF4A8 /* ServiceTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceTimeViewController.m; sourceTree = "<group>"; };
+		CF3953761AB202C7008EF4A8 /* TextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewCell.h; sourceTree = "<group>"; };
+		CF3953771AB202C7008EF4A8 /* TextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewCell.m; sourceTree = "<group>"; };
 		CF4882981A767455004CB66D /* YZSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YZSegment.h; path = ../ViewControllers/YZSegment.h; sourceTree = "<group>"; };
 		CF4882991A767455004CB66D /* YZSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YZSegment.m; path = ../ViewControllers/YZSegment.m; sourceTree = "<group>"; };
 		CF6B6AD11A7FD39E00A6CBA2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -820,6 +841,14 @@
 				CF3953571AB1C311008EF4A8 /* CookerDetailViewController.m */,
 				CF39535F1AB1CF84008EF4A8 /* AllCommentsViewController.h */,
 				CF3953601AB1CF84008EF4A8 /* AllCommentsViewController.m */,
+				CF39536A1AB1F527008EF4A8 /* BookViewController.h */,
+				CF39536B1AB1F527008EF4A8 /* BookViewController.m */,
+				CF39536D1AB2005A008EF4A8 /* PayViewController.h */,
+				CF39536E1AB2005A008EF4A8 /* PayViewController.m */,
+				CF3953701AB201BE008EF4A8 /* PackageViewController.h */,
+				CF3953711AB201BE008EF4A8 /* PackageViewController.m */,
+				CF3953731AB20251008EF4A8 /* ServiceTimeViewController.h */,
+				CF3953741AB20251008EF4A8 /* ServiceTimeViewController.m */,
 			);
 			name = "Category_分类";
 			sourceTree = "<group>";
@@ -896,6 +925,10 @@
 				CFC169AE1AB08FE2007D821A /* CookerTimeCell.m */,
 				CF39535C1AB1C327008EF4A8 /* CommentCell.h */,
 				CF39535D1AB1C327008EF4A8 /* CommentCell.m */,
+				CF3953621AB1D6CA008EF4A8 /* CommentTypeCell.h */,
+				CF3953631AB1D6CA008EF4A8 /* CommentTypeCell.m */,
+				CF3953761AB202C7008EF4A8 /* TextViewCell.h */,
+				CF3953771AB202C7008EF4A8 /* TextViewCell.m */,
 			);
 			path = BaseCell;
 			sourceTree = "<group>";
@@ -999,6 +1032,8 @@
 		CFCDB3D01A6981FA002DDD68 /* Toolkit */ = {
 			isa = PBXGroup;
 			children = (
+				CF3953671AB1E7D9008EF4A8 /* UIImage+Color.h */,
+				CF3953681AB1E7D9008EF4A8 /* UIImage+Color.m */,
 				CFA3ACD61AA9ECCE00683A12 /* ExpandHeader.h */,
 				CFA3ACD71AA9ECCE00683A12 /* ExpandHeader.m */,
 				CFCDB3D31A69828E002DDD68 /* HYZTextField.h */,
@@ -1172,6 +1207,8 @@
 				CF39535B1AB1C319008EF4A8 /* OpenHeaderView.m in Sources */,
 				3E63552F1A6CF534006A254B /* LoginViewController.m in Sources */,
 				3E6639771A7636FF00D0E49F /* MessageSave.m in Sources */,
+				CF3953641AB1D6CA008EF4A8 /* CommentTypeCell.m in Sources */,
+				CF3953721AB201BE008EF4A8 /* PackageViewController.m in Sources */,
 				3EB9396E1A696DCA00535310 /* UIImageView+AFNetworking.m in Sources */,
 				3EED20F71A6F85A700EC264F /* UserProtocolViewController.m in Sources */,
 				CF3953611AB1CF84008EF4A8 /* AllCommentsViewController.m in Sources */,
@@ -1196,6 +1233,8 @@
 				3EA0618F1A7A088500D365DA /* CommentViewController.m in Sources */,
 				3EB939781A696DCA00535310 /* SDWebImageDownloader.m in Sources */,
 				3EED20ED1A6F759B00EC264F /* FeedbackViewController.m in Sources */,
+				CF3953781AB202C7008EF4A8 /* TextViewCell.m in Sources */,
+				CF39536F1AB2005A008EF4A8 /* PayViewController.m in Sources */,
 				3EB939681A696DCA00535310 /* AFURLResponseSerialization.m in Sources */,
 				3EED20DD1A6F4CA500EC264F /* CWStarRateView.m in Sources */,
 				3E6639711A76363A00D0E49F /* PublicSaveViewController.m in Sources */,
@@ -1214,6 +1253,7 @@
 				CFA3ACD81AA9ECCE00683A12 /* ExpandHeader.m in Sources */,
 				3E8A18501A6E3B4600866D29 /* FindViewController.m in Sources */,
 				3EB939711A696DCA00535310 /* UIWebView+AFNetworking.m in Sources */,
+				CF3953751AB20251008EF4A8 /* ServiceTimeViewController.m in Sources */,
 				3EB939791A696DCA00535310 /* SDWebImageDownloaderOperation.m in Sources */,
 				3EB939721A696DCA00535310 /* MBProgressHUD.m in Sources */,
 				3EB939631A696DCA00535310 /* AFHTTPSessionManager.m in Sources */,
@@ -1243,7 +1283,9 @@
 				3EB939801A696DCA00535310 /* UIImageView+HighlightedWebCache.m in Sources */,
 				CFC169AF1AB08FE2007D821A /* CookerTimeCell.m in Sources */,
 				3EED20E41A6F753500EC264F /* MyOrderViewController.m in Sources */,
+				CF39536C1AB1F527008EF4A8 /* BookViewController.m in Sources */,
 				3EB939061A695DA200535310 /* RootTabBarViewController.m in Sources */,
+				CF3953691AB1E7D9008EF4A8 /* UIImage+Color.m in Sources */,
 				CF39535E1AB1C327008EF4A8 /* CommentCell.m in Sources */,
 				CFCDB3D51A69828E002DDD68 /* HYZTextField.m in Sources */,
 			);

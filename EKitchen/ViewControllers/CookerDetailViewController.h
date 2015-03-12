@@ -14,8 +14,9 @@
 #import "OpenHeaderView.h"
 #import "CommentCell.h"
 #import "AllCommentsViewController.h"
+#import "BookViewController.h"
 
-@interface CookerDetailViewController : BaseViewController<OpenHeaderViewDelegate> {
+@interface CookerDetailViewController : BaseViewController<OpenHeaderViewDelegate,CookerHeaderViewDelegate> {
     BOOL             _isOpenSection[100];
 }
 

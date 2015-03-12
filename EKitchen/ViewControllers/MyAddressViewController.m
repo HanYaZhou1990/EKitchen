@@ -164,7 +164,10 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     //选择收货地址 点击后退并往外传值
-  
+    if ([_delegate respondsToSelector:@selector(viewController:address:)]) {
+        [_delegate viewController:self address:@"河南省郑州市金水区庙里多菱路与溜达大街交叉口富甲小区15号楼225室  15092377782"];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

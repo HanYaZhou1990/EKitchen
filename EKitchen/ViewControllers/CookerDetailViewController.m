@@ -122,8 +122,9 @@
     if (section == 0) {
         CookerHeaderView *cookerHadder = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"header"];
         cookerHadder.dishNameLable.text = @"黄焖鸡米饭";
+        cookerHadder.delegate = self;
         cookerHadder.titleLable.text = @"900000人预定过该厨师";
-        cookerHadder.titleString = @"立即预约";
+        cookerHadder.titleString = @"立即预定";
         return cookerHadder;
     }else if (section == 1) {
         return nil;
@@ -203,7 +204,7 @@
         return cell;
     }else {
         CommentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CommentCell" forIndexPath:indexPath];
-        cell.userNameString = @"来个牛逼名字";
+        cell.userNameString = @"看名字霸气不";
         cell.commentTimeString = @"2015-3-12";
         cell.commentContenString = @"做的饭很不错，很好吃哦，绝对的满分，好评，下次还请他!";
         return cell;
@@ -222,6 +223,13 @@
     _isOpenSection[section] =!_isOpenSection[section];
     NSIndexSet *indexSet = [[NSIndexSet alloc] initWithIndex:headerView.headerViewSection];
     [_detailTableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationNone];
+}
+
+#pragma mark -
+#pragma mark CookerHeaderViewDelegate -
+- (void)headerView:(CookerHeaderView *)headerView clickbutton:(UIButton *)sender {
+    BookViewController *bookVC = [[BookViewController alloc] init];
+    [self.navigationController pushViewController:bookVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
