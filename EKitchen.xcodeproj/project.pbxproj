@@ -118,12 +118,15 @@
 		3EED20F41A6F82CA00EC264F /* imageSelectedSmallOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EED20F21A6F82CA00EC264F /* imageSelectedSmallOn@2x.png */; };
 		3EED20F71A6F85A700EC264F /* UserProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EED20F61A6F85A700EC264F /* UserProtocolViewController.m */; };
 		3EED20FA1A6F928A00EC264F /* ResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EED20F91A6F928A00EC264F /* ResetPwdViewController.m */; };
+		CF3953581AB1C311008EF4A8 /* CookerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3953571AB1C311008EF4A8 /* CookerDetailViewController.m */; };
+		CF39535B1AB1C319008EF4A8 /* OpenHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF39535A1AB1C319008EF4A8 /* OpenHeaderView.m */; };
+		CF39535E1AB1C327008EF4A8 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF39535D1AB1C327008EF4A8 /* CommentCell.m */; };
+		CF3953611AB1CF84008EF4A8 /* AllCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3953601AB1CF84008EF4A8 /* AllCommentsViewController.m */; };
 		CF48829B1A767455004CB66D /* YZSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4882991A767455004CB66D /* YZSegment.m */; };
 		CF6B6AD21A7FD39E00A6CBA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6B6AD11A7FD39E00A6CBA2 /* Main.storyboard */; };
 		CF82C6F11AAC7F9E0026C3EF /* advanced@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF82C6EE1AAC7F9E0026C3EF /* advanced@2x.png */; };
 		CF82C6F21AAC7F9E0026C3EF /* intermediate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF82C6EF1AAC7F9E0026C3EF /* intermediate@2x.png */; };
 		CF82C6F31AAC7F9E0026C3EF /* primary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF82C6F01AAC7F9E0026C3EF /* primary@2x.png */; };
-		CF82C6F61AAC7FB00026C3EF /* OpenHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF82C6F51AAC7FB00026C3EF /* OpenHeaderView.m */; };
 		CF82C6FB1AAC7FD00026C3EF /* OneCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF82C6F81AAC7FD00026C3EF /* OneCategoryViewController.m */; };
 		CF856F7C1A77CA3E00852D89 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF856F7B1A77CA3E00852D89 /* SearchViewController.m */; };
 		CF856F7F1A77CA5400852D89 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF856F7E1A77CA5400852D89 /* MenuView.m */; };
@@ -144,8 +147,6 @@
 		CFAAA4571AA7481800BA0384 /* geren.png in Resources */ = {isa = PBXBuildFile; fileRef = CFAAA4551AA7481800BA0384 /* geren.png */; };
 		CFAAA4581AA7481800BA0384 /* tuandui.png in Resources */ = {isa = PBXBuildFile; fileRef = CFAAA4561AA7481800BA0384 /* tuandui.png */; };
 		CFAAA4631AA75DF900BA0384 /* CalculationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAAA4621AA75DF900BA0384 /* CalculationTool.m */; };
-		CFC169A91AB08FAA007D821A /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC169A81AB08FAA007D821A /* CommentCell.m */; };
-		CFC169AC1AB08FD5007D821A /* CookerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC169AB1AB08FD5007D821A /* CookerDetailViewController.m */; };
 		CFC169AF1AB08FE2007D821A /* CookerTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC169AE1AB08FE2007D821A /* CookerTimeCell.m */; };
 		CFCDB3D51A69828E002DDD68 /* HYZTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCDB3D41A69828E002DDD68 /* HYZTextField.m */; };
 /* End PBXBuildFile section */
@@ -350,14 +351,20 @@
 		3EED20F61A6F85A700EC264F /* UserProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProtocolViewController.m; sourceTree = "<group>"; };
 		3EED20F81A6F928A00EC264F /* ResetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPwdViewController.h; sourceTree = "<group>"; };
 		3EED20F91A6F928A00EC264F /* ResetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPwdViewController.m; sourceTree = "<group>"; };
+		CF3953561AB1C311008EF4A8 /* CookerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookerDetailViewController.h; sourceTree = "<group>"; };
+		CF3953571AB1C311008EF4A8 /* CookerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookerDetailViewController.m; sourceTree = "<group>"; };
+		CF3953591AB1C319008EF4A8 /* OpenHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenHeaderView.h; sourceTree = "<group>"; };
+		CF39535A1AB1C319008EF4A8 /* OpenHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenHeaderView.m; sourceTree = "<group>"; };
+		CF39535C1AB1C327008EF4A8 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
+		CF39535D1AB1C327008EF4A8 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
+		CF39535F1AB1CF84008EF4A8 /* AllCommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllCommentsViewController.h; sourceTree = "<group>"; };
+		CF3953601AB1CF84008EF4A8 /* AllCommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllCommentsViewController.m; sourceTree = "<group>"; };
 		CF4882981A767455004CB66D /* YZSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YZSegment.h; path = ../ViewControllers/YZSegment.h; sourceTree = "<group>"; };
 		CF4882991A767455004CB66D /* YZSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YZSegment.m; path = ../ViewControllers/YZSegment.m; sourceTree = "<group>"; };
 		CF6B6AD11A7FD39E00A6CBA2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CF82C6EE1AAC7F9E0026C3EF /* advanced@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "advanced@2x.png"; sourceTree = "<group>"; };
 		CF82C6EF1AAC7F9E0026C3EF /* intermediate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "intermediate@2x.png"; sourceTree = "<group>"; };
 		CF82C6F01AAC7F9E0026C3EF /* primary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "primary@2x.png"; sourceTree = "<group>"; };
-		CF82C6F41AAC7FB00026C3EF /* OpenHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenHeaderView.h; sourceTree = "<group>"; };
-		CF82C6F51AAC7FB00026C3EF /* OpenHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenHeaderView.m; sourceTree = "<group>"; };
 		CF82C6F71AAC7FD00026C3EF /* OneCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneCategoryViewController.h; sourceTree = "<group>"; };
 		CF82C6F81AAC7FD00026C3EF /* OneCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneCategoryViewController.m; sourceTree = "<group>"; };
 		CF856F7A1A77CA3E00852D89 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -449,10 +456,6 @@
 		CFAAA4561AA7481800BA0384 /* tuandui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tuandui.png; sourceTree = "<group>"; };
 		CFAAA4611AA75DF900BA0384 /* CalculationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculationTool.h; sourceTree = "<group>"; };
 		CFAAA4621AA75DF900BA0384 /* CalculationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculationTool.m; sourceTree = "<group>"; };
-		CFC169A71AB08FAA007D821A /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
-		CFC169A81AB08FAA007D821A /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
-		CFC169AA1AB08FD5007D821A /* CookerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookerDetailViewController.h; sourceTree = "<group>"; };
-		CFC169AB1AB08FD5007D821A /* CookerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookerDetailViewController.m; sourceTree = "<group>"; };
 		CFC169AD1AB08FE2007D821A /* CookerTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookerTimeCell.h; sourceTree = "<group>"; };
 		CFC169AE1AB08FE2007D821A /* CookerTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookerTimeCell.m; sourceTree = "<group>"; };
 		CFCDB3D31A69828E002DDD68 /* HYZTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYZTextField.h; sourceTree = "<group>"; };
@@ -813,8 +816,10 @@
 			children = (
 				CF82C6F71AAC7FD00026C3EF /* OneCategoryViewController.h */,
 				CF82C6F81AAC7FD00026C3EF /* OneCategoryViewController.m */,
-				CFC169AA1AB08FD5007D821A /* CookerDetailViewController.h */,
-				CFC169AB1AB08FD5007D821A /* CookerDetailViewController.m */,
+				CF3953561AB1C311008EF4A8 /* CookerDetailViewController.h */,
+				CF3953571AB1C311008EF4A8 /* CookerDetailViewController.m */,
+				CF39535F1AB1CF84008EF4A8 /* AllCommentsViewController.h */,
+				CF3953601AB1CF84008EF4A8 /* AllCommentsViewController.m */,
 			);
 			name = "Category_分类";
 			sourceTree = "<group>";
@@ -889,8 +894,8 @@
 				CFAAA4501AA7475900BA0384 /* CategoryCell.m */,
 				CFC169AD1AB08FE2007D821A /* CookerTimeCell.h */,
 				CFC169AE1AB08FE2007D821A /* CookerTimeCell.m */,
-				CFC169A71AB08FAA007D821A /* CommentCell.h */,
-				CFC169A81AB08FAA007D821A /* CommentCell.m */,
+				CF39535C1AB1C327008EF4A8 /* CommentCell.h */,
+				CF39535D1AB1C327008EF4A8 /* CommentCell.m */,
 			);
 			path = BaseCell;
 			sourceTree = "<group>";
@@ -1008,8 +1013,8 @@
 				CFAAA4621AA75DF900BA0384 /* CalculationTool.m */,
 				CFA3ACDD1AA9F17500683A12 /* CookerHeaderView.h */,
 				CFA3ACDE1AA9F17500683A12 /* CookerHeaderView.m */,
-				CF82C6F41AAC7FB00026C3EF /* OpenHeaderView.h */,
-				CF82C6F51AAC7FB00026C3EF /* OpenHeaderView.m */,
+				CF3953591AB1C319008EF4A8 /* OpenHeaderView.h */,
+				CF39535A1AB1C319008EF4A8 /* OpenHeaderView.m */,
 			);
 			path = Toolkit;
 			sourceTree = "<group>";
@@ -1164,11 +1169,12 @@
 				3EB939611A696DCA00535310 /* AFHTTPRequestOperation.m in Sources */,
 				3E66396D1A76195200D0E49F /* AddressInfo.m in Sources */,
 				3EB939731A696DCA00535310 /* MKAnnotationView+WebCache.m in Sources */,
-				CF82C6F61AAC7FB00026C3EF /* OpenHeaderView.m in Sources */,
+				CF39535B1AB1C319008EF4A8 /* OpenHeaderView.m in Sources */,
 				3E63552F1A6CF534006A254B /* LoginViewController.m in Sources */,
 				3E6639771A7636FF00D0E49F /* MessageSave.m in Sources */,
 				3EB9396E1A696DCA00535310 /* UIImageView+AFNetworking.m in Sources */,
 				3EED20F71A6F85A700EC264F /* UserProtocolViewController.m in Sources */,
+				CF3953611AB1CF84008EF4A8 /* AllCommentsViewController.m in Sources */,
 				3EB938E41A695D2800535310 /* AppDelegate.m in Sources */,
 				CF856F7F1A77CA5400852D89 /* MenuView.m in Sources */,
 				3EB939621A696DCA00535310 /* AFHTTPRequestOperationManager.m in Sources */,
@@ -1201,6 +1207,7 @@
 				3EB9396B1A696DCA00535310 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				CFAAA4631AA75DF900BA0384 /* CalculationTool.m in Sources */,
 				CFA3ACDF1AA9F17500683A12 /* CookerHeaderView.m in Sources */,
+				CF3953581AB1C311008EF4A8 /* CookerDetailViewController.m in Sources */,
 				3EB939651A696DCA00535310 /* AFSecurityPolicy.m in Sources */,
 				3EB939701A696DCA00535310 /* UIRefreshControl+AFNetworking.m in Sources */,
 				3EED20FA1A6F928A00EC264F /* ResetPwdViewController.m in Sources */,
@@ -1223,7 +1230,6 @@
 				3EB9397A1A696DCA00535310 /* SDWebImageManager.m in Sources */,
 				3EB939741A696DCA00535310 /* NSData+ImageContentType.m in Sources */,
 				3EB9396C1A696DCA00535310 /* UIAlertView+AFNetworking.m in Sources */,
-				CFC169AC1AB08FD5007D821A /* CookerDetailViewController.m in Sources */,
 				3EB939C11A69833100535310 /* SizeToLabelCell.m in Sources */,
 				3EB939671A696DCA00535310 /* AFURLRequestSerialization.m in Sources */,
 				3EB9396A1A696DCA00535310 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -1238,7 +1244,7 @@
 				CFC169AF1AB08FE2007D821A /* CookerTimeCell.m in Sources */,
 				3EED20E41A6F753500EC264F /* MyOrderViewController.m in Sources */,
 				3EB939061A695DA200535310 /* RootTabBarViewController.m in Sources */,
-				CFC169A91AB08FAA007D821A /* CommentCell.m in Sources */,
+				CF39535E1AB1C327008EF4A8 /* CommentCell.m in Sources */,
 				CFCDB3D51A69828E002DDD68 /* HYZTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

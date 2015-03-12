@@ -23,7 +23,7 @@ typedef enum {
 
 @protocol OpenHeaderViewDelegate <NSObject>
 
-- (void)headerView:(OpenHeaderView *)headerView didSelected:(BOOL)selected;
+- (void)headerView:(OpenHeaderView *)headerView didSelectedSection:(NSInteger)section;
 
 @end
 

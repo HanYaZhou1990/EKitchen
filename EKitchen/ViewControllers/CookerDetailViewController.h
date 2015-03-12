@@ -13,7 +13,10 @@
 #import "CookerTimeCell.h"
 #import "OpenHeaderView.h"
 #import "CommentCell.h"
+#import "AllCommentsViewController.h"
 
-@interface CookerDetailViewController : BaseViewController<OpenHeaderViewDelegate>
+@interface CookerDetailViewController : BaseViewController<OpenHeaderViewDelegate> {
+    BOOL             _isOpenSection[100];
+}
 
 @end
