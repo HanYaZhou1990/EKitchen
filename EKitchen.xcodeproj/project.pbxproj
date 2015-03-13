@@ -155,6 +155,8 @@
 		CFAAA4581AA7481800BA0384 /* tuandui.png in Resources */ = {isa = PBXBuildFile; fileRef = CFAAA4561AA7481800BA0384 /* tuandui.png */; };
 		CFAAA4631AA75DF900BA0384 /* CalculationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAAA4621AA75DF900BA0384 /* CalculationTool.m */; };
 		CFC169AF1AB08FE2007D821A /* CookerTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC169AE1AB08FE2007D821A /* CookerTimeCell.m */; };
+		CFCB30601AB343F600F6A9FA /* AllBooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCB305F1AB343F600F6A9FA /* AllBooksViewController.m */; };
+		CFCB30631AB3464E00F6A9FA /* BookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCB30621AB3464E00F6A9FA /* BookCell.m */; };
 		CFCDB3D51A69828E002DDD68 /* HYZTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCDB3D41A69828E002DDD68 /* HYZTextField.m */; };
 /* End PBXBuildFile section */
 
@@ -479,6 +481,10 @@
 		CFAAA4621AA75DF900BA0384 /* CalculationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculationTool.m; sourceTree = "<group>"; };
 		CFC169AD1AB08FE2007D821A /* CookerTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookerTimeCell.h; sourceTree = "<group>"; };
 		CFC169AE1AB08FE2007D821A /* CookerTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookerTimeCell.m; sourceTree = "<group>"; };
+		CFCB305E1AB343F600F6A9FA /* AllBooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllBooksViewController.h; sourceTree = "<group>"; };
+		CFCB305F1AB343F600F6A9FA /* AllBooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllBooksViewController.m; sourceTree = "<group>"; };
+		CFCB30611AB3464E00F6A9FA /* BookCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookCell.h; sourceTree = "<group>"; };
+		CFCB30621AB3464E00F6A9FA /* BookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookCell.m; sourceTree = "<group>"; };
 		CFCDB3D31A69828E002DDD68 /* HYZTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYZTextField.h; sourceTree = "<group>"; };
 		CFCDB3D41A69828E002DDD68 /* HYZTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYZTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -839,6 +845,8 @@
 				CF82C6F81AAC7FD00026C3EF /* OneCategoryViewController.m */,
 				CF3953561AB1C311008EF4A8 /* CookerDetailViewController.h */,
 				CF3953571AB1C311008EF4A8 /* CookerDetailViewController.m */,
+				CFCB305E1AB343F600F6A9FA /* AllBooksViewController.h */,
+				CFCB305F1AB343F600F6A9FA /* AllBooksViewController.m */,
 				CF39535F1AB1CF84008EF4A8 /* AllCommentsViewController.h */,
 				CF3953601AB1CF84008EF4A8 /* AllCommentsViewController.m */,
 				CF39536A1AB1F527008EF4A8 /* BookViewController.h */,
@@ -929,6 +937,8 @@
 				CF3953631AB1D6CA008EF4A8 /* CommentTypeCell.m */,
 				CF3953761AB202C7008EF4A8 /* TextViewCell.h */,
 				CF3953771AB202C7008EF4A8 /* TextViewCell.m */,
+				CFCB30611AB3464E00F6A9FA /* BookCell.h */,
+				CFCB30621AB3464E00F6A9FA /* BookCell.m */,
 			);
 			path = BaseCell;
 			sourceTree = "<group>";
@@ -1208,6 +1218,7 @@
 				3E63552F1A6CF534006A254B /* LoginViewController.m in Sources */,
 				3E6639771A7636FF00D0E49F /* MessageSave.m in Sources */,
 				CF3953641AB1D6CA008EF4A8 /* CommentTypeCell.m in Sources */,
+				CFCB30631AB3464E00F6A9FA /* BookCell.m in Sources */,
 				CF3953721AB201BE008EF4A8 /* PackageViewController.m in Sources */,
 				3EB9396E1A696DCA00535310 /* UIImageView+AFNetworking.m in Sources */,
 				3EED20F71A6F85A700EC264F /* UserProtocolViewController.m in Sources */,
@@ -1278,6 +1289,7 @@
 				3EB939C21A69833100535310 /* SizeToLeftLabelCell.m in Sources */,
 				CF856F821A77CA6600852D89 /* RecommendCell.m in Sources */,
 				3EB939691A696DCA00535310 /* AFURLSessionManager.m in Sources */,
+				CFCB30601AB343F600F6A9FA /* AllBooksViewController.m in Sources */,
 				3EB938E11A695D2800535310 /* main.m in Sources */,
 				3EB939821A696DCA00535310 /* UIView+WebCacheOperation.m in Sources */,
 				3EB939801A696DCA00535310 /* UIImageView+HighlightedWebCache.m in Sources */,

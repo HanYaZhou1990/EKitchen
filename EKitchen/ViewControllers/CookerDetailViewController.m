@@ -221,8 +221,13 @@
 #pragma mark OpenHeaderViewDelegate -
 - (void)headerView:(OpenHeaderView *)headerView didSelectedSection:(NSInteger)section {
     _isOpenSection[section] =!_isOpenSection[section];
-    NSIndexSet *indexSet = [[NSIndexSet alloc] initWithIndex:headerView.headerViewSection];
-    [_detailTableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationNone];
+    if (section == 2) {
+        NSIndexSet *indexSet = [[NSIndexSet alloc] initWithIndex:headerView.headerViewSection];
+        [_detailTableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationNone];
+    }else {
+        AllBooksViewController *bookViewController = [[AllBooksViewController alloc] init];
+        [self.navigationController pushViewController:bookViewController animated:YES];
+    }
 }
 
 #pragma mark -
