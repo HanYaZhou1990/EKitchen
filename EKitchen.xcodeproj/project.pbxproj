@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3E06D5D91A778AA100F3717A /* OrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E06D5D81A778AA100F3717A /* OrderCell.m */; };
-		3E63552F1A6CF534006A254B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E63552E1A6CF534006A254B /* LoginViewController.m */; };
-		3E6355321A6CF541006A254B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6355311A6CF541006A254B /* RegisterViewController.m */; };
 		3E6639661A75EA0100D0E49F /* AddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6639651A75EA0100D0E49F /* AddressCell.m */; };
 		3E6639691A75EA6C00D0E49F /* AddressInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6639681A75EA6C00D0E49F /* AddressInfoViewController.m */; };
 		3E66396D1A76195200D0E49F /* AddressInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E66396C1A76195200D0E49F /* AddressInfo.m */; };
@@ -139,6 +137,8 @@
 		CF856F7F1A77CA5400852D89 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF856F7E1A77CA5400852D89 /* MenuView.m */; };
 		CF856F821A77CA6600852D89 /* RecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF856F811A77CA6600852D89 /* RecommendCell.m */; };
 		CF8EE41E1A85211100AC3DCF /* libYYDes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8EE41D1A85211100AC3DCF /* libYYDes.a */; };
+		CF955F951AB71D4C003A2600 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF955F921AB71D4C003A2600 /* LoginViewController.m */; };
+		CF955F961AB71D4C003A2600 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF955F941AB71D4C003A2600 /* RegisterViewController.m */; };
 		CF9C01E61A793B3A005BF01B /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CF9C01E51A793B3A005BF01B /* mapapi.bundle */; };
 		CF9C01E81A793B45005BF01B /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9C01E71A793B45005BF01B /* libbaidumapapi.a */; };
 		CF9C01EA1A793B8E005BF01B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9C01E91A793B8E005BF01B /* CoreLocation.framework */; };
@@ -173,10 +173,6 @@
 /* Begin PBXFileReference section */
 		3E06D5D71A778AA100F3717A /* OrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderCell.h; sourceTree = "<group>"; };
 		3E06D5D81A778AA100F3717A /* OrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderCell.m; sourceTree = "<group>"; };
-		3E63552D1A6CF534006A254B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		3E63552E1A6CF534006A254B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		3E6355301A6CF541006A254B /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
-		3E6355311A6CF541006A254B /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		3E6639641A75EA0100D0E49F /* AddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressCell.h; sourceTree = "<group>"; };
 		3E6639651A75EA0100D0E49F /* AddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressCell.m; sourceTree = "<group>"; };
 		3E6639671A75EA6C00D0E49F /* AddressInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressInfoViewController.h; sourceTree = "<group>"; };
@@ -398,6 +394,10 @@
 		CF856F811A77CA6600852D89 /* RecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCell.m; sourceTree = "<group>"; };
 		CF8EE41D1A85211100AC3DCF /* libYYDes.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYYDes.a; sourceTree = "<group>"; };
 		CF8EE41F1A85211C00AC3DCF /* YYDes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYDes.h; sourceTree = "<group>"; };
+		CF955F911AB71D4C003A2600 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CF955F921AB71D4C003A2600 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		CF955F931AB71D4C003A2600 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		CF955F941AB71D4C003A2600 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		CF9C01A81A793B2D005BF01B /* BMapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMapKit.h; sourceTree = "<group>"; };
 		CF9C01A91A793B2D005BF01B /* BMKActionPaopaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKActionPaopaoView.h; sourceTree = "<group>"; };
 		CF9C01AA1A793B2D005BF01B /* BMKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKAnnotation.h; sourceTree = "<group>"; };
@@ -878,10 +878,10 @@
 		3EB939A51A6972EA00535310 /* Me_我的 */ = {
 			isa = PBXGroup;
 			children = (
-				3E63552D1A6CF534006A254B /* LoginViewController.h */,
-				3E63552E1A6CF534006A254B /* LoginViewController.m */,
-				3E6355301A6CF541006A254B /* RegisterViewController.h */,
-				3E6355311A6CF541006A254B /* RegisterViewController.m */,
+				CF955F911AB71D4C003A2600 /* LoginViewController.h */,
+				CF955F921AB71D4C003A2600 /* LoginViewController.m */,
+				CF955F931AB71D4C003A2600 /* RegisterViewController.h */,
+				CF955F941AB71D4C003A2600 /* RegisterViewController.m */,
 				3EED20F51A6F85A700EC264F /* UserProtocolViewController.h */,
 				3EED20F61A6F85A700EC264F /* UserProtocolViewController.m */,
 				3E8A184E1A6E3B4600866D29 /* FindViewController.h */,
@@ -1207,7 +1207,6 @@
 			files = (
 				3EB939771A696DCA00535310 /* SDWebImageDecoder.m in Sources */,
 				3EE1356C1A723AEC003E9E03 /* EditUserInfoViewController.m in Sources */,
-				3E6355321A6CF541006A254B /* RegisterViewController.m in Sources */,
 				3EB939911A69716600535310 /* BaseViewController.m in Sources */,
 				3E6639691A75EA6C00D0E49F /* AddressInfoViewController.m in Sources */,
 				3E66397D1A7637D300D0E49F /* UserInfo.m in Sources */,
@@ -1215,7 +1214,6 @@
 				3E66396D1A76195200D0E49F /* AddressInfo.m in Sources */,
 				3EB939731A696DCA00535310 /* MKAnnotationView+WebCache.m in Sources */,
 				CF39535B1AB1C319008EF4A8 /* OpenHeaderView.m in Sources */,
-				3E63552F1A6CF534006A254B /* LoginViewController.m in Sources */,
 				3E6639771A7636FF00D0E49F /* MessageSave.m in Sources */,
 				CF3953641AB1D6CA008EF4A8 /* CommentTypeCell.m in Sources */,
 				CFCB30631AB3464E00F6A9FA /* BookCell.m in Sources */,
@@ -1272,6 +1270,7 @@
 				3EB939941A69723000535310 /* HomeViewController.m in Sources */,
 				3EB939C31A69833100535310 /* SizeToRightLabelCell.m in Sources */,
 				3EB9398D1A696F0400535310 /* PublicConfig.m in Sources */,
+				CF955F961AB71D4C003A2600 /* RegisterViewController.m in Sources */,
 				3EB9397B1A696DCA00535310 /* SDWebImagePrefetcher.m in Sources */,
 				CF82C6FB1AAC7FD00026C3EF /* OneCategoryViewController.m in Sources */,
 				3E06D5D91A778AA100F3717A /* OrderCell.m in Sources */,
@@ -1299,6 +1298,7 @@
 				3EB939061A695DA200535310 /* RootTabBarViewController.m in Sources */,
 				CF3953691AB1E7D9008EF4A8 /* UIImage+Color.m in Sources */,
 				CF39535E1AB1C327008EF4A8 /* CommentCell.m in Sources */,
+				CF955F951AB71D4C003A2600 /* LoginViewController.m in Sources */,
 				CFCDB3D51A69828E002DDD68 /* HYZTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

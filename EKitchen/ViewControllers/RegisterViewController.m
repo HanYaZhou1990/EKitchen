@@ -294,7 +294,7 @@
     NSString *key = [phoneNumber substringToIndex:8];
     NSString *passwordString = [YYDes DESEncrypt:[passWord dataUsingEncoding:NSUTF8StringEncoding] WithKey:key];
     
-    NSDictionary *params = @{@"appKey":appKeyEkitchen,@"method":member_register,@"v":versionEkitchen,@"format":formatEkitchen,@"locale":localeEkitchen,@"timestamp":timeStampEkitchen,@"mobile":phoneNumber,@"client":clientEkitchen,@"verificationCode":passCode};
+    NSDictionary *params = @{@"appKey":appKeyEkitchen,@"method":member_register,@"v":versionEkitchen,@"format":formatEkitchen,@"locale":localeEkitchen,@"timestamp":timeStampEkitchen,@"mobile":phoneNumber,@"client":clientEkitchen,@"verificationCode":passCode,@"client":clientEkitchen};
     
     //追加参数签名字段
     NSDictionary *addParams = @{@"password":passwordString,@"sign":[YYDes generate:params]};
@@ -311,32 +311,19 @@
          [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
          
          NSDictionary *responseDic = (NSDictionary *)responseObject;
-         
-         //打印结果 方便查看
-         NSString *responseString = [PublicConfig dictionaryToJson:responseDic];
-         DLog(@"返回结果字符串 : %@",responseString);
-         
-//         NSString *resultCode = [responseDic valueForKey:@"code"]; //0成功 1失败
-//         if ([resultCode boolValue]==NO)
-//         {
-//             [PublicConfig waringInfo:@"注册成功"];
-//             //注册成功 返回去登陆
-//             [self.navigationController popViewControllerAnimated:YES];
-//         }
-//         else
-//         {
-//             NSString *msgStr = [responseDic valueForKey:@"msg"];
-//             [SVProgressHUD showErrorWithStatus:[PublicConfig isSpaceString:msgStr andReplace:@"注册失败"]];
-//         }
-    }
+         if ([[responseDic allKeys] containsObject:@"errorToken"]) {
+             [SVProgressHUD showErrorWithStatus:[PublicConfig isSpaceString:responseDic[@"subErrors"][0][@"message"] andReplace:@"注册失败"]];
+         }else {
+             /*注册成功*/
+             [SVProgressHUD showSuccessWithStatus:@"注册成功"];
+             [self performSelector:@selector(backAction) withObject:nil afterDelay:1.0f];
+         }
+     }
           failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
          [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
          [SVProgressHUD showErrorWithStatus:@"注册请求失败"];
     }];
-
-    
-    
 }
 
 //给用户发送短信验证码
@@ -375,17 +362,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

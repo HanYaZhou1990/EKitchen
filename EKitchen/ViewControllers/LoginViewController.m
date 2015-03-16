@@ -234,22 +234,50 @@
 //登录协议
 -(void)sendLoginDataWithLoginType:(NSString *)loginTypeStr
 {
-    //发送登录协议
+    NSString *mobileString = userNameField.text;
     
-    
-    //登陆成功 设置登录id跟登录用户类型得值 刷新设置界面 后退至设置界面
-    [PublicConfig setValue:@"userid" forKey:userAccountEKitchen];
-    [PublicConfig setValue:loginTypeStr forKey:userTypeEKitchen];
-    
-    [[NSNotificationCenter defaultCenter]postNotificationName:refreshMeVCNotification object:nil];
-    
-    if (selectBgView)
-    {
-        [selectBgView removeFromSuperview];
-        selectBgView=nil;
+    /*因为密码需要经过DES加密，所以需要先取key,key是手机号的前八位*/
+    NSString *key = [mobileString substringToIndex:8];
+    /*!假如密码是  123456*/
+    NSString *passwordString = [YYDes DESEncrypt:[userPswField.text dataUsingEncoding:NSUTF8StringEncoding] WithKey:key];
+    NSDictionary *parameters = [NSDictionary dictionary];
+    if ([loginTypeStr isEqualToString:@"0"]) {
+        parameters = @{@"appKey":appKeyEkitchen,@"method":member_login,@"v":versionEkitchen,@"format":formatEkitchen,@"locale":localeEkitchen,@"timestamp":timeStampEkitchen,@"mobile":mobileString,@"client":clientEkitchen};
+    }else {
+        parameters = @{@"appKey":appKeyEkitchen,@"method":cooker_login,@"v":versionEkitchen,@"format":formatEkitchen,@"locale":localeEkitchen,@"timestamp":timeStampEkitchen,@"mobile":mobileString,@"client":clientEkitchen};
     }
-    [self.navigationController popToRootViewControllerAnimated:YES];
     
+    NSDictionary *addParams = @{@"password":passwordString,@"sign":[YYDes generate:parameters],@"identify":identifyEkitchen};
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    [dic addEntriesFromDictionary:parameters];
+    [dic addEntriesFromDictionary:addParams];
+    
+    [MBProgressHUD showHUDAddedToExt:self.view showMessage:@"登录中..." animated:YES];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    [manager POST:BASE_PLAN_URL parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        NSDictionary *responseDic = (NSDictionary *)responseObject;
+        if ([[responseDic allKeys] containsObject:@"errorToken"]) {
+            /*登录失败*/
+            [SVProgressHUD showErrorWithStatus:[PublicConfig isSpaceString:responseDic[@"subErrors"][0][@"message"] andReplace:@"登录失败"]];
+        }else {
+            [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+                //登陆成功 设置登录id跟登录用户类型得值 刷新设置界面 后退至设置界面
+            [PublicConfig setValue:responseObject[@"sessionId"] forKey:userAccountEKitchen];
+            [PublicConfig setValue:loginTypeStr forKey:userTypeEKitchen];
+            
+            [[NSNotificationCenter defaultCenter]postNotificationName:refreshMeVCNotification object:nil];
+            
+            [self performSelector:@selector(backAction) withObject:nil afterDelay:1.0f];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        [SVProgressHUD showErrorWithStatus:@"登录求失败"];
+    }];
 }
 
 
@@ -289,17 +317,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
