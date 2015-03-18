@@ -22,6 +22,8 @@
     UIButton *captchaBtn;
     UIButton *agreeBtn;
     BOOL isAgree;
+    
+    UIView *selectBgView; //设置选择背景视图
 }
 
 @property (nonatomic,strong) NSTimer *timer;
@@ -146,6 +148,59 @@
     [self.view addSubview:useAgreeBtn];
     
    
+}
+
+    //初始化选择页面
+-(void)initSelectView
+{
+    selectBgView = [[UIView alloc]init];
+    selectBgView.frame = CGRectMake(0,SCREEN_HEIGHT,SCREEN_WIDTH, SCREEN_HEIGHT);
+    selectBgView.backgroundColor = [UIColor clearColor];
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;//获取window
+    [keyWindow addSubview:selectBgView];
+    
+    UIView *selectView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    [selectView setBackgroundColor:[UIColor blackColor]];
+    selectView.alpha = 0.8;
+    [selectBgView addSubview:selectView];
+    
+    
+    UIButton *customerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    customerButton.frame = CGRectMake((SCREEN_WIDTH-200)/3, (SCREEN_HEIGHT-100)/2, 100, 100);
+    [customerButton setBackgroundColor:RGBA(24, 123, 225, 1)];
+    [customerButton setTitle:@"我是顾客" forState:UIControlStateNormal];
+    [customerButton setTitle:@"我是顾客" forState:UIControlStateHighlighted];
+    [customerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [customerButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    customerButton.layer.masksToBounds=YES;
+    customerButton.layer.cornerRadius=50;
+    customerButton.tag = 100;
+    [customerButton addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [selectBgView addSubview:customerButton];
+    
+    UIButton *cookerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    cookerButton.frame = CGRectMake(((SCREEN_WIDTH-200)/3)*2+100, (SCREEN_HEIGHT-100)/2, 100, 100);
+    [cookerButton setBackgroundColor:RGBA(210, 6, 18, 1)];
+    [cookerButton setTitle:@"我是厨师" forState:UIControlStateNormal];
+    [cookerButton setTitle:@"我是厨师" forState:UIControlStateHighlighted];
+    [cookerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [cookerButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    cookerButton.layer.masksToBounds=YES;
+    cookerButton.layer.cornerRadius=50;
+    cookerButton.tag = 101;
+    [cookerButton addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [selectBgView addSubview:cookerButton];
+    
+}
+
+-(void)showSelectView
+{
+    selectBgView.frame = CGRectMake(0,0,SCREEN_WIDTH, SCREEN_HEIGHT);
+}
+
+-(void)removeSelectView
+{
+    selectBgView.frame = CGRectMake(0,SCREEN_HEIGHT,SCREEN_WIDTH, SCREEN_HEIGHT);
 }
 
 -(void)onTimer
@@ -279,24 +334,70 @@
         [PublicConfig waringInfo:@"请您选择同意用户协议"];
         return;
     }
-    //验证后成功后发送请求
-    [self registerUserData:phoneStr andPassWord:pwdStr andPassCode:captchaStr];
+        //选择类型 顾客 Or 厨师
+        //登录协议
+    if (!selectBgView)
+        {
+        [self initSelectView];
+        }
+    [self showSelectView];
+}
+
+    //用户类型点击
+-(void)buttonClicked:(id)sender
+{
+    NSString *registerUserType = @"";
+    UIButton *btn = (UIButton *)sender;
+    switch (btn.tag)
+    {
+        case 100:
+        {
+            //我是顾客
+        registerUserType = @"0";
+        }
+        break;
+        case 101:
+        {
+            //我是厨师
+        registerUserType = @"1";
+        }
+        break;
+        
+        default:
+        break;
+    }
+    [self removeSelectView];
+    [self sendRegisterDataWithRegisterType:registerUserType];
     
+}
+
+    //登录协议
+-(void)sendRegisterDataWithRegisterType:(NSString *)registerTypeStr {
+    NSString *phoneStr = [phoneTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *pwdStr = [userPswField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *captchaStr = [captchaTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        //验证后成功后发送请求
+    [self registerUserData:phoneStr andPassWord:pwdStr passCode:captchaStr andRegistType:registerTypeStr];
 }
 
 #pragma mark -
 #pragma mark 请求相关
 
 //注册请求
--(void)registerUserData:(NSString *)phoneNumber andPassWord:(NSString *)passWord andPassCode:(NSString *)passCode
+-(void)registerUserData:(NSString *)phoneNumber andPassWord:(NSString *)passWord passCode:(NSString *)passCode andRegistType:(NSString *)registerTypeStr
 {
-    //用户密码,明文采用DES算法,密钥：取用户名前8字节,不足后补空格
+        //用户密码,明文采用DES算法,密钥：取用户名前8字节,不足后补空格
     NSString *key = [phoneNumber substringToIndex:8];
     NSString *passwordString = [YYDes DESEncrypt:[passWord dataUsingEncoding:NSUTF8StringEncoding] WithKey:key];
     
-    NSDictionary *params = @{@"appKey":appKeyEkitchen,@"method":member_register,@"v":versionEkitchen,@"format":formatEkitchen,@"locale":localeEkitchen,@"timestamp":timeStampEkitchen,@"mobile":phoneNumber,@"client":clientEkitchen,@"verificationCode":passCode,@"client":clientEkitchen};
-    
-    //追加参数签名字段
+    NSDictionary *params = [NSDictionary dictionary];
+    if ([registerTypeStr isEqualToString:@"0"]) {
+        params = @{@"appKey":appKeyEkitchen,@"method":member_register,@"v":versionEkitchen,@"format":formatEkitchen,@"locale":localeEkitchen,@"timestamp":timeStampEkitchen,@"mobile":phoneNumber,@"client":clientEkitchen,@"verificationCode":passCode,@"client":clientEkitchen};
+        
+    }else {
+        params = @{@"appKey":appKeyEkitchen,@"method":cooker_register,@"v":versionEkitchen,@"format":formatEkitchen,@"locale":localeEkitchen,@"timestamp":timeStampEkitchen,@"mobile":phoneNumber,@"client":clientEkitchen,@"verificationCode":passCode,@"client":clientEkitchen};
+    }
+        //追加参数签名字段
     NSDictionary *addParams = @{@"password":passwordString,@"sign":[YYDes generate:params]};
     
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
@@ -308,22 +409,22 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager POST:BASE_PLAN_URL parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
-         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-         
-         NSDictionary *responseDic = (NSDictionary *)responseObject;
-         if ([[responseDic allKeys] containsObject:@"errorToken"]) {
-             [SVProgressHUD showErrorWithStatus:[PublicConfig isSpaceString:responseDic[@"subErrors"][0][@"message"] andReplace:@"注册失败"]];
-         }else {
-             /*注册成功*/
-             [SVProgressHUD showSuccessWithStatus:@"注册成功"];
-             [self performSelector:@selector(backAction) withObject:nil afterDelay:1.0f];
-         }
+     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+     
+     NSDictionary *responseDic = (NSDictionary *)responseObject;
+     if ([[responseDic allKeys] containsObject:@"errorToken"]) {
+         [SVProgressHUD showErrorWithStatus:[PublicConfig isSpaceString:responseDic[@"subErrors"][0][@"message"] andReplace:@"注册失败"]];
+     }else {
+         /*注册成功*/
+         [SVProgressHUD showSuccessWithStatus:@"注册成功"];
+         [self performSelector:@selector(backAction) withObject:nil afterDelay:1.0f];
+     }
      }
           failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
-         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-         [SVProgressHUD showErrorWithStatus:@"注册请求失败"];
-    }];
+     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+     [SVProgressHUD showErrorWithStatus:@"注册请求失败"];
+     }];
 }
 
 //给用户发送短信验证码
@@ -357,8 +458,6 @@
     textField.text = @"";
     return YES;
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

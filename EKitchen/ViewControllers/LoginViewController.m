@@ -267,6 +267,7 @@
         }else {
             [SVProgressHUD showSuccessWithStatus:@"登录成功"];
                 //登陆成功 设置登录id跟登录用户类型得值 刷新设置界面 后退至设置界面
+            [PublicConfig setValue:responseObject[@"id"] forKey:userIdEKitchen];
             [PublicConfig setValue:responseObject[@"sessionId"] forKey:userAccountEKitchen];
             [PublicConfig setValue:loginTypeStr forKey:userTypeEKitchen];
             

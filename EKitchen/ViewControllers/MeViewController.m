@@ -25,6 +25,7 @@
     NSArray *sectionTwoLArray;
     NSArray *sectionImgOneLArray;
     NSArray *sectionImgTwoLArray;
+    NSDictionary *_userinformationDic;
 }
 @end
 
@@ -45,6 +46,8 @@
     [super viewDidLoad];
     
      self.title = @"我的";
+    
+    _userinformationDic = [NSDictionary dictionary];
 
     [self setRightBtnItem];
     
@@ -87,6 +90,41 @@
         rightBtn.hidden = NO;
         //已登录
         NSString *userTypeStr = [PublicConfig valueForKey:userTypeEKitchen];
+        NSString *memberIdStr = [PublicConfig valueForKey:userIdEKitchen];
+        NSString *sessionIdStr = [PublicConfig valueForKey:userAccountEKitchen];
+    NSDictionary *parameters = [NSDictionary dictionary];
+    if ([userTypeStr isEqualToString:@"0"]) {
+        parameters = @{@"appKey":appKeyEkitchen,@"sessionId":sessionIdStr,@"method":member_detail,@"v":versionEkitchen,@"format":formatEkitchen,@"locale":localeEkitchen,@"timestamp":timeStampEkitchen,@"memberId":memberIdStr,@"client":clientEkitchen};
+    }else {
+        parameters = @{@"appKey":appKeyEkitchen,@"sessionId":sessionIdStr,@"method":cooker_detail,@"v":versionEkitchen,@"format":formatEkitchen,@"locale":localeEkitchen,@"timestamp":timeStampEkitchen,@"cookerId":memberIdStr,@"client":clientEkitchen};
+    }
+    
+    NSDictionary *addParams = @{@"sign":[YYDes generate:parameters]};
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    [dic addEntriesFromDictionary:parameters];
+    [dic addEntriesFromDictionary:addParams];
+    
+    [MBProgressHUD showHUDAddedToExt:self.view showMessage:@"登录中..." animated:YES];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    [manager POST:BASE_PLAN_URL parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        NSDictionary *responseDic = (NSDictionary *)responseObject;
+        if ([[responseDic allKeys] containsObject:@"errorToken"]) {
+            /*登录失败*/
+            [SVProgressHUD showErrorWithStatus:[PublicConfig isSpaceString:responseDic[@"subErrors"][0][@"message"] andReplace:@"资料获取失败"]];
+        }else {
+            _userinformationDic = responseDic;
+            [myTableView reloadData];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        [SVProgressHUD showErrorWithStatus:@"登录求失败"];
+    }];
+    
         if ([userTypeStr isEqualToString:@"0"])
         {
             //顾客
@@ -109,7 +147,6 @@
         sectionOneLArray = @[@"意见反馈",@"版本检测",@"关于"];
         sectionImgOneLArray = @[@"feedbackMeItem.png",@"updateMeItem.png",@"aboutMeItem.png"];
     }
-
     [myTableView reloadData];
 }
 
@@ -119,6 +156,13 @@
 -(void)rightButtonClick
 {
     UserInfoViewController *vc = [[UserInfoViewController alloc]init];
+    NSString *userTypeStr = [PublicConfig valueForKey:userTypeEKitchen];
+    if ([userTypeStr isEqualToString:@"0"]) {
+        vc.userType = UserInfoViewControllerTypeMember;
+    }else {
+        vc.userType = UserInfoViewControllerTypeCooker;
+    }
+    vc.userInfoDic = _userinformationDic;
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -126,6 +170,7 @@
 -(void)logoutButtonClicked:(id)sender
 {
     //退出登录
+    [PublicConfig setValue:@"" forKey:userIdEKitchen];
     [PublicConfig setValue:@"" forKey:userAccountEKitchen];
     [PublicConfig setValue:@"" forKey:userTypeEKitchen];
     
@@ -216,7 +261,7 @@
             userNameLabel.textAlignment = NSTextAlignmentCenter;
             userNameLabel.textColor = [UIColor whiteColor];
             userNameLabel.font = [UIFont systemFontOfSize:14];
-            userNameLabel.text = @"韩亚周";
+            userNameLabel.text = _userinformationDic[@"nickName"];
             userNameLabel.backgroundColor = [UIColor clearColor];
             [cell.contentView addSubview:userNameLabel];
 
@@ -489,17 +534,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

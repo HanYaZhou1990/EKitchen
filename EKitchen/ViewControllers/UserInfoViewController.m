@@ -37,13 +37,21 @@
     
     [self leftBarItem];
     
-    if (!_userInfo)
-    {
+    NSString *userTypeStr = [PublicConfig valueForKey:userTypeEKitchen];
+    if (!_userInfo){
         _userInfo = [[UserInfo alloc]init];
+        if ([userTypeStr isEqualToString:@"0"]) {
+            _userInfo.userName = _userInfoDic[@"nickName"];
+            _userInfo.sex = [_userInfoDic[@"sex"] longValue];
+            _userInfo.nickName = _userInfoDic[@"mobile"];
+        }else {
+            _userInfo.userName = _userInfoDic[@"nickName"];
+            _userInfo.sex = [_userInfoDic[@"sex"] longValue];
+            _userInfo.nickName = _userInfoDic[@"mobile"];
+        }
     }
     
     //已登录
-    NSString *userTypeStr = [PublicConfig valueForKey:userTypeEKitchen];
     if ([userTypeStr isEqualToString:@"0"])
     {
         //顾客
