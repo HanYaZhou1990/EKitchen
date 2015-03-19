@@ -83,7 +83,6 @@
 		3EB9398D1A696F0400535310 /* PublicConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9398C1A696F0400535310 /* PublicConfig.m */; };
 		3EB939911A69716600535310 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB939901A69716600535310 /* BaseViewController.m */; };
 		3EB939941A69723000535310 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB939931A69723000535310 /* HomeViewController.m */; };
-		3EB9399D1A69728900535310 /* LazyViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3EB9399C1A69728900535310 /* LazyViewController.mm */; };
 		3EB939B01A69759400535310 /* categoryIconGray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB939A61A69759400535310 /* categoryIconGray@2x.png */; };
 		3EB939B11A69759400535310 /* categoryIconRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB939A71A69759400535310 /* categoryIconRed@2x.png */; };
 		3EB939B21A69759400535310 /* homeIconGray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB939A81A69759400535310 /* homeIconGray@2x.png */; };
@@ -103,6 +102,8 @@
 		3EED20E11A6F4CB000EC264F /* b27_icon_star_yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EED20DF1A6F4CB000EC264F /* b27_icon_star_yellow@2x.png */; };
 		3EED20F31A6F82CA00EC264F /* imageSelectedSmallOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EED20F11A6F82CA00EC264F /* imageSelectedSmallOff@2x.png */; };
 		3EED20F41A6F82CA00EC264F /* imageSelectedSmallOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EED20F21A6F82CA00EC264F /* imageSelectedSmallOn@2x.png */; };
+		CF1766B31ABB159F00D7C926 /* LazyViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CF1766B21ABB159F00D7C926 /* LazyViewController.mm */; };
+		CF1766B51ABB167000D7C926 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF1766B41ABB167000D7C926 /* Info.plist */; };
 		CF3953581AB1C311008EF4A8 /* CookerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3953571AB1C311008EF4A8 /* CookerDetailViewController.m */; };
 		CF39535B1AB1C319008EF4A8 /* OpenHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF39535A1AB1C319008EF4A8 /* OpenHeaderView.m */; };
 		CF39535E1AB1C327008EF4A8 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF39535D1AB1C327008EF4A8 /* CommentCell.m */; };
@@ -208,7 +209,6 @@
 		3EACE8021A70CC2C0075A685 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
 		3EACE8031A70CC2C0075A685 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
 		3EB938DB1A695D2800535310 /* EKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EB938DF1A695D2800535310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EB938E01A695D2800535310 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3EB938E21A695D2800535310 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3EB938E31A695D2800535310 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -305,8 +305,6 @@
 		3EB939901A69716600535310 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		3EB939921A69723000535310 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		3EB939931A69723000535310 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		3EB9399B1A69728900535310 /* LazyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyViewController.h; sourceTree = "<group>"; };
-		3EB9399C1A69728900535310 /* LazyViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LazyViewController.mm; sourceTree = "<group>"; };
 		3EB939A61A69759400535310 /* categoryIconGray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "categoryIconGray@2x.png"; sourceTree = "<group>"; };
 		3EB939A71A69759400535310 /* categoryIconRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "categoryIconRed@2x.png"; sourceTree = "<group>"; };
 		3EB939A81A69759400535310 /* homeIconGray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homeIconGray@2x.png"; sourceTree = "<group>"; };
@@ -330,6 +328,9 @@
 		3EED20DF1A6F4CB000EC264F /* b27_icon_star_yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "b27_icon_star_yellow@2x.png"; sourceTree = "<group>"; };
 		3EED20F11A6F82CA00EC264F /* imageSelectedSmallOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageSelectedSmallOff@2x.png"; sourceTree = "<group>"; };
 		3EED20F21A6F82CA00EC264F /* imageSelectedSmallOn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageSelectedSmallOn@2x.png"; sourceTree = "<group>"; };
+		CF1766B11ABB159F00D7C926 /* LazyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyViewController.h; sourceTree = "<group>"; };
+		CF1766B21ABB159F00D7C926 /* LazyViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LazyViewController.mm; sourceTree = "<group>"; };
+		CF1766B41ABB167000D7C926 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF3953561AB1C311008EF4A8 /* CookerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookerDetailViewController.h; sourceTree = "<group>"; };
 		CF3953571AB1C311008EF4A8 /* CookerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookerDetailViewController.m; sourceTree = "<group>"; };
 		CF3953591AB1C319008EF4A8 /* OpenHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenHeaderView.h; sourceTree = "<group>"; };
@@ -598,7 +599,7 @@
 			isa = PBXGroup;
 			children = (
 				3EB9390F1A696D0D00535310 /* EKitchen-Prefix.pch */,
-				3EB938DF1A695D2800535310 /* Info.plist */,
+				CF1766B41ABB167000D7C926 /* Info.plist */,
 				3EB938E01A695D2800535310 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -645,8 +646,8 @@
 				CFAAA44D1AA7473E00BA0384 /* CategoryViewController.m */,
 				CF856F7A1A77CA3E00852D89 /* SearchViewController.h */,
 				CF856F7B1A77CA3E00852D89 /* SearchViewController.m */,
-				3EB9399B1A69728900535310 /* LazyViewController.h */,
-				3EB9399C1A69728900535310 /* LazyViewController.mm */,
+				CF1766B11ABB159F00D7C926 /* LazyViewController.h */,
+				CF1766B21ABB159F00D7C926 /* LazyViewController.mm */,
 				CF73D8341AB9CB7A0084CC37 /* MeViewController.h */,
 				CF73D8351AB9CB7A0084CC37 /* MeViewController.m */,
 			);
@@ -1182,6 +1183,7 @@
 				3EB939B41A69759400535310 /* lazyIconGray@2x.png in Resources */,
 				3EED20E01A6F4CB000EC264F /* b27_icon_star_gray@2x.png in Resources */,
 				3EB939B91A69759400535310 /* searchIconRed@2x.png in Resources */,
+				CF1766B51ABB167000D7C926 /* Info.plist in Resources */,
 				CF82C6F21AAC7F9E0026C3EF /* intermediate@2x.png in Resources */,
 				3EA5AF1F1A69FD730058714B /* aboutMeItem@2x.png in Resources */,
 				3EA5AF211A69FD730058714B /* feedbackMeItem@2x.png in Resources */,
@@ -1284,7 +1286,6 @@
 				3EB939C11A69833100535310 /* SizeToLabelCell.m in Sources */,
 				3EB939671A696DCA00535310 /* AFURLRequestSerialization.m in Sources */,
 				3EB9396A1A696DCA00535310 /* AFNetworkActivityIndicatorManager.m in Sources */,
-				3EB9399D1A69728900535310 /* LazyViewController.mm in Sources */,
 				3EB939C21A69833100535310 /* SizeToLeftLabelCell.m in Sources */,
 				CF73D8271AB9CB630084CC37 /* RegisterViewController.m in Sources */,
 				CF856F821A77CA6600852D89 /* RecommendCell.m in Sources */,
@@ -1294,6 +1295,7 @@
 				3EB939821A696DCA00535310 /* UIView+WebCacheOperation.m in Sources */,
 				3EB939801A696DCA00535310 /* UIImageView+HighlightedWebCache.m in Sources */,
 				CFC169AF1AB08FE2007D821A /* CookerTimeCell.m in Sources */,
+				CF1766B31ABB159F00D7C926 /* LazyViewController.mm in Sources */,
 				CF73D8361AB9CB7A0084CC37 /* MeViewController.m in Sources */,
 				CF39536C1AB1F527008EF4A8 /* BookViewController.m in Sources */,
 				3EB939061A695DA200535310 /* RootTabBarViewController.m in Sources */,
@@ -1414,7 +1416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: guan jun (X94E4C7XN4)";
 				GCC_PREFIX_HEADER = "EKitchen/EKitchen-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1430,6 +1432,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = EKitchen;
+				PROVISIONING_PROFILE = "c604f2a8-ebae-4ff5-a712-06844ec7463c";
 			};
 			name = Debug;
 		};
@@ -1438,7 +1441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: guan jun (X94E4C7XN4)";
 				GCC_PREFIX_HEADER = "EKitchen/EKitchen-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1454,6 +1457,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = EKitchen;
+				PROVISIONING_PROFILE = "c604f2a8-ebae-4ff5-a712-06844ec7463c";
 			};
 			name = Release;
 		};

@@ -9,8 +9,9 @@
 #import "BaseViewController.h"
 #import "BMapKit.h"
 
-@interface LazyViewController : BaseViewController<BMKMapViewDelegate>
+@interface LazyViewController : BaseViewController<BMKMapViewDelegate,BMKLocationServiceDelegate>
 
 @property (nonatomic, strong) BMKMapView *mapView;
+@property (nonatomic, strong) BMKLocationService *locService;
 
 @end
